@@ -1,6 +1,6 @@
-// A memory full screen: the photo at its own proportions, its time and caption, previous and next.
+// A photograph full screen (a memory, or a stop's picture): at its own proportions, with its note, previous and next.
 
-export function createMemoryViewer(dialog) {
+export function createPhotoViewer(dialog) {
   // The photo element is made on first open, so the page never ships an <img> without a source.
   const image = document.createElement('img');
   image.className = 'viewer-img';
@@ -16,7 +16,7 @@ export function createMemoryViewer(dialog) {
     image.src = photo.src;
     image.width = photo.w;
     image.height = photo.h;
-    image.alt = photo.caption || `Hatıra ${index + 1}`;
+    image.alt = photo.caption || `Fotoğraf ${index + 1}`;
     note.textContent = [photo.time, photo.caption].filter(Boolean).join(' · ');
     count.textContent = `${index + 1} / ${photos.length}`;
     dialog.dataset.single = String(photos.length === 1);

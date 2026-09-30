@@ -10,7 +10,7 @@ import { wireActions } from './ui/actions.js';
 import { setupArrowKeys, setupSwipe } from './ui/gestures.js';
 import { showLoadError } from './ui/load-error.js';
 import { createPage } from './ui/page.js';
-import { createMemoryViewer } from './ui/memory-viewer.js';
+import { createPhotoViewer } from './ui/photo-viewer.js';
 import { createTaxiDialog } from './ui/taxi-dialog.js';
 
 const CLOCK_TICK_MS = 60_000;
@@ -45,7 +45,7 @@ async function start() {
   page.render();
 
   const taxi = createTaxiDialog(document.getElementById('taxi'));
-  const viewer = createMemoryViewer(document.getElementById('memory-viewer'));
+  const viewer = createPhotoViewer(document.getElementById('photo-viewer'));
   wireActions({ page, taxi, viewer, store });
   setupArrowKeys(page.step, () => taxi.isOpen() || viewer.isOpen());
   // Only the cover swipes between days: on the stops a sideways swipe is too easy to make by accident.

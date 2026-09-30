@@ -121,7 +121,7 @@ def check_offline(browser, base: str, out: Path, checks: Checks) -> None:
     cover = page.locator(".card-img--cover").first
     cover.scroll_into_view_if_needed()
     page.wait_for_timeout(500)
-    checks.expect(page.evaluate(LOADED_JS, ".card-img--cover"), "offline reload shows the first card's photographs")
+    checks.expect(page.evaluate(LOADED_JS, ".card-img--cover img"), "offline reload shows the first card's photographs")
     page.locator('.nav-btn[data-dir="next"]').click()
     checks.expect(page.url.endswith("#gun-3"), "offline navigation to the next day works")
     route = page.locator("#route-open").get_attribute("href") or ""

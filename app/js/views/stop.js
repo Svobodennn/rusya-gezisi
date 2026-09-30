@@ -26,8 +26,10 @@ function actionsHtml(place, key, ticked, nameId) {
 export function cardPhotosHtml(place, number, city) {
   const photos = place.photos ?? [];
   if (!photos.length) return '';
-  const images = photos.map((photo, i) => `<img class="card-img card-img--${i === 0 ? 'cover' : 'side'}" src="${esc(photo.src)}" `
-    + `width="${Number(photo.w)}" height="${Number(photo.h)}" alt="${esc(place.name)}, fotoğraf ${i + 1}" loading="lazy" decoding="async">`).join('');
+  // Each picture is a button: a tap opens it full screen in the photo viewer.
+  const images = photos.map((photo, i) => `<button type="button" class="card-img card-img--${i === 0 ? 'cover' : 'side'}" data-photo="${i}" `
+    + `aria-label="${esc(place.name)}, fotoğraf ${i + 1}: büyüt"><img src="${esc(photo.src)}" width="${Number(photo.w)}" height="${Number(photo.h)}" `
+    + 'alt="" loading="lazy" decoding="async"></button>').join('');
   const credits = photos.map((photo) => sourceLink(photo.page, photo.credit)).join(' · ');
   return `<div class="card-media"><figure class="card-photos" data-count="${photos.length}">${images}${corners(city)}`
     + `<span class="card-num" aria-hidden="true">${number ?? ''}</span></figure>`

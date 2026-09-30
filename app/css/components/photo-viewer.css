@@ -1,0 +1,75 @@
+/* The photo viewer: one photograph full screen (a day's memory or a stop's picture), in the album's white border,
+   with its handwritten note below and previous / next at the sides. */
+
+.viewer {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: calc(env(safe-area-inset-top, 0px) + var(--pitch) * 2) max(16px, env(safe-area-inset-right, 0px))
+    calc(env(safe-area-inset-bottom, 0px) + var(--pitch) * 2) max(16px, env(safe-area-inset-left, 0px));
+  border: 0;
+  background: rgb(6 9 18 / 0.96);
+  color: var(--snow);
+}
+
+.viewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: calc(var(--pitch) * 2);
+}
+
+.viewer::backdrop {
+  background: rgb(6 9 18 / 0.96);
+}
+
+.viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pitch);
+  font-family: var(--font-sign);
+  color: var(--frost);
+}
+
+.viewer-stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--pitch);
+  min-height: 0;
+}
+
+.viewer-frame {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 0;
+}
+
+.viewer-img {
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 8px solid var(--porcelain);
+  border-radius: 2px;
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.9);
+}
+
+.viewer[data-single='true'] [data-viewer='prev'],
+.viewer[data-single='true'] [data-viewer='next'] {
+  visibility: hidden;
+}
+
+.viewer-note {
+  margin: 0;
+  min-height: 1.4em;
+  font-family: var(--font-hand);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  text-align: center;
+  color: var(--gold-soft);
+}

@@ -4,6 +4,11 @@ import { scrollStrip } from './strip.js';
 
 export function wireActions({ page, taxi, viewer, store }) {
   const places = () => store.get().trip.places;
+  // A stop's pictures for the viewer, each noted with the place and where the photograph comes from.
+  const stopPhotos = (id) => {
+    const place = places()[id];
+    return (place?.photos ?? []).map((photo) => ({ src: photo.src, w: photo.w, h: photo.h, caption: `${place.name} · ${photo.credit}` }));
+  };
   const dayMemories = () => {
     const { trip, index, memories } = store.get();
     return memories[trip.days[index].date] ?? [];
@@ -15,6 +20,7 @@ export function wireActions({ page, taxi, viewer, store }) {
     ['[data-taxi]', (el) => taxi.open(places()[el.dataset.taxi])],
     ['[data-map-mode]', (el) => page.setMapMode(el)],
     ['[data-memory]', (el) => viewer.open(dayMemories(), Number(el.dataset.memory))],
+    ['[data-photo]', (el) => viewer.open(stopPhotos(el.closest('.stop').dataset.place), Number(el.dataset.photo))],
     ['[data-strip]', (el) => scrollStrip(el)],
     ['.stop-toggle', (el) => setPanel(el, el.getAttribute('aria-expanded') !== 'true', places())],
   ];
