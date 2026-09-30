@@ -27,7 +27,8 @@ function onMessage(event) {
   // An update installing in the background must not overwrite the working version's status.
   if (controller && event.source !== controller) return;
   const type = event.data?.type;
-  if (typeof type === 'string' && Object.hasOwn(TEXT, type)) show(type, event.data);
+  // hasOwnProperty rather than Object.hasOwn: TV boxes still run WebViews from before Chromium 93.
+  if (typeof type === 'string' && Object.prototype.hasOwnProperty.call(TEXT, type)) show(type, event.data);
 }
 
 function offerUpdate(worker, accept) {

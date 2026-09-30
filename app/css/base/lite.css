@@ -1,0 +1,33 @@
+/* The light look (html[data-lite], set by js/state/lite.js) for weak devices: every surface a solid plate instead of
+   frosted glass, nothing moving on its own, no falling snow, the plain night ground instead of the textile, and the
+   garland's bulbs all lit and still. Loaded last. */
+
+html[data-lite] .glass {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgb(11 16 29 / 0.93);
+}
+
+html[data-lite] *,
+html[data-lite] *::before,
+html[data-lite] *::after {
+  animation: none !important;
+  transition-duration: 0.01ms !important;
+}
+
+html[data-lite] .hero-photo {
+  transform: none;
+}
+
+html[data-lite] .hero-snow,
+html[data-lite] .page-bg {
+  display: none;
+}
+
+html[data-lite] .route-lights {
+  stroke-dasharray: 0 13;
+}
+
+html[data-lite] .route-bulbs {
+  display: none;
+}

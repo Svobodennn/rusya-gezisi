@@ -1,10 +1,12 @@
 // Snow falling on the hero's canvas. Pauses off screen and in a hidden tab; under reduced motion it lies still.
+// The flakes are soft dots, so the canvas is drawn at one pixel per CSS pixel and 30 frames a second: on a 2x screen
+// that is a quarter of the pixels to fill and hand to the compositor, half as often, and it looks the same.
 import { onReducedMotionChange, prefersReducedMotion } from '../lib/motion.js';
 
 export function startSnow(canvas) {
   const context = canvas.getContext('2d');
   if (!context) return () => {};
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const FRAME_MS = 30;
   let flakes = [];
   let width = 0;
   let height = 0;
@@ -43,10 +45,11 @@ export function startSnow(canvas) {
   };
 
   const tick = (now) => {
+    frame = requestAnimationFrame(tick);
+    if (last && now - last < FRAME_MS) return;
     const dt = last ? Math.min((now - last) / 1000, 0.05) : 0;
     last = now;
     paint(dt);
-    frame = requestAnimationFrame(tick);
   };
 
   const run = () => {
@@ -59,9 +62,8 @@ export function startSnow(canvas) {
   const resize = () => {
     width = canvas.clientWidth;
     height = canvas.clientHeight;
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
-    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    canvas.width = Math.round(width);
+    canvas.height = Math.round(height);
     flakes = Array.from({ length: Math.round(Math.min(170, (width * height) / 7500)) }, () => flake(true));
     run();
   };

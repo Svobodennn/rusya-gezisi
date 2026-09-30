@@ -33,6 +33,14 @@
   color: var(--ice);
 }
 
+/* The switch to the light look (and back): a quiet line, the button beside the sentence. */
+.lite-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pitch) calc(var(--pitch) * 2);
+}
+
 .verified {
   font-size: var(--t-xs);
 }

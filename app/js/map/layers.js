@@ -20,10 +20,11 @@ export function mountFrame(root) {
   const overlay = svgEl('svg', { class: 'map-overlay', 'aria-hidden': 'true' });
   const labelGroup = svgEl('g', { class: 'm-labels', lang: 'ru' });
   const wire = svgEl('path', { class: 'route-wire' });
+  const bulbs = svgEl('path', { class: 'route-bulbs' });
   const lights = svgEl('path', { class: 'route-lights' });
   const leaders = svgEl('path', { class: 'pin-leaders' });
   const anchors = svgEl('path', { class: 'pin-anchors' });
-  overlay.append(labelGroup, wire, lights, leaders, anchors);
+  overlay.append(labelGroup, wire, bulbs, lights, leaders, anchors);
   const pinLayer = document.createElement('div');
   pinLayer.className = 'map-pins';
   const note = document.createElement('p');
@@ -34,7 +35,9 @@ export function mountFrame(root) {
   controls.innerHTML = CONTROLS.map(([action, iconId, label]) => `<button type="button" class="map-control" `
     + `data-map-control="${action}" aria-label="${label}"><svg class="icon" aria-hidden="true"><use href="#${iconId}"/></svg></button>`).join('');
   root.replaceChildren(base, overlay, pinLayer, note, controls);
-  return { cameraGroup, overlay, labels: createLabelLayer(labelGroup), wire, lights, leaders, anchors, pinLayer, note, controls };
+  return {
+    cameraGroup, overlay, labels: createLabelLayer(labelGroup), wire, bulbs, lights, leaders, anchors, pinLayer, note, controls,
+  };
 }
 
 // The screen box the zoom buttons take, with a margin, in the map's own pixels; null before the map is laid out.

@@ -3,6 +3,7 @@
 import { project } from '../core/geo.js';
 import { prefersReducedMotion } from '../lib/motion.js';
 import { tweenCamera } from './camera.js';
+import { startChase } from './chase.js';
 import { drawCity, loadMapData, markPinned } from './base-map.js';
 import {
   clampCamera, fitCamera, garlandPath, isSameCamera, layoutPins, overviewCamera, panBy, scaleLimits, toScreen, withoutOutliers,
@@ -76,8 +77,7 @@ export function createRouteMap(root, { onPick }) {
     frame.leaders.setAttribute('d', leaderPath);
     frame.anchors.setAttribute('d', anchorPath);
     const d = garlandPath(state.route.map((pin) => pinScreen(pin)));
-    frame.wire.setAttribute('d', d);
-    frame.lights.setAttribute('d', d);
+    [frame.wire, frame.bulbs, frame.lights].forEach((path) => path.setAttribute('d', d));
     drawLabels();
   }
 
@@ -158,8 +158,11 @@ export function createRouteMap(root, { onPick }) {
     recenter: () => state.camera && lookAt(targetCamera(), true),
   });
 
-  // Off screen, the chasing lights stop repainting.
-  new IntersectionObserver(([entry]) => root.toggleAttribute('data-offscreen', !entry.isIntersecting)).observe(root);
+  // With less than a fifth of the map in view (or the tab hidden), the chaser holds still.
+  new IntersectionObserver(([entry]) => root.toggleAttribute('data-offscreen', entry.intersectionRatio < 0.2), {
+    threshold: [0, 0.2],
+  }).observe(root);
+  startChase(frame.lights, { paused: () => document.hidden || root.hasAttribute('data-offscreen') || prefersReducedMotion() });
 
   // The first show can land while the section is still hidden (0×0); the first real size then does the layout.
   new ResizeObserver(() => {

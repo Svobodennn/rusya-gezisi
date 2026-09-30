@@ -20,22 +20,31 @@
   stroke-linecap: round;
 }
 
+/* The garland's bulbs, one every 13 px, glowing dimly; over them every third one lit, the lit set stepping one bulb
+   along as map/chase.js turns data-chase 0 → 1 → 2. Still (reduced motion, the light look): every bulb lit. */
+.route-bulbs {
+  fill: none;
+  stroke: rgb(255 214 150 / 0.4);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 0 13;
+}
+
 .route-lights {
   fill: none;
   stroke: var(--filament);
   stroke-width: 5;
   stroke-linecap: round;
-  stroke-dasharray: 0 13;
+  stroke-dasharray: 0 39;
   filter: drop-shadow(0 0 3px rgb(255 214 150 / 0.9));
-  animation: chase 1.6s linear infinite;
 }
 
-.map[data-offscreen] .route-lights {
-  animation-play-state: paused;
+.route-lights[data-chase='1'] {
+  stroke-dashoffset: -13;
 }
 
-@keyframes chase {
-  to { stroke-dashoffset: -13; }
+.route-lights[data-chase='2'] {
+  stroke-dashoffset: -26;
 }
 
 .map-pins {
@@ -195,6 +204,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .route-lights {
-    animation: none;
+    stroke-dasharray: 0 13;
+  }
+
+  .route-bulbs {
+    display: none;
   }
 }

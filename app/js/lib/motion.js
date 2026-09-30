@@ -1,4 +1,5 @@
-// The visitor's reduced-motion preference, read lazily so modules stay importable outside a browser.
+// Whether things may move on their own: not when the visitor's system asks for reduced motion, nor in the light look
+// (html[data-lite]) for weak devices. Read lazily, so modules stay importable outside a browser.
 
 const QUERY = '(prefers-reduced-motion: reduce)';
 let media = null;
@@ -8,7 +9,7 @@ const query = () => {
 };
 
 export function prefersReducedMotion() {
-  return query().matches;
+  return query().matches || document.documentElement.hasAttribute('data-lite');
 }
 
 export function onReducedMotionChange(listener) {
