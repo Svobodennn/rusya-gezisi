@@ -15,6 +15,11 @@ export function yandexDayRouteUrl(points) {
   return `https://yandex.ru/maps/?rtext=~${stops}&rtt=mt`;
 }
 
+// Yandex's embeddable map (map widget), centred on the place with a red pin. ll and pt are longitude,latitude too.
+export function yandexWidgetUrl(lat, lon) {
+  return `https://yandex.ru/map-widget/v1/?ll=${lon},${lat}&z=16&pt=${lon},${lat},pm2rdm`;
+}
+
 export function googleTransitUrl(lat, lon) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=transit`;
 }

@@ -9,7 +9,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="noindex, nofollow">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; frame-src https://yandex.ru https://*.yandex.ru https://yandex.com https://*.yandex.com https://yandex.com.tr https://*.yandex.com.tr; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -94,6 +94,7 @@
   </div>
 
   <dialog id="taxi" class="taxi" aria-labelledby="taxi-name">
+    <div class="taxi-map" id="taxi-map" hidden></div>
     <div class="taxi-sign">
       <p class="taxi-lead" lang="ru">Отвезите меня, пожалуйста, по этому адресу:</p>
       <p class="taxi-name" id="taxi-name" lang="ru"></p>

@@ -5,11 +5,13 @@
     python3 tools/check_visual.py              # capture again and compare with the baseline
 
 Renders are made deterministic: the clock is frozen with ?now=, motion is reduced (no tweens, no twinkle),
-Math.random is seeded, the snow canvas (random by design) is hidden, the service worker is blocked and every lazy
+Math.random is seeded, the snow canvas (random by design) and the live Yandex map in the taxi sign are hidden and
+the network to Yandex is cut, the service worker is blocked and every lazy
 image is awaited. --app captures another copy of the app, e.g. an archived pre-refactor one, as the baseline.
 """
 import argparse
 import io
+import re
 import subprocess
 import sys
 import time
@@ -39,7 +41,9 @@ SEED_RANDOM = """(() => {
   };
 })();"""
 
-HIDE_SNOW = ".hero-snow { visibility: hidden !important; }"
+HIDE_LIVE = ".hero-snow, .taxi-map iframe { visibility: hidden !important; }"
+
+YANDEX = re.compile(r"^https://([a-z0-9-]+\.)*yandex\.(ru|com|com\.tr)/")
 
 SETTLE = """async () => {
   for (let y = 0; y < document.body.scrollHeight; y += 400) {
@@ -91,10 +95,11 @@ def capture(browser) -> dict:
     for name, options, now, action in shots():
         context = browser.new_context(service_workers="block", reduced_motion="reduce", bypass_csp=True, **options)
         context.add_init_script(SEED_RANDOM)
+        context.route(YANDEX, lambda route: route.abort())
         page = context.new_page()
         page.goto(f"http://localhost:{PORT}/?now={now}")
         page.wait_for_selector(".slot")
-        page.add_style_tag(content=HIDE_SNOW)
+        page.add_style_tag(content=HIDE_LIVE)
         page.evaluate(SETTLE)
         page.wait_for_timeout(300)
         images[name] = Image.open(io.BytesIO(action(page))).convert("RGB")

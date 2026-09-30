@@ -4,7 +4,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { yandexPointUrl, yandexTransitUrl, googleTransitUrl, yandexDayRouteUrl } from '../../../app/js/core/links.js';
+import { yandexPointUrl, yandexTransitUrl, googleTransitUrl, yandexDayRouteUrl, yandexWidgetUrl } from '../../../app/js/core/links.js';
 
 test('the day route link lists every stop in order after the current location', () => {
   assert.equal(yandexDayRouteUrl([{ lat: 55.76, lon: 37.63 }, { lat: 55.75, lon: 37.62 }]),
@@ -17,4 +17,9 @@ test('map links keep each provider’s coordinate order', () => {
   assert.equal(yandexTransitUrl(59.89, 30.29), 'https://yandex.ru/maps/?rtext=~59.89,30.29&rtt=mt');
   assert.equal(googleTransitUrl(55.75, 37.61),
     'https://www.google.com/maps/dir/?api=1&destination=55.75,37.61&travelmode=transit');
+});
+
+test('the embedded taxi map centres and pins the place, longitude first', () => {
+  assert.equal(yandexWidgetUrl(55.7539, 37.6208),
+    'https://yandex.ru/map-widget/v1/?ll=37.6208,55.7539&z=16&pt=37.6208,55.7539,pm2rdm');
 });
