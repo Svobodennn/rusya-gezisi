@@ -17,6 +17,19 @@ python3 -m http.server 8000 -d app
 
 Installing it on a phone needs an HTTPS address.
 
+## Memories (Hatıralar)
+
+Each day ends with an album page for the day's own photos. From a computer:
+
+```bash
+# 1. put the day's photos in hatiralar/<date>/, e.g. hatiralar/2026-12-20/kizil-meydan.jpg
+# 2. optional captions, one per line, in hatiralar/2026-12-20/aciklamalar.txt:  kizil-meydan.jpg = Kızıl Meydan'da ilk kar
+python3 tools/build_memories.py && python3 tools/build_sw.py
+```
+
+Photos are turned upright, scaled and re-encoded without metadata (no GPS position, no camera details) into
+`app/memories/`, ordered by the time they were taken. The originals in `hatiralar/` are never committed.
+
 ## What is and is not in this repository
 
 - `app/` — the page itself: HTML, CSS, vanilla ES modules, the SVG sprite, fonts, icons, trip data and the

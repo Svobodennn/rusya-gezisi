@@ -17,3 +17,6 @@ tools/osm-cache/
 # Third-party photographs: collected for personal use, rights stay with their owners
 app/img/
 mekanlar/**/*.jpg
+
+# The day photos as taken: full size, with EXIF (GPS position, camera). Only the cleaned copies in app/memories ship.
+hatiralar/

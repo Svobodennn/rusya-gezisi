@@ -46,6 +46,7 @@ python3 -m unittest discover -s tools -p 'test_*.py'      # Python tests
 python3 tools/build_trip.py      # plan + places → app/data/trip.json and app/img (needs the local photos)
 python3 tools/build_heroes.py    # day covers → app/img/hero-*.webp, app/data/heroes.json
 python3 tools/build_maps.py --offline   # base maps from tools/osm-cache (drop --offline to fetch from Overpass)
+python3 tools/build_memories.py  # hatiralar/<YYYY-MM-DD>/*.jpg → app/memories + app/data/memories.json (EXIF/GPS stripped)
 python3 tools/build_sw.py        # after ANY change in app/: new file hashes → incremental offline update
 python3 tools/check_app.py       # Playwright: offline behaviour, 20 checks, review screenshots
 python3 tools/check_visual.py    # pixel-exact diff against .impeccable/baseline (--baseline to re-capture)
@@ -53,3 +54,5 @@ python3 -m http.server 8000 -d app   # local preview; ?now=2026-12-20T13:00:00Z 
 ```
 
 Photographs are third-party (rights stay with their owners): `app/img/` and `mekanlar/**/*.jpg` are not committed.
+Memories: the originals in `hatiralar/` never leave the computer (gitignored, they carry GPS); only the cleaned WebP
+copies in `app/memories/` are committed — and in this public repository they are public.

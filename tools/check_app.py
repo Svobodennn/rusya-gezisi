@@ -101,6 +101,7 @@ def check_offline(browser, base: str, out: Path, checks: Checks) -> None:
     page.wait_for_selector('#offline[data-state="ready"]', timeout=180_000)
     check_precache(page, base, checks)
     checks.expect(page.locator(".slot").count() == 3, "day view renders three slots")
+    checks.expect(page.locator(".memories").count() == 1, "the day ends with its memories section")
     checks.expect(page.locator('.slot-now').count() == 1, "exactly one slot is marked next at 16:00")
     checks.expect(no_horizontal_overflow(page), "no horizontal overflow at 390px")
     page.screenshot(path=str(out / "mobile-viewport.png"))

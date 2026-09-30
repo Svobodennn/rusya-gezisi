@@ -1,4 +1,4 @@
-// The day: navigation, then the three slots on one wire, then good night.
+// The day: navigation, then the three slots on one wire, the day's memories, then good night.
 import { isToday } from '../core/clock.js';
 import { planAddsInfo } from '../core/plan-text.js';
 import { liveWires, slotOf, slotState } from '../core/slots.js';
@@ -8,6 +8,7 @@ import { dayLabel, shortLabel, slotTime } from './format.js';
 import { shelfHtml } from './ornaments.js';
 import { stopHtml } from './stop.js';
 import { freeHtml } from './free-slot.js';
+import { memoriesHtml } from './memories.js';
 
 const BULB_WORDS = { lit: 'yapıldı', dead: 'açık mekân yok' };
 
@@ -66,5 +67,5 @@ export function dayHtml(snapshot) {
   });
   const wires = liveWires(rows.map((row) => row.state), rows.findIndex((row) => row.isNext));
   const slots = rows.map((row, i) => slotHtml(snapshot, day, { ...row, wire: wires[i] }, numbers)).join('');
-  return `${navHtml(snapshot)}<ol class="slots">${slots}</ol>${dayEndHtml()}`;
+  return `${navHtml(snapshot)}<ol class="slots">${slots}</ol>${memoriesHtml(snapshot.memories?.[day.date])}${dayEndHtml()}`;
 }

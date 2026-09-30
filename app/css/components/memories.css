@@ -1,0 +1,187 @@
+/* Memories: the day's photos at the end of the day, on an old family-album page. Each print is a porcelain-white
+   photo, set a little askew and held by the album's paper corners; a note in hand-writing gives the time taken. */
+
+.memories {
+  display: grid;
+  gap: calc(var(--pitch) * 2.5);
+  margin-top: calc(var(--pitch) * 6);
+  padding: var(--glass-pad);
+}
+
+.memories-empty {
+  margin: 0;
+  font-size: var(--t-s);
+  color: var(--frost);
+}
+
+.memory-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr));
+  gap: calc(var(--pitch) * 4) calc(var(--pitch) * 3);
+  margin: 0;
+  padding: calc(var(--pitch) * 1.5) calc(var(--pitch) * 1);
+  list-style: none;
+}
+
+/* Phones keep two prints a row, like an album page, instead of one long strip. */
+@media (max-width: 480px) {
+  .memory-album {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--pitch) * 3.5) calc(var(--pitch) * 2);
+  }
+
+  .memory-note {
+    font-size: 1rem;
+  }
+}
+
+.memory {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.memory-open {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 9px 9px 9px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--porcelain);
+  box-shadow: 0 14px 26px -12px rgb(0 0 0 / 0.85), 0 2px 5px rgb(0 0 0 / 0.35);
+  cursor: zoom-in;
+  rotate: -2deg;
+  transition: rotate 0.25s var(--ease-out), scale 0.25s var(--ease-out);
+}
+
+.memory:nth-child(3n + 2) .memory-open { rotate: 1.6deg; }
+.memory:nth-child(3n) .memory-open { rotate: -0.8deg; }
+
+@media (hover: hover) {
+  .memory-open:hover {
+    rotate: 0deg;
+    scale: 1.03;
+  }
+}
+
+.memory-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--night-raised);
+}
+
+/* The album's paper corners: four little gold triangles holding the print. */
+.memory-open::before,
+.memory-open::after,
+.memory-corners::before,
+.memory-corners::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(135deg, #e9c877, #b98a2e);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+.memory-open::before { top: -5px; left: -5px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.memory-open::after { right: -5px; bottom: -5px; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.memory-corners::before { top: -5px; right: -5px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.memory-corners::after { bottom: -5px; left: -5px; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+
+.memory-note {
+  margin: 0;
+  max-width: 100%;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--gold-soft);
+  overflow-wrap: anywhere;
+}
+
+/* Before the photos: empty album places, the corners already glued in. */
+.memory--empty .memory-open {
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgb(242 245 252 / 0.22);
+  cursor: default;
+}
+
+.memory--empty .memory-open::before,
+.memory--empty .memory-open::after,
+.memory--empty .memory-corners::before,
+.memory--empty .memory-corners::after {
+  opacity: 0.45;
+}
+
+/* ---------------------------------------------------------- the viewer */
+
+.viewer {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: calc(env(safe-area-inset-top, 0px) + var(--pitch) * 2) max(16px, env(safe-area-inset-right, 0px))
+    calc(env(safe-area-inset-bottom, 0px) + var(--pitch) * 2) max(16px, env(safe-area-inset-left, 0px));
+  border: 0;
+  background: rgb(6 9 18 / 0.96);
+  color: var(--snow);
+}
+
+.viewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: calc(var(--pitch) * 2);
+}
+
+.viewer::backdrop {
+  background: rgb(6 9 18 / 0.96);
+}
+
+.viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pitch);
+  font-family: var(--font-sign);
+  color: var(--frost);
+}
+
+.viewer-stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--pitch);
+  min-height: 0;
+}
+
+.viewer-img {
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 8px solid var(--porcelain);
+  border-radius: 2px;
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.9);
+}
+
+.viewer[data-single='true'] [data-viewer='prev'],
+.viewer[data-single='true'] [data-viewer='next'] {
+  visibility: hidden;
+}
+
+.viewer-note {
+  margin: 0;
+  min-height: 1.4em;
+  font-family: var(--font-hand);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  text-align: center;
+  color: var(--gold-soft);
+}

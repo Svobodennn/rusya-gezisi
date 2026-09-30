@@ -1,12 +1,14 @@
 // How this breaks, and the test that catches it:
 // - a venue's notes, website, photo credit or page reach innerHTML raw → hostile place, hostile photos
 // - the day's cover credit or phrase reaches innerHTML raw → hostile hero
+// - a memory's caption (typed by hand in aciklamalar.txt) reaches innerHTML raw → hostile memory
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { moreHtml } from '../../../app/js/views/stop-details.js';
 import { cardPhotosHtml } from '../../../app/js/views/stop.js';
 import { heroHtml } from '../../../app/js/views/hero.js';
+import { memoriesHtml } from '../../../app/js/views/memories.js';
 
 test('a hostile place renders as inert text', () => {
   const html = moreHtml({
@@ -47,4 +49,18 @@ test('the day cover escapes its credit and phrase', () => {
   assert.doesNotMatch(html, /<img src=x>|<b>c<\/b>|<i>n<\/i>|<u>|<s>|javascript:|" onerror="x/);
   assert.match(html, /Geziye 80 gün/);
   assert.match(html, /<span lang="ru">МОСКВА<\/span>/);
+});
+
+test('a memory\'s caption and paths stay text', () => {
+  const html = memoriesHtml([{ src: 'memories/a.webp', thumb: '" onerror="x', w: 4, h: 3, time: '18:42', caption: '<img src=x onerror=alert(1)>' }]);
+  assert.doesNotMatch(html, /<img src=x|" onerror="x/);
+  assert.match(html, /18:42 · &lt;img src=x onerror=alert\(1\)&gt;/);
+});
+
+test('a day without memories shows the empty album, one with them numbers each photo', () => {
+  assert.match(memoriesHtml([]), /memory-album--empty/);
+  assert.match(memoriesHtml(undefined), /memory-album--empty/);
+  const two = memoriesHtml([{ src: 'a', thumb: 'a', w: 4, h: 3 }, { src: 'b', thumb: 'b', w: 3, h: 4 }]);
+  assert.equal(two.match(/data-memory="/g).length, 2);
+  assert.match(two, /aria-label="Hatıra 2 \/ 2\. Büyütmek için dokunun\."/);
 });

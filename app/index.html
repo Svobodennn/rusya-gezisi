@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="css/components/stop-card.css">
   <link rel="stylesheet" href="css/components/stop-details.css">
   <link rel="stylesheet" href="css/components/free-slot.css">
+  <link rel="stylesheet" href="css/components/memories.css">
   <link rel="stylesheet" href="css/components/route-map.css">
   <link rel="stylesheet" href="css/components/map-pins.css">
   <link rel="stylesheet" href="css/components/prep.css">
@@ -106,6 +107,25 @@
         <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>Kapat
       </button>
     </div>
+  </dialog>
+
+  <dialog id="memory-viewer" class="viewer" aria-label="Hatıra">
+    <div class="viewer-bar">
+      <span class="viewer-count"></span>
+      <button class="act" type="button" data-viewer="close">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>Kapat
+      </button>
+    </div>
+    <div class="viewer-stage">
+      <button class="act viewer-step" type="button" data-viewer="prev" aria-label="Önceki fotoğraf">
+        <svg class="icon" aria-hidden="true"><use href="#i-left"/></svg>
+      </button>
+      <img class="viewer-img" alt="">
+      <button class="act viewer-step" type="button" data-viewer="next" aria-label="Sonraki fotoğraf">
+        <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
+      </button>
+    </div>
+    <p class="viewer-note"></p>
   </dialog>
 
   <script type="module" src="js/main.js"></script>

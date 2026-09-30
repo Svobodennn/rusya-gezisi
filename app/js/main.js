@@ -10,6 +10,7 @@ import { wireActions } from './ui/actions.js';
 import { setupArrowKeys, setupSwipe } from './ui/gestures.js';
 import { showLoadError } from './ui/load-error.js';
 import { createPage } from './ui/page.js';
+import { createMemoryViewer } from './ui/memory-viewer.js';
 import { createTaxiDialog } from './ui/taxi-dialog.js';
 
 const CLOCK_TICK_MS = 60_000;
@@ -26,7 +27,9 @@ async function start() {
   setupOffline();
   const ticks = loadTicks();
   const elements = pageElements();
-  const [trip, heroes, phrases] = await Promise.all(['trip', 'heroes', 'phrases'].map(loadJson).concat(mountSprite()));
+  const [trip, heroes, phrases, memories] = await Promise.all(
+    ['trip', 'heroes', 'phrases', 'memories'].map(loadJson).concat(mountSprite()),
+  );
   if (!trip) {
     showLoadError(elements.hero, elements.main);
     return;
@@ -37,13 +40,14 @@ async function start() {
   const index = indexFromHash(trip.days.length) ?? position.index;
   // The covers and phrases are decoration: without them the day still renders.
   const extras = { heroes: heroes ?? {}, phrases: phrases ?? {} };
-  const store = createStore({ trip, ticks, now, position, index });
+  const store = createStore({ trip, memories: memories ?? {}, ticks, now, position, index });
   const page = createPage({ store, elements, extras, fixedNow });
   page.render();
 
   const taxi = createTaxiDialog(document.getElementById('taxi'));
-  wireActions({ page, taxi, store });
-  setupArrowKeys(page.step, taxi.isOpen);
+  const viewer = createMemoryViewer(document.getElementById('memory-viewer'));
+  wireActions({ page, taxi, viewer, store });
+  setupArrowKeys(page.step, () => taxi.isOpen() || viewer.isOpen());
   setupSwipe(elements.main, page.step);
   setupSwipe(elements.hero, page.step);
   window.addEventListener('storage', (event) => {
