@@ -364,3 +364,12 @@ Hand-drawn SVG symbols in the sprite, recoloured through custom properties (`--m
 ## Glass Plates
 
 Every reading surface sits on frosted glass over the textile: each slot's body, the route panel and the sections below the day (`.slot-body`, `.route`, `.band`). A diagonal white sheen (11% → 0) over night at 50%, `blur(22px) saturate(1.7) brightness(0.92)`, so the shawl's roses and the net's cobalt glow through as soft colour; a 1 px white hairline at 13%, a bright top edge (inset white 24%), a faint gold inner ring, radius 14 px, inner padding `--glass-pad` (clamp 16–28 px; 14 px under 420 px). Under 700 px the night tint rises to 76% because Chromium at 2x density can drop the blur on a plate scrolled partly past the top edge, and the plate must stay readable without it (93% where `backdrop-filter` is unsupported). The next slot's plate is edged in tungsten with a warm glow. The textile (`.page-bg`, shawl 42%, net 46%) scrolls with the page inside `.page`'s isolated stacking context. Slots are separated by 40 px of textile, and the slot bulb drops by `--glass-pad` so it stays level with the time line.
+
+## Memories Album
+
+Each day ends with **Hatıralar** (воспоминания), a glass plate styled as an old family-album page: the day's own
+photos as porcelain-white prints (9 px border), set a little askew (-2°, 1.6°, -0.8° by position), each held by four
+gold paper corners (26 px triangles, gold gradient), with a Bad Script note underneath (time taken · caption). Three
+columns or more on wide screens, two on phones. Before any photo arrives the page shows three empty places, corners
+already glued in. A print opens the full-screen viewer: the photo in its own proportions inside the same white
+border, counter and close at the top, previous and next at the sides, the note in Bad Script below.
