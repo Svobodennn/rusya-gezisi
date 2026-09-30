@@ -6,10 +6,14 @@
 // - the camera leaves a stop outside the frame or zooms in to a street corner → fitCamera cases
 // - a pin's label runs off the map or over another pin → layoutPins sides
 // - a street name is drawn over a pin, off the frame, or on top of another name → placeLabels cases
+// - zooming slides the map away from the finger or cursor, or zooms without end → zoomAt cases
+// - a drag moves the map the wrong way, or off the drawing entirely → panBy and clampCamera cases
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { fanOffsets, withoutOutliers, garlandPath, fitCamera, toScreen, layoutPins, placeLabels } from '../../../app/js/map/geometry.js';
+import {
+  fanOffsets, withoutOutliers, garlandPath, fitCamera, toScreen, layoutPins, placeLabels, panBy, zoomAt, clampCamera, scaleLimits,
+} from '../../../app/js/map/geometry.js';
 
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 const moved = (points, offsets) => points.map((p, i) => ({ x: p.x + offsets[i].dx, y: p.y + offsets[i].dy }));
@@ -88,4 +92,28 @@ test('placeLabels hides a name outside the frame, over a pin, or over an earlier
   const positions = [{ x: 100, y: 50 }, { x: 110, y: 52 }, { x: 290, y: 100 }, { x: 150, y: 150 }];
   const pin = [{ x0: 140, x1: 180, y0: 130, y1: 170 }];
   assert.deepEqual(placeLabels(labels, positions, pin, size), [true, false, false, false]);
+});
+
+test('zoomAt keeps the map point under the cursor where it is, and stops at the limits', () => {
+  const size = { width: 400, height: 300 };
+  const camera = { x: 500, y: 400, s: 1 };
+  const at = { x: 300, y: 80 };
+  const under = (c) => ({ x: c.x + (at.x - size.width / 2) / c.s, y: c.y + (at.y - size.height / 2) / c.s });
+  const zoomed = zoomAt(camera, 2, at, size, { min: 0.5, max: 4 });
+  assert.equal(zoomed.s, 2);
+  assert.ok(Math.abs(under(zoomed).x - under(camera).x) < 1e-9 && Math.abs(under(zoomed).y - under(camera).y) < 1e-9);
+  assert.equal(zoomAt(camera, 100, at, size, { min: 0.5, max: 4 }).s, 4);
+  assert.equal(zoomAt(camera, 0.01, at, size, { min: 0.5, max: 4 }).s, 0.5);
+});
+
+test('a drag moves the map with the finger, and the centre stays over the drawing', () => {
+  const moved = panBy({ x: 500, y: 400, s: 2 }, 40, -20);
+  assert.deepEqual(moved, { x: 480, y: 410, s: 2 }, 'dragging right shows what lies to the left');
+  assert.deepEqual(clampCamera({ x: -50, y: 2000, s: 1 }, 900), { x: 0, y: 900, s: 1 });
+});
+
+test('scaleLimits lets the whole city fit and stops a few streets in', () => {
+  const limits = scaleLimits({ width: 500, height: 400 }, { lon0: 37.5, lat0: 55.83, k: 4278 }, 998.5);
+  const cityFits = Math.min(500 / 1000, 400 / 998.5);
+  assert.ok(limits.min < cityFits && limits.max > 10 * cityFits);
 });

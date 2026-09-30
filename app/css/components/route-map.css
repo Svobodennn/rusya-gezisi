@@ -50,7 +50,43 @@
   border-radius: 3px;
   background: #0a0f1c;
   box-shadow: inset 0 0 0 1px var(--wire), 0 24px 60px -30px rgb(0 0 0 / 0.9);
-  touch-action: pan-y pinch-zoom;
+  /* A vertical swipe scrolls the page; sideways drags and pinches move the map (map/interaction.js). */
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+
+.map.is-dragging {
+  cursor: grabbing;
+}
+
+.map-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+}
+
+.map-control {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(240 205 124 / 0.35);
+  border-radius: 50%;
+  background: rgb(10 15 28 / 0.86);
+  color: var(--snow);
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .map-control:hover {
+    border-color: var(--gold);
+    color: var(--filament);
+  }
 }
 
 @media (max-width: 1179px) {

@@ -3,6 +3,7 @@ import { svgEl } from '../lib/svg.js';
 
 const COLOUR = /^#[0-9a-f]{3,8}$/i;
 const LABEL_SIZE = { street: 10.5, default: 12.5 };
+const CONTROLS = [['zoom-in', 'i-plus', 'Yakınlaştır'], ['zoom-out', 'i-minus', 'Uzaklaştır'], ['recenter', 'i-target', 'Günün rotasına dön']];
 
 const joinPaths = (list) => (Array.isArray(list) ? list.filter((d) => typeof d === 'string').join('') : '');
 export const finite = (...values) => values.every(Number.isFinite);
@@ -24,8 +25,12 @@ export function mountFrame(root) {
   const note = document.createElement('p');
   note.className = 'map-note';
   note.hidden = true;
-  root.replaceChildren(base, overlay, pinLayer, note);
-  return { cameraGroup, overlay, labelGroup, wire, lights, leaders, anchors, pinLayer, note };
+  const controls = document.createElement('div');
+  controls.className = 'map-controls';
+  controls.innerHTML = CONTROLS.map(([action, iconId, label]) => `<button type="button" class="map-control" `
+    + `data-map-control="${action}" aria-label="${label}"><svg class="icon" aria-hidden="true"><use href="#${iconId}"/></svg></button>`).join('');
+  root.replaceChildren(base, overlay, pinLayer, note, controls);
+  return { cameraGroup, overlay, labelGroup, wire, lights, leaders, anchors, pinLayer, note, controls };
 }
 
 export function baseLayers(data) {

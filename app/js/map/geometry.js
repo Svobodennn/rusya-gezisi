@@ -40,6 +40,32 @@ export function overviewCamera({ width, height }, mapHeight = 600) {
   return { x: 500, y: mapHeight / 2, s: Math.min(width, height) / 1000 };
 }
 
+// Moving the map by a drag of dx, dy screen pixels.
+export function panBy(camera, dx, dy) {
+  return { ...camera, x: camera.x - dx / camera.s, y: camera.y - dy / camera.s };
+}
+
+// Zooming by a factor while the map point under `at` (screen pixels) stays under it; the scale stays within limits.
+export function zoomAt(camera, factor, at, { width, height }, { min, max }) {
+  const s = Math.min(max, Math.max(min, camera.s * factor));
+  const x = camera.x + (at.x - width / 2) / camera.s;
+  const y = camera.y + (at.y - height / 2) / camera.s;
+  return { x: x - (at.x - width / 2) / s, y: y - (at.y - height / 2) / s, s };
+}
+
+// How far a visitor may zoom: out to the whole city drawing, in to a few streets (about 350 m across).
+export function scaleLimits({ width, height }, projection, mapHeight = 600) {
+  return {
+    min: Math.min(width / 1000, height / mapHeight) * 0.8,
+    max: Math.min(width, height) / (350 / metresPerUnit(projection)),
+  };
+}
+
+// The camera's centre stays over the drawing, so the city can never be dragged off into the dark.
+export function clampCamera(camera, mapHeight = 600) {
+  return { ...camera, x: Math.min(1000, Math.max(0, camera.x)), y: Math.min(mapHeight, Math.max(0, camera.y)) };
+}
+
 export function interpolateCamera(from, to, t) {
   return {
     x: from.x + (to.x - from.x) * t,

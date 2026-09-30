@@ -373,3 +373,14 @@ gold paper corners (26 px triangles, gold gradient), with a Bad Script note unde
 columns or more on wide screens, two on phones. Before any photo arrives the page shows three empty places, corners
 already glued in. A print opens the full-screen viewer: the photo in its own proportions inside the same white
 border, counter and close at the top, previous and next at the sides, the note in Bad Script below.
+
+## Hands-on Maps and Photos
+
+- **Taxi sign map:** above the sign, a live Yandex map widget of the spot (Russian labels for the driver, pan and zoom),
+  12 px radius with a gold hairline, clamp(200 px, 38 vh, 440 px) tall; offline, a frost note stands in its place. The
+  address stays the largest type on the sign.
+- **Photo viewer:** one full-screen viewer for a day's memories and for a stop's pictures (tap any card photo); the
+  note reads "place · source" for stop pictures.
+- **Route map by hand:** drag with the mouse or one finger sideways, pinch or Ctrl + wheel to zoom (a plain wheel
+  and a vertical swipe still scroll the page), round 44 px controls top-right on night glass: zoom in, zoom out,
+  back to the day's route. Zoom runs from the whole city to about 350 m across.

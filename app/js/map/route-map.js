@@ -5,8 +5,10 @@ import { prefersReducedMotion } from '../lib/motion.js';
 import { tweenCamera } from './camera.js';
 import { drawCity, loadMapData } from './base-map.js';
 import {
-  fitCamera, garlandPath, isSameCamera, layoutPins, overviewCamera, placeLabels, toScreen, withoutOutliers,
+  clampCamera, fitCamera, garlandPath, isSameCamera, layoutPins, overviewCamera, panBy, placeLabels, scaleLimits,
+  toScreen, withoutOutliers, zoomAt,
 } from './geometry.js';
+import { enableMapInteraction } from './interaction.js';
 import { mountFrame } from './layers.js';
 import { pinButton, pinItems, routePins } from './pins.js';
 
@@ -136,6 +138,21 @@ export function createRouteMap(root, { onPick }) {
     arrangePins(target);
     moveTo(target, animate);
   }
+
+  // By hand: every drag or zoom lays the pins out again for the new framing; buttons and recentring glide there.
+  const bounded = (camera) => (state.data ? clampCamera(camera, state.data.height) : camera);
+  function lookAt(camera, animate = false) {
+    const target = bounded(camera);
+    arrangePins(target);
+    moveTo(target, animate);
+  }
+  enableMapInteraction({ root, controls: frame.controls }, {
+    begin: () => state.stopTween(),
+    pan: (dx, dy) => state.camera && lookAt(panBy(state.camera, dx, dy)),
+    zoom: (factor, at, { animate = false } = {}) => state.camera
+      && lookAt(zoomAt(state.camera, factor, at, size(), scaleLimits(size(), state.projection, state.data?.height)), animate),
+    recenter: () => state.camera && lookAt(targetCamera(), true),
+  });
 
   // Off screen, the chasing lights stop repainting.
   new IntersectionObserver(([entry]) => root.toggleAttribute('data-offscreen', !entry.isIntersecting)).observe(root);

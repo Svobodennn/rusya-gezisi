@@ -13,7 +13,7 @@ export function routeShellHtml() {
     <div class="map" id="map" data-mode="day" role="group"></div>
     <div class="map-foot">
       <a class="act act--accent" id="route-open" href="#" target="_blank" rel="noopener">${icon('i-route')}Rotayı Yandex'te aç</a>
-      <p class="map-credit">Harita: © OpenStreetMap katkıcıları · internetsiz çizildi</p>
+      <p class="map-credit">Harita: © OpenStreetMap katkıcıları · internetsiz çizildi · sürükleyip yakınlaştırın</p>
     </div>
     ${shelfHtml()}`;
 }
