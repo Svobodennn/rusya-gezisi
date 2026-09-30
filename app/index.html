@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rusya Gezisi</title>
+  <meta name="description" content="Moskova ve St. Petersburg gezisinin günlük planı; internetsiz çalışır.">
+  <meta name="theme-color" content="#0d1220">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gezi">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/sofia-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oranienbaum-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <!-- Cascade order matters: tokens → base → layout → components → theme → motion. -->
+  <link rel="stylesheet" href="css/base/tokens.css">
+  <link rel="stylesheet" href="css/base/base.css">
+  <link rel="stylesheet" href="css/base/layout.css">
+  <link rel="stylesheet" href="css/components/section-title.css">
+  <link rel="stylesheet" href="css/components/day-nav.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-title.css">
+  <link rel="stylesheet" href="css/components/hero-postcard.css">
+  <link rel="stylesheet" href="css/components/hero-edge.css">
+  <link rel="stylesheet" href="css/components/slot.css">
+  <link rel="stylesheet" href="css/components/stop-photos.css">
+  <link rel="stylesheet" href="css/components/stop-card.css">
+  <link rel="stylesheet" href="css/components/stop-details.css">
+  <link rel="stylesheet" href="css/components/free-slot.css">
+  <link rel="stylesheet" href="css/components/route-map.css">
+  <link rel="stylesheet" href="css/components/map-pins.css">
+  <link rel="stylesheet" href="css/components/prep.css">
+  <link rel="stylesheet" href="css/components/garland.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/taxi.css">
+  <link rel="stylesheet" href="css/components/load-error.css">
+  <link rel="stylesheet" href="css/theme/textile.css">
+  <link rel="stylesheet" href="css/theme/glass.css">
+  <link rel="stylesheet" href="css/theme/folk-shelf.css">
+  <link rel="stylesheet" href="css/base/motion.css">
+</head>
+<body data-city="moscow">
+
+  <div class="page">
+    <svg class="page-bg" aria-hidden="true" focusable="false">
+      <rect class="bg-moscow" width="100%" height="100%" fill="url(#p-shawl)"/>
+      <rect class="bg-spb" width="100%" height="100%" fill="url(#p-net)"/>
+    </svg>
+    <header id="hero" class="hero">
+      <div class="hero-inner hero-inner--loading" role="status"><span class="loading-text">Plan yükleniyor</span></div>
+    </header>
+
+    <div class="shell">
+      <aside class="aside" aria-label="Günün rotası">
+        <section id="route" class="route glass" aria-labelledby="route-title" hidden></section>
+      </aside>
+      <main id="day" class="timeline" aria-busy="true"></main>
+    </div>
+
+    <section id="prep" class="prep band glass" aria-labelledby="prep-title" hidden></section>
+
+    <section id="trip" class="trip band glass" aria-labelledby="trip-title" hidden>
+      <h2 id="trip-title" class="section-title">Gezinin tamamı<span lang="ru">вся поездка</span></h2>
+      <p class="trip-hint">Her gün üç ampul: çalışma, gezi, akşam. Bir güne dokun, o gün açılsın.</p>
+      <div class="garland-scroll" tabindex="0" role="group" aria-label="Gezi günleri">
+        <ol id="garland" class="garland"></ol>
+      </div>
+    </section>
+
+    <footer class="foot band glass">
+      <p id="offline-live" class="visually-hidden" role="status"></p>
+      <p id="offline" class="offline" data-state="pending">
+        <svg class="icon" aria-hidden="true"><use href="#i-sync"/></svg>
+        <span>Çevrimdışı kullanım hazırlanıyor</span>
+      </p>
+      <p id="update" class="update" hidden>
+        <button id="update-button" class="act act--accent" type="button">
+          <svg class="icon" aria-hidden="true"><use href="#i-sync"/></svg>Yeni sürüm hazır · Yenile
+        </button>
+      </p>
+      <p class="verified" id="verified"></p>
+      <p class="verified">Harita verisi © OpenStreetMap katkıcıları (ODbL). Fotoğrafların hakları sahiplerine aittir; kaynaklar her fotoğrafın altında.</p>
+    </footer>
+  </div>
+
+  <dialog id="taxi" class="taxi" aria-labelledby="taxi-name">
+    <div class="taxi-sign">
+      <p class="taxi-lead" lang="ru">Отвезите меня, пожалуйста, по этому адресу:</p>
+      <p class="taxi-name" id="taxi-name" lang="ru"></p>
+      <p class="taxi-address" id="taxi-address" lang="ru"></p>
+    </div>
+    <div class="taxi-actions">
+      <button class="act" type="button" id="taxi-copy">
+        <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Adresi kopyala</span>
+      </button>
+      <button class="act act--accent" type="button" id="taxi-close">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>Kapat
+      </button>
+    </div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

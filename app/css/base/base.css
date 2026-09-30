@@ -1,0 +1,81 @@
+/* Element defaults and utilities: root, body, hidden, visually-hidden, the sprite, icons, focus. */
+
+html {
+  background: var(--night);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-color: var(--glass) var(--night);
+}
+
+body {
+  margin: 0;
+  color: var(--snow);
+  font-family: var(--font-text);
+  font-size: var(--t-m);
+  line-height: 1.45;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--bulb);
+  accent-color: var(--bulb);
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--bulb);
+  color: var(--night);
+}
+
+:focus-visible {
+  outline: 2px solid var(--filament);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: rgb(255 181 74 / 0.6);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

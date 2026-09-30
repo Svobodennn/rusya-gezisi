@@ -1,0 +1,15 @@
+/* The city's edge: the Kremlin wall under Moscow, a gilded railing on porcelain under Petersburg. */
+.hero-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--edge-h);
+  pointer-events: none;
+}
+
+.hero-edge svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

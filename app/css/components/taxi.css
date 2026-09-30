@@ -1,0 +1,64 @@
+/* --------------------------------------------------------- taxi sign */
+
+.taxi {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: calc(env(safe-area-inset-top, 0px) + var(--pitch) * 4) max(24px, env(safe-area-inset-right, 0px))
+    calc(env(safe-area-inset-bottom, 0px) + var(--pitch) * 3) max(24px, env(safe-area-inset-left, 0px));
+  border: 0;
+  background: var(--night);
+  color: var(--snow);
+}
+
+.taxi[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: calc(var(--pitch) * 4);
+}
+
+.taxi::backdrop {
+  background: var(--night);
+}
+
+.taxi-sign {
+  display: grid;
+  align-content: center;
+  gap: calc(var(--pitch) * 2);
+  flex: 1;
+}
+
+.taxi-lead {
+  margin: 0;
+  font-size: var(--t-m);
+  color: var(--frost);
+}
+
+.taxi-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.taxi-address {
+  margin: 0;
+  font-size: clamp(2rem, 10vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--filament);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.taxi-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--pitch) * 1.5);
+}

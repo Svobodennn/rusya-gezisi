@@ -1,0 +1,19 @@
+# System and tool caches
+.DS_Store
+__pycache__/
+.tldr/
+.tldrignore
+
+# Local backups and generated review captures (the captures contain the photographs)
+.archive/
+.impeccable/review/
+.impeccable/baseline/
+.impeccable/hook.cache.json
+.impeccable/questions/
+
+# Raw Overpass responses: 39 MB, rebuilt on demand (python3 tools/build_maps.py)
+tools/osm-cache/
+
+# Third-party photographs: collected for personal use, rights stay with their owners
+app/img/
+mekanlar/**/*.jpg

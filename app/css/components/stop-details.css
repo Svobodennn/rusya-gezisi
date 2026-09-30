@@ -1,0 +1,86 @@
+/* ------------------------------------------------------ notes panel */
+
+.stop-more {
+  display: grid;
+  gap: calc(var(--pitch) * 2);
+  padding: calc(var(--pitch) * 2.5) calc(var(--pitch) * 2.5) calc(var(--pitch) * 2);
+  border-left: 1px solid rgb(220 171 73 / 0.45);
+  background: linear-gradient(90deg, rgb(220 171 73 / 0.06), transparent 70%);
+}
+
+.stop-more:not([hidden]) {
+  animation: reveal 0.2s var(--ease-out);
+}
+
+.stop-more[data-restored] {
+  animation: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+}
+
+.stop-notes,
+.stop-branch,
+.stop-status-note {
+  margin: 0;
+  max-width: 64ch;
+}
+
+.stop-branch {
+  font-size: var(--t-s);
+  color: var(--frost);
+}
+
+.stop-status-note {
+  font-size: var(--t-s);
+  color: var(--ash);
+}
+
+.stop-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 calc(var(--pitch) * 2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stop-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: var(--t-s);
+}
+
+.stop-links .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+}
+
+.substops {
+  display: grid;
+  gap: var(--pitch);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stop;
+}
+
+.substops li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--pitch) * 1.5);
+  counter-increment: stop;
+}
+
+.substops span::before {
+  content: counter(stop) '. ';
+  font-family: var(--font-sign);
+  font-weight: 700;
+  color: var(--bulb);
+  font-variant-numeric: tabular-nums;
+}

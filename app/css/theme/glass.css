@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------------ glass */
+
+/* Every reading surface is frosted glass over the textile: the shawl's roses and the net's cobalt glow through it
+   as soft colour, a diagonal sheen catches the light, and a bright hairline cuts the edge. */
+.glass {
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.11) 0%, rgb(255 255 255 / 0.035) 34%, rgb(255 255 255 / 0) 58%),
+    rgb(14 20 38 / 0.5);
+  border: 1px solid rgb(255 255 255 / 0.13);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.24),
+    inset 0 -1px 0 rgb(255 255 255 / 0.05),
+    inset 0 0 0 1px rgb(240 205 124 / 0.08),
+    0 30px 60px -28px rgb(0 0 0 / 0.85);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7) brightness(0.92);
+  backdrop-filter: blur(22px) saturate(1.7) brightness(0.92);
+}
+
+/* Phones get a denser tint: at 2x density Chromium can drop the blur on a plate scrolled partly past the top edge,
+   and the plate has to stay readable without it. */
+@media (max-width: 699px) {
+  .glass {
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 0.1) 0%, rgb(255 255 255 / 0.03) 34%, rgb(255 255 255 / 0) 58%),
+      rgb(14 20 38 / 0.76);
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background: rgb(11 16 29 / 0.93);
+  }
+}

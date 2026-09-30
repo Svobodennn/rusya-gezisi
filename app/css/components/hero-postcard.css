@@ -1,0 +1,86 @@
+/* The day's Russian, written by hand on a postcard in the city's colour. */
+.hero-phrase {
+  grid-area: phrase;
+  position: relative;
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 36px 26px 20px;
+  background: var(--city-deep);
+  border-radius: 3px;
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.8), inset 0 0 0 1px rgb(220 171 73 / 0.55), inset 0 0 0 5px var(--city-deep),
+    inset 0 0 0 6px rgb(220 171 73 / 0.35);
+}
+
+@media (min-width: 980px) {
+  .hero-phrase {
+    align-self: end;
+    transform: rotate(-1.6deg);
+  }
+}
+
+.hero-phrase .corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  color: var(--gold);
+}
+
+.hero-phrase .corner--tl { top: 4px; left: 4px; }
+.hero-phrase .corner--br { right: 4px; bottom: 4px; transform: scale(-1); }
+
+.phrase-ru {
+  margin: 4px 0 0;
+  font-family: var(--font-hand);
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  line-height: 1.15;
+  color: var(--snow);
+}
+
+.phrase-say {
+  margin: 0;
+  font-family: var(--font-sign);
+  font-size: var(--t-m);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-soft);
+}
+
+.phrase-tr {
+  margin: 0;
+  font-size: var(--t-s);
+  color: var(--frost);
+}
+
+/* A postage stamp with the day number: perforated edge cut from a radial mask. */
+.phrase-stamp {
+  position: absolute;
+  top: -14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 68px;
+  padding: 5px;
+  background: var(--porcelain);
+  color: var(--city);
+  text-align: center;
+  line-height: 1;
+  /* Perforation: holes on an 8px grid, kept only in the 5px band outside the solid content box. */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, radial-gradient(circle 2.6px, transparent 96%, #000) -4px -4px / 8px 8px round;
+  mask: linear-gradient(#000 0 0) content-box, radial-gradient(circle 2.6px, transparent 96%, #000) -4px -4px / 8px 8px round;
+  transform: rotate(5deg);
+}
+
+.phrase-stamp span {
+  font-family: var(--font-sign);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.phrase-stamp strong {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 400;
+}

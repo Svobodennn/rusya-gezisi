@@ -1,0 +1,22 @@
+/* Section headings speak in the city's own lettering. */
+.section-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--t-2xl);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--filament);
+  text-wrap: balance;
+}
+
+.section-title [lang='ru'] {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-sign);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}

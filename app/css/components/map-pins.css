@@ -1,0 +1,200 @@
+/* Screen-space overlay: the string of lights between the day's stops, sized in pixels at every zoom. */
+.route-wire {
+  fill: none;
+  stroke: rgb(255 214 150 / 0.42);
+  stroke-width: 2.6;
+  filter: drop-shadow(0 0 4px rgb(255 181 74 / 0.45));
+}
+
+/* A fanned-out bulb stays tied to its true spot. */
+.pin-leaders {
+  fill: none;
+  stroke: rgb(240 205 124 / 0.75);
+  stroke-width: 1;
+}
+
+.pin-anchors {
+  fill: none;
+  stroke: var(--gold-soft);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.route-lights {
+  fill: none;
+  stroke: var(--filament);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 0 13;
+  filter: drop-shadow(0 0 3px rgb(255 214 150 / 0.9));
+  animation: chase 1.6s linear infinite;
+}
+
+.map[data-offscreen] .route-lights {
+  animation-play-state: paused;
+}
+
+@keyframes chase {
+  to { stroke-dashoffset: -13; }
+}
+
+.map-pins {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pin {
+  --pin-shift: -22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  transform: translate(var(--x, -200px), var(--y, -200px)) translate(var(--pin-shift), -50%);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.pin-bulb {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 34%, #4a5577 0 16%, var(--glass) 56%, #1a2033 100%);
+  box-shadow: 0 0 0 2px #0a0f1c, 0 0 0 3px var(--wire);
+  color: var(--snow);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.pin[data-state='next'] .pin-bulb {
+  background: radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%);
+  box-shadow: 0 0 0 2px #0a0f1c, 0 0 14px 4px rgb(255 181 74 / 0.6);
+  color: var(--night);
+}
+
+.pin[data-state='lit'] .pin-bulb {
+  background: radial-gradient(circle at 50% 38%, #ffd9a0 0 14%, var(--ember) 56%, #7a4719 100%);
+  box-shadow: 0 0 0 2px #0a0f1c, 0 0 8px 1px rgb(201 128 58 / 0.6);
+  color: var(--night);
+}
+
+.pin[data-state='dead'] .pin-bulb {
+  background: radial-gradient(circle at 50% 38%, #3d352f 0 32%, #25201e 100%);
+  color: var(--ash);
+  text-decoration: line-through;
+}
+
+.pin-label {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgb(10 15 28 / 0.86);
+  box-shadow: inset 0 0 0 1px rgb(220 171 73 / 0.35);
+  font-family: var(--font-sign);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--snow);
+  white-space: nowrap;
+}
+
+.pin--left {
+  --pin-shift: calc(-100% + 22px);
+  flex-direction: row-reverse;
+}
+
+.pin--left .pin-bulb {
+  margin: 0 6px 0 0;
+}
+
+.pin[data-label='off'] .pin-label,
+.m-labels [hidden] {
+  display: none;
+}
+
+.pin.is-focus .pin-bulb,
+.pin:focus-visible .pin-bulb {
+  outline: 2px solid var(--filament);
+  outline-offset: 3px;
+}
+
+/* City mode: every stop of the city as a small bulb, no labels. */
+.map[data-mode='city'] .pin {
+  --pin-shift: -12px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/* The small city bulbs keep a glove-sized hit area. */
+.map[data-mode='city'] .pin::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+}
+
+.map[data-mode='city'] .pin-bulb {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  font-size: 0;
+}
+
+.map[data-mode='city'] .pin-label {
+  display: none;
+}
+
+.map[data-mode='city'] .pin.is-today .pin-bulb {
+  width: 22px;
+  height: 22px;
+  box-shadow: 0 0 0 2px #0a0f1c, 0 0 0 3px var(--bulb);
+}
+
+.map-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pitch) calc(var(--pitch) * 2);
+}
+
+.map-credit {
+  margin: 0;
+  font-size: var(--t-xs);
+  color: var(--frost);
+}
+
+.map-note {
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: rgb(10 15 28 / 0.86);
+  font-size: var(--t-xs);
+  color: var(--frost);
+}
+
+.map-empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: var(--frost);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-lights {
+    animation: none;
+  }
+}

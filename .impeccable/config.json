@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "app/index.html"
+        ],
+        "createdAt": "2026-09-30T12:22:47.034Z",
+        "reason": "Direction locked by the user on the decision page (New Year illuminations, seed 5f5207a8): remaining glows are the bulbs' own light (lit/next bulbs, bulb-matrix date); decorative glows on wire, thumbnails, taxi text and garland marker were removed rather than ignored"
+      }
+    ]
+  }
+}

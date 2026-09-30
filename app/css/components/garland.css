@@ -1,0 +1,145 @@
+/* ------------------------------------------------------ trip garland */
+
+.trip {
+  display: grid;
+  gap: calc(var(--pitch) * 1.5);
+}
+
+.trip-hint {
+  margin: 0;
+  font-size: var(--t-s);
+  color: var(--frost);
+}
+
+.garland-scroll {
+  margin-inline: calc(var(--glass-pad) * -1);
+  padding: calc(var(--pitch) * 5) var(--glass-pad) calc(var(--pitch) * 1.5);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: var(--glass-pad);
+}
+
+.garland {
+  position: relative;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  list-style: none;
+}
+
+.garland::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--wire);
+}
+
+.g-day {
+  position: relative;
+}
+
+.g-day > button {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  width: 46px;
+  padding: 14px 0 8px;
+  border: 0;
+  border-radius: var(--plate-radius);
+  background: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .g-day > button:hover {
+    background: rgb(255 255 255 / 0.04);
+  }
+}
+
+.g-bulbs {
+  display: grid;
+  gap: 7px;
+}
+
+.g-bulbs .bulb {
+  --bulb-size: 14px;
+}
+
+.g-bulbs .bulb[data-state='next'] {
+  box-shadow: 0 0 8px 2px rgb(255 181 74 / 0.55);
+}
+
+.g-bulbs .bulb[data-state='next']::after {
+  inset: -6px;
+}
+
+.g-date {
+  font-family: var(--font-sign);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  color: var(--frost);
+  font-variant-numeric: tabular-nums;
+}
+
+.g-month {
+  position: absolute;
+  top: -22px;
+  left: 6px;
+  font-family: var(--font-sign);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  white-space: nowrap;
+}
+
+/* Each city's stretch of the garland carries its name in Cyrillic above the wire. */
+.g-city {
+  position: absolute;
+  top: -48px;
+  left: 6px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  color: var(--filament);
+  white-space: nowrap;
+}
+
+.g-day.is-view > button {
+  background: rgb(255 181 74 / 0.1);
+  box-shadow: inset 0 0 0 1px rgb(255 181 74 / 0.35);
+}
+
+.g-day.is-view .g-date {
+  color: var(--filament);
+}
+
+.g-day.is-today::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--bulb);
+}
+
+.g-sep {
+  display: grid;
+  justify-items: center;
+  width: 40px;
+  padding-top: 8px;
+  color: var(--gold);
+}
+
+.g-sep .icon {
+  width: 20px;
+  height: 20px;
+  background: var(--night);
+}

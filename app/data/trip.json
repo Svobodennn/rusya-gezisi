@@ -1,0 +1,4558 @@
+{
+ "version": "e84dc6b4339b",
+ "generatedAt": "2026-09-30T13:36:11Z",
+ "verifiedOn": "2026-09-30",
+ "timezone": "Europe/Moscow",
+ "utcOffsetHours": 3,
+ "dayRolloverHour": 5,
+ "slots": [
+  {
+   "key": "work",
+   "label": "Çalışma",
+   "start": "08:00",
+   "end": "16:00"
+  },
+  {
+   "key": "afternoon",
+   "label": "Gezi",
+   "start": "16:00",
+   "end": "19:30"
+  },
+  {
+   "key": "evening",
+   "label": "Akşam",
+   "start": "19:30",
+   "end": "05:00"
+  }
+ ],
+ "cities": {
+  "moscow": {
+   "label": "Moskova",
+   "local": "Москва"
+  },
+  "spb": {
+   "label": "St. Petersburg",
+   "local": "Санкт-Петербург"
+  }
+ },
+ "days": [
+  {
+   "n": 1,
+   "date": "2026-12-19",
+   "weekday": "Cumartesi",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:56",
+   "sunset": "15:57",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Stars Coffee (Arbat District)",
+     "places": [
+      "msk-01"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Walk down Old Arbat Street, settle in",
+     "places": [
+      "msk-02"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Dinner at Varenichnaya №1, beers at Kamchatka",
+     "places": [
+      "msk-03",
+      "msk-04"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "date": "2026-12-20",
+   "weekday": "Pazar",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:57",
+   "sunset": "15:57",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Surf Coffee x Milyutinsky",
+     "places": [
+      "msk-05"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Red Square, St. Basil’s Cathedral, GUM",
+     "places": [
+      "msk-06",
+      "msk-07",
+      "msk-08"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Cocktails at Mendeleev Bar (Underground Speakeasy)",
+     "places": [
+      "msk-09"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "date": "2026-12-21",
+   "weekday": "Pazartesi",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:57",
+   "sunset": "15:58",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Skuratov Coffee",
+     "places": [
+      "msk-10"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Zaryadye Park & Floating Bridge",
+     "places": [
+      "msk-11"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Techno night at Propaganda Club",
+     "places": [
+      "msk-12"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "date": "2026-12-22",
+   "weekday": "Salı",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:58",
+   "sunset": "15:58",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "ABC Coffee Roasters",
+     "places": [
+      "msk-13"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "VDNKh Park & Cosmonautics Museum",
+     "places": [
+      "msk-14",
+      "msk-15"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Chill drinks and dinner at Blanc",
+     "places": [
+      "msk-16"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "date": "2026-12-23",
+   "weekday": "Çarşamba",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:58",
+   "sunset": "15:59",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Cooperative Chernyi",
+     "places": [
+      "msk-17"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Tretyakov Gallery (Russian Art)",
+     "places": [
+      "msk-18"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Bar hopping around Kitay-Gorod (Zinc, Black Swan)",
+     "places": [
+      "msk-19",
+      "msk-20",
+      "msk-21"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "date": "2026-12-24",
+   "weekday": "Perşembe",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "15:59",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Surf Coffee x Hlebozavod",
+     "places": [
+      "msk-22"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Flacon Design Factory (Tech/Art hub)",
+     "places": [
+      "msk-23"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Craft beers at Rule Taproom",
+     "places": [
+      "msk-24"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "date": "2026-12-25",
+   "weekday": "Cuma",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:00",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Roaster Coffee",
+     "places": [
+      "msk-25"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Gorky Park (Ice Skating & stroll)",
+     "places": [
+      "msk-26"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Dinner at Garage Museum Cafe",
+     "places": [
+      "msk-27"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "date": "2026-12-26",
+   "weekday": "Cumartesi",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:01",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Introvert Place",
+     "places": [
+      "msk-28"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Moscow Metro Stations Architecture Tour",
+     "places": [
+      "msk-29"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Live music at Alexey Kozlov Club",
+     "places": [
+      "msk-30"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "date": "2026-12-27",
+   "weekday": "Pazar",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:02",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Stars Coffee (Tverskaya)",
+     "places": [
+      "msk-31"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Tverskaya Street & Pushkin Square",
+     "places": [
+      "msk-32",
+      "msk-33"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Upscale drinks at Noor Electro",
+     "places": [
+      "msk-34"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "date": "2026-12-28",
+   "weekday": "Pazartesi",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "09:00",
+   "sunset": "16:03",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Skuratov Coffee",
+     "places": [
+      "msk-10"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Cathedral of Christ the Saviour",
+     "places": [
+      "msk-35"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Night out at Gipsy Bar (Red October area)",
+     "places": [
+      "msk-36"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "date": "2026-12-29",
+   "weekday": "Salı",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "09:00",
+   "sunset": "16:04",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "ABC Coffee Roasters",
+     "places": [
+      "msk-13"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Izmailovo Kremlin (Souvenir shopping)",
+     "places": [
+      "msk-37"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Casual drinks at Zinzin",
+     "places": [
+      "msk-38"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "date": "2026-12-30",
+   "weekday": "Çarşamba",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "09:00",
+   "sunset": "16:05",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Surf Coffee x Baumanskaya",
+     "places": [
+      "msk-39"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Artplay Design Center",
+     "places": [
+      "msk-40"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Pre-NYE dinner & drinks at Depo Food Mall",
+     "places": [
+      "msk-41"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "date": "2026-12-31",
+   "weekday": "Perşembe",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:06",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Cooperative Chernyi",
+     "places": [
+      "msk-17"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Rest and prep for the long night",
+     "places": []
+    },
+    {
+     "key": "evening",
+     "plan": "NYE: Red Square fireworks, then Mutabor Club",
+     "places": [
+      "msk-06",
+      "msk-42"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "date": "2027-01-01",
+   "weekday": "Cuma",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:07",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Recovery Day / No Work",
+     "places": []
+    },
+    {
+     "key": "afternoon",
+     "plan": "Walk around Chistye Prudy",
+     "places": [
+      "msk-43"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Late casual dinner at Tekhnikum",
+     "places": [
+      "msk-44"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "date": "2027-01-02",
+   "weekday": "Cumartesi",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:08",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Roaster Coffee",
+     "places": [
+      "msk-25"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Novodevichy Convent & Pond",
+     "places": [
+      "msk-45"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Tacos and mezcal at Veladora",
+     "places": [
+      "msk-46"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "date": "2027-01-03",
+   "weekday": "Pazar",
+   "city": "moscow",
+   "transit": false,
+   "sunrise": "08:59",
+   "sunset": "16:09",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Introvert Place",
+     "places": [
+      "msk-28"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Sparrow Hills (City panoramic view)",
+     "places": [
+      "msk-47"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Farewell Moscow drinks at Strelka Bar",
+     "places": [
+      "msk-48"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "date": "2027-01-04",
+   "weekday": "Pazartesi",
+   "city": "spb",
+   "transit": true,
+   "from": "moscow",
+   "sunrise": "09:59",
+   "sunset": "16:09",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Sapsan Train to St. Petersburg",
+     "places": [
+      "msk-49",
+      "spb-01"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Check-in & walk Nevsky Prospect",
+     "places": [
+      "spb-02"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Dinner at Pelmenya, drinks at Union Bar",
+     "places": [
+      "spb-03",
+      "spb-04"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "date": "2027-01-05",
+   "weekday": "Salı",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:58",
+   "sunset": "16:10",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Mad Espresso Team",
+     "places": [
+      "spb-05"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "State Hermitage Museum (Winter Palace)",
+     "places": [
+      "spb-06"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Cocktails at El Copitas (Book in advance)",
+     "places": [
+      "spb-07"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "date": "2027-01-06",
+   "weekday": "Çarşamba",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:57",
+   "sunset": "16:12",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Surf Coffee x Gorokhovaya",
+     "places": [
+      "spb-08"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Church of the Savior on Spilled Blood",
+     "places": [
+      "spb-09"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Christmas Eve walk, drinks at Mishka Bar",
+     "places": [
+      "spb-10"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "date": "2027-01-07",
+   "weekday": "Perşembe",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:56",
+   "sunset": "16:14",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Civil Coffee Bar",
+     "places": [
+      "spb-11"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Orthodox Christmas: Kazan Cathedral",
+     "places": [
+      "spb-12"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Traditional dinner at Severyanin",
+     "places": [
+      "spb-13"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "date": "2027-01-08",
+   "weekday": "Cuma",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:55",
+   "sunset": "16:16",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Smena Cafe",
+     "places": [
+      "spb-14"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Peter and Paul Fortress",
+     "places": [
+      "spb-15"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Electronic music at Stackenschneider",
+     "places": [
+      "spb-16"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "date": "2027-01-09",
+   "weekday": "Cumartesi",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:54",
+   "sunset": "16:18",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Verle Garden",
+     "places": [
+      "spb-17"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "New Holland Island (Ice Skating)",
+     "places": [
+      "spb-18"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Drinks at Orthodox Russian Bar",
+     "places": [
+      "spb-19"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "date": "2027-01-10",
+   "weekday": "Pazar",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:53",
+   "sunset": "16:20",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Aster Cafe",
+     "places": [
+      "spb-20"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "State Russian Museum",
+     "places": [
+      "spb-21"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Bar hopping along Rubinstein Street",
+     "places": [
+      "spb-22"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "date": "2027-01-11",
+   "weekday": "Pazartesi",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:52",
+   "sunset": "16:22",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Mad Espresso Team",
+     "places": [
+      "spb-05"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Mariinsky Theatre area",
+     "places": [
+      "spb-23"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Late night rave at Blank Club",
+     "places": [
+      "spb-24"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "date": "2027-01-12",
+   "weekday": "Salı",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:51",
+   "sunset": "16:24",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Surf Coffee x Fontanka",
+     "places": [
+      "spb-25"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "St. Isaac's Cathedral & Colonnade",
+     "places": [
+      "spb-26"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Casual evening at Golitsyn Hall",
+     "places": [
+      "spb-27"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "date": "2027-01-13",
+   "weekday": "Çarşamba",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:49",
+   "sunset": "16:26",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Civil Coffee Bar",
+     "places": [
+      "spb-11"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Sevkabel Port",
+     "places": [
+      "spb-28"
+     ]
+    },
+    {
+     "key": "evening",
+     "plan": "Farewell party at Griboedov Club",
+     "places": [
+      "spb-29"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "date": "2027-01-14",
+   "weekday": "Perşembe",
+   "city": "spb",
+   "transit": false,
+   "sunrise": "09:48",
+   "sunset": "16:28",
+   "slots": [
+    {
+     "key": "work",
+     "plan": "Smena Cafe",
+     "places": [
+      "spb-14"
+     ]
+    },
+    {
+     "key": "afternoon",
+     "plan": "Last-minute shopping",
+     "places": []
+    },
+    {
+     "key": "evening",
+     "plan": "Head to Pulkovo Airport",
+     "places": [
+      "spb-30"
+     ]
+    }
+   ]
+  }
+ ],
+ "places": {
+  "msk-01": {
+   "id": "msk-01",
+   "name": "Stars Coffee (Arbat)",
+   "local": "Stars Coffee (Новый Арбат)",
+   "nameEn": "Stars Coffee – Novy Arbat",
+   "branch": "Novy Arbat 11с1 – zincirin ilk/amiral şubesi (Arbatskaya metrosu, Arbat Caddesi'ne ~200 m)",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Starbucks'ın yerini alan Rus zincirinin Ağustos 2022'de açılan ilk şubesi; her gün 08:00–23:00, Wi‑Fi var. Alternatif: yaya Arbat Caddesi üzerindeki şube (ул. Арбат, 19; 08:00–23:00, 2GIS'te 4.9).",
+   "address": "ул. Новый Арбат, 11, стр. 1, 1 этаж, Москва",
+   "lat": 55.752251,
+   "lon": 37.594922,
+   "website": "https://stars-coffee.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-01-1.webp",
+     "thumb": "img/msk-01-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "sparklespotlight.ru",
+     "page": "https://sparklespotlight.ru/2022/08/stars-coffee/"
+    },
+    {
+     "src": "img/msk-01-2.webp",
+     "thumb": "img/msk-01-2-t.webp",
+     "w": 960,
+     "h": 432,
+     "credit": "timeout.ru",
+     "page": "https://www.timeout.ru/msk/place/stars-coffee"
+    },
+    {
+     "src": "img/msk-01-3.webp",
+     "thumb": "img/msk-01-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "lifestyle.kompas.com",
+     "page": "https://lifestyle.kompas.com/read/2022/08/23/103614620/serupa-tapi-tak-sama-stars-coffee-starbucks-versi-rusia-baru-dibuka-di"
+    }
+   ]
+  },
+  "msk-02": {
+   "id": "msk-02",
+   "name": "Old Arbat Street",
+   "local": "Старый Арбат (улица Арбат)",
+   "nameEn": "Old Arbat Street",
+   "branch": null,
+   "category": "street",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Moskova'nın en ünlü ~1 km'lik yaya caddesi: Arbatskaya Meydanı'ndan Smolenskaya Meydanı'na uzanıyor; sokak sanatçıları, ressam tezgâhları, hediyelik eşya dükkânları ve kafelerle dolu. Pin caddenin orta kesiminde (Arbat 30–36 civarı); iki ucunda Arbatskaya ve Smolenskaya metroları var.",
+   "address": "улица Арбат, Москва",
+   "lat": 55.749167,
+   "lon": 37.590556,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-02-1.webp",
+     "thumb": "img/msk-02-1-t.webp",
+     "w": 960,
+     "h": 605,
+     "credit": "mr.moscow",
+     "page": "https://mr.moscow/mandarinovoe-nastroenie-arbat-prevratilsya-v-novogodnyuyu-skazku/"
+    },
+    {
+     "src": "img/msk-02-2.webp",
+     "thumb": "img/msk-02-2-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "vladimirbelev.ru",
+     "page": "https://vladimirbelev.ru/staryj-arbat-moskva-dostoprimechatelnosti"
+    },
+    {
+     "src": "img/msk-02-3.webp",
+     "thumb": "img/msk-02-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "masterok.livejournal.com",
+     "page": "https://masterok.livejournal.com/1535006.html"
+    }
+   ]
+  },
+  "msk-03": {
+   "id": "msk-03",
+   "name": "Varenichnaya No.1",
+   "local": "Вареничная №1",
+   "nameEn": "Varenichnaya No.1",
+   "branch": "Arbat, 29 (Stary Arbat şubesi)",
+   "category": "restaurant",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Sovyet nostaljisi dekorlu, uygun fiyatlı Rus-Ukrayna mutfağı zinciri (varenik, pelmeni, borş). Arbat 29 şubesi yaya caddesi Stary Arbat üzerinde; her gün 11:00–23:00, Aralık 2025 tarihli yorumlarla açık görünüyor.",
+   "address": "ул. Арбат, 29, Москва",
+   "lat": 55.749904,
+   "lon": 37.593388,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-03-1.webp",
+     "thumb": "img/msk-03-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "varenichnaya1.ru",
+     "page": "https://varenichnaya1.ru/tpost/15x4onuaa1-varenichnaya-1-arbat"
+    },
+    {
+     "src": "img/msk-03-2.webp",
+     "thumb": "img/msk-03-2-t.webp",
+     "w": 948,
+     "h": 631,
+     "credit": "restoran.ru",
+     "page": "https://www.restoran.ru/msk/detailed/restaurants/varenichnaya1-arbat/"
+    },
+    {
+     "src": "img/msk-03-3.webp",
+     "thumb": "img/msk-03-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/varenichnaya-1-arbat"
+    }
+   ]
+  },
+  "msk-04": {
+   "id": "msk-04",
+   "name": "Kamchatka (beer bar)",
+   "local": "Камчатка (пивбар)",
+   "nameEn": "Kamchatka beer bar",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "2020 sonunda kapandı"
+   },
+   "statusNote": "Kalıcı olarak kapandı: Moskvich Mag (Ocak 2025) barın 2020 sonunda kapandığını yazıyor, Yandex Haritalar 'Shut down' gösteriyor. 2024'te Konyushkovskaya'da açılan 'Kamchatka' bistro-grill de bir yıl dolmadan kapandı.",
+   "notes": "Arkadiy Novikov'un Sovyet birahanesi tarzındaki ucuz bira barıydı (Kuznetsky Most 7). Artık yok; yerine yakındaki başka bir bira barı planlanmalı.",
+   "address": "ул. Кузнецкий Мост, 7, Москва",
+   "lat": 55.761798,
+   "lon": 37.619079,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-04-1.webp",
+     "thumb": "img/msk-04-1-t.webp",
+     "w": 640,
+     "h": 960,
+     "credit": "posta-magazine.ru",
+     "page": "https://posta-magazine.ru/article/in-the-center-of-moscow-to-open-a-bar-kamchatka/"
+    },
+    {
+     "src": "img/msk-04-2.webp",
+     "thumb": "img/msk-04-2-t.webp",
+     "w": 620,
+     "h": 413,
+     "credit": "the-village.ru",
+     "page": "https://www.the-village.ru/food/new-place/116389-novoe-mesto-pivbar-kamchatka"
+    },
+    {
+     "src": "img/msk-04-3.webp",
+     "thumb": "img/msk-04-3-t.webp",
+     "w": 948,
+     "h": 630,
+     "credit": "restoran.ru",
+     "page": "https://www.restoran.ru/msk/detailed/restaurants/kamchatka-pivbar/"
+    }
+   ]
+  },
+  "msk-05": {
+   "id": "msk-05",
+   "name": "Surf Coffee x Milyutinsky",
+   "local": "Surf Coffee x G-Spot",
+   "nameEn": "Surf Coffee x G-Spot",
+   "branch": "Surf Coffee x G-Spot – Мясницкая 16, Милютинский пер. ağzında (~60 m); zincirin Moskova'daki ilk şubesi",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": {
+    "level": "info",
+    "text": "Bu adla şube yok; en yakın Surf: G-Spot, Myasnitskaya 16"
+   },
+   "statusNote": null,
+   "notes": "'Surf Coffee x Milyutinsky' adında bir şube yok; Milyutinsky Sokağı'nın Myasnitskaya'ya çıktığı köşedeki tek Surf şubesi G-Spot. Hafta içi 08:00–23:00, hafta sonu 09/10:00–23:00; Lubyanka/Chistye Prudy metrolarına yakın, HSE öğrencileriyle kalabalık olabilir.",
+   "address": "Мясницкая ул., 16, 1 этаж, Москва",
+   "lat": 55.760984,
+   "lon": 37.632282,
+   "website": "https://www.surfcoffee.ru/surf-coffee-stores/moscow-gspot",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-05-1.webp",
+     "thumb": "img/msk-05-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "yandex.com",
+     "page": "https://yandex.com/maps/org/surf_coffee_x_g_spot/1677462086/"
+    },
+    {
+     "src": "img/msk-05-2.webp",
+     "thumb": "img/msk-05-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "zoon.ru",
+     "page": "https://zoon.ru/msk/restaurants/kofejnya_surf_coffee_x_g-spot_na_metro_lubyanka/"
+    },
+    {
+     "src": "img/msk-05-3.webp",
+     "thumb": "img/msk-05-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "surfcoffee.ru",
+     "page": "https://www.surfcoffee.ru/surf-coffee-stores/moscow-gspot"
+    }
+   ]
+  },
+  "msk-06": {
+   "id": "msk-06",
+   "name": "Red Square",
+   "local": "Красная площадь",
+   "nameEn": "Red Square",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Yılbaşı gecesi: 2025/26'da Kızıl Meydan güvenlik gerekçesiyle 31 Aralık 18:00 – 1 Ocak 10:00 arası ziyaretçilere kapatıldı (yalnızca GUM buz pisti çalıştı); Kommersant'a göre aynı kısıtlama 2023 ve 2024'te de uygulandı ve Moskova havai fişek gösterisi de yapmadı. 2026/27 için de benzer kapanma beklenmeli — 31 Aralık akşamı için alternatif plan yapın.",
+   "notes": "Moskova'nın ana meydanı: Kremlin duvarı, Lenin Anıtmezarı, Aziz Vasil Katedrali, GUM ve Tarih Müzesi çevresinde. Kışın meydanda GUM buz pisti ve yılbaşı panayırı kuruluyor; meydan etkinlik/prova günlerinde geçici olarak kapatılabiliyor.",
+   "address": "Красная площадь, Москва",
+   "lat": 55.754167,
+   "lon": 37.62,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-06-1.webp",
+     "thumb": "img/msk-06-1-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "wallpapercave.com",
+     "page": "https://wallpapercave.com/red-square-wallpapers"
+    },
+    {
+     "src": "img/msk-06-2.webp",
+     "thumb": "img/msk-06-2-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "wallpapers.com",
+     "page": "https://wallpapers.com/wallpapers/moscow-russia-red-square-winter-dq5osswevtirposr.html"
+    },
+    {
+     "src": "img/msk-06-3.webp",
+     "thumb": "img/msk-06-3-t.webp",
+     "w": 626,
+     "h": 418,
+     "credit": "freepik.com",
+     "page": "https://www.freepik.com/premium-photo/red-square-moscow-after-snowfall_36091495.htm"
+    }
+   ]
+  },
+  "msk-07": {
+   "id": "msk-07",
+   "name": "St. Basil's Cathedral",
+   "local": "Покровский собор (Храм Василия Блаженного)",
+   "nameEn": "St. Basil's Cathedral",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "16. yüzyıldan kalma rengârenk soğan kubbeli katedral; Devlet Tarih Müzesi'ne bağlı müze olarak biletle geziliyor. Kaynaklara göre kasım–aralık 11:00–17:00 açık; kasa ve giriş kapanıştan 1 saat önce kapanıyor, her ayın ilk çarşambası kapalı — içeri girmek için 16:00'dan önce varın.",
+   "address": "Красная площадь, 7, Москва",
+   "lat": 55.7525,
+   "lon": 37.623056,
+   "website": "https://shm.ru/museum/hvb/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-07-1.webp",
+     "thumb": "img/msk-07-1-t.webp",
+     "w": 683,
+     "h": 960,
+     "credit": "fity.club",
+     "page": "https://fity.club/lists/suggestions/st.-basils-cathedral-snow/"
+    },
+    {
+     "src": "img/msk-07-2.webp",
+     "thumb": "img/msk-07-2-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "vulplex.com",
+     "page": "https://vulplex.com/wallpaper/saint-basils-cathedral-twilight-snow-moscow-wallpaper/"
+    },
+    {
+     "src": "img/msk-07-3.webp",
+     "thumb": "img/msk-07-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "russiau.com",
+     "page": "http://russiau.com/basils-cathedral-moscow-visits-tickets-schedules/"
+    }
+   ]
+  },
+  "msk-08": {
+   "id": "msk-08",
+   "name": "GUM",
+   "local": "ГУМ",
+   "nameEn": "GUM department store",
+   "branch": null,
+   "category": "shopping",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kızıl Meydan'ın doğu cephesini kaplayan 19. yy sonu pasaj mağaza; cam tavanlı galerileri, kafe-restoranları ve kışın ışıklandırılan cephesiyle ünlü. OSM'e göre her gün 10:00–22:00 açık; meydandaki GUM buz pisti de kışın buradan işletiliyor.",
+   "address": "Красная площадь, 3, Москва",
+   "lat": 55.754703,
+   "lon": 37.621438,
+   "website": "https://www.gum.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-08-1.webp",
+     "thumb": "img/msk-08-1-t.webp",
+     "w": 960,
+     "h": 717,
+     "credit": "russlande.de",
+     "page": "https://russlande.de/moscow-gum-shopping-mall/"
+    },
+    {
+     "src": "img/msk-08-2.webp",
+     "thumb": "img/msk-08-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "petersfoodadventures.com",
+     "page": "https://petersfoodadventures.com/moscow-in-winter/"
+    },
+    {
+     "src": "img/msk-08-3.webp",
+     "thumb": "img/msk-08-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "themoscowtimes.com",
+     "page": "https://www.themoscowtimes.com/2022/12/02/darkest-time-of-the-year-moscows-lavish-lights-and-ukraines-blackout-a79560"
+    }
+   ]
+  },
+  "msk-09": {
+   "id": "msk-09",
+   "name": "Mendeleev Bar",
+   "local": "Mendeleev. Bar & Music (Менделеев)",
+   "nameEn": "Mendeleev Bar & Music",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Petrovka'da, Lucky Noodles adlı küçük Çin erişte dükkânının içindeki gizli kapıdan girilen tonozlu bodrum speakeasy kokteyl barı. Her gün 18:00'de açılıyor; DJ setleri ve canlı müzik geceleri var.",
+   "address": "ул. Петровка, 20/1, Москва",
+   "lat": 55.764149,
+   "lon": 37.617628,
+   "website": "https://mendeleev.bar/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-09-1.webp",
+     "thumb": "img/msk-09-1-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "mendeleev.bar",
+     "page": "https://mendeleev.bar/"
+    },
+    {
+     "src": "img/msk-09-2.webp",
+     "thumb": "img/msk-09-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/mendeleev-bar-music"
+    },
+    {
+     "src": "img/msk-09-3.webp",
+     "thumb": "img/msk-09-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "mendeleevbar.ru",
+     "page": "https://mendeleevbar.ru/"
+    }
+   ]
+  },
+  "msk-10": {
+   "id": "msk-10",
+   "name": "Skuratov Coffee",
+   "local": "Skuratov Coffee (Калашный переулок)",
+   "nameEn": "Skuratov Coffee – Kalashny Lane",
+   "branch": "Калашный пер. 5 – Arbatskaya metrosu yakını; Kurtarıcı İsa Katedrali'ne ~15 dk yürüyüş, Zaryadye'ye ~25 dk yürüyüş / 2 durak metro",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Omsk çıkışlı nitelikli kahve zincirinin Moskova'daki ilk kafesi; her gün 06:55–22:05, 2GIS'te 5.0 (567 yorum). Zaryadye'ye daha yakın alternatif: Большой Овчинниковский пер. 16 (ТДЦ «Аркадия», laptopla çalışmaya uygun).",
+   "address": "Калашный пер., 5, 1 этаж (БЦ «Калашный»), Москва",
+   "lat": 55.755107,
+   "lon": 37.60147,
+   "website": "https://skuratovcoffee.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-10-1.webp",
+     "thumb": "img/msk-10-1-t.webp",
+     "w": 960,
+     "h": 575,
+     "credit": "theartnewspaper.ru",
+     "page": "https://www.theartnewspaper.ru/posts/20251107-nher/"
+    },
+    {
+     "src": "img/msk-10-2.webp",
+     "thumb": "img/msk-10-2-t.webp",
+     "w": 960,
+     "h": 600,
+     "credit": "zoon.ru",
+     "page": "https://zoon.ru/msk/restaurants/kofejnya_skuratov_coffee_na_metro_arbatskaya_filevskaya_liniya/"
+    },
+    {
+     "src": "img/msk-10-3.webp",
+     "thumb": "img/msk-10-3-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "ru.pinterest.com",
+     "page": "https://ru.pinterest.com/pin/631137335365555973/"
+    }
+   ]
+  },
+  "msk-11": {
+   "id": "msk-11",
+   "name": "Zaryadye Park & Floating Bridge",
+   "local": "Парк «Зарядье»",
+   "nameEn": "Zaryadye Park",
+   "branch": null,
+   "category": "park",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kremlin'in hemen yanında 2017'de açılan modern park; Moskova Nehri üzerine V şeklinde çıkıntı yapan 'Paryaşçiy Most' (Süzülen Köprü) Kremlin ve nehir manzarası sunuyor. Park 7/24 açık ve ücretsiz; kaynaklara göre iç mekân pavyonları pazartesi 12:00–21:00, diğer günler 10:00–21:00.",
+   "address": "улица Варварка, 6, стр. 1, Москва",
+   "lat": 55.751217,
+   "lon": 37.628935,
+   "website": "https://www.zaryadyepark.ru/",
+   "stops": [
+    {
+     "name": "Парящий мост (Floating Bridge)",
+     "lat": 55.749503,
+     "lon": 37.629405
+    }
+   ],
+   "photos": [
+    {
+     "src": "img/msk-11-1.webp",
+     "thumb": "img/msk-11-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "moskultura.ru",
+     "page": "https://moskultura.ru/mesta/paryashhij-most-v-parke-zaryade"
+    },
+    {
+     "src": "img/msk-11-2.webp",
+     "thumb": "img/msk-11-2-t.webp",
+     "w": 960,
+     "h": 533,
+     "credit": "russiable.com",
+     "page": "https://russiable.com/bridges-moscow/"
+    },
+    {
+     "src": "img/msk-11-3.webp",
+     "thumb": "img/msk-11-3-t.webp",
+     "w": 960,
+     "h": 502,
+     "credit": "pikabu.ru",
+     "page": "https://pikabu.ru/story/zima_zaryade_paryashchiy_most_5702997"
+    }
+   ]
+  },
+  "msk-12": {
+   "id": "msk-12",
+   "name": "Propaganda Club",
+   "local": "Пропаганда",
+   "nameEn": "Propaganda Club",
+   "branch": null,
+   "category": "club",
+   "city": "moscow",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Temmuz 2024'te, 27 yıl sonra kapandı"
+   },
+   "statusNote": "Kalıcı olarak kapandı: 27 yıl sonra Temmuz 2024 sonunda kapandı (Kommersant, Forbes). BFM Şubat 2025'te mekânın 300 milyon rubleye satışa çıkarıldığını yazdı; Yandex Haritalar 'Shut down', OSM de kapalı (was:amenity) gösteriyor.",
+   "notes": "1997'den beri Kitay-gorod'da açık olan, Moskova'nın en eski house/techno kulüplerinden biriydi (gündüz kafe, gece kulüp). Techno gecesi için bölgedeki başka bir kulüp seçilmeli.",
+   "address": "Большой Златоустинский пер., 7с1, Москва",
+   "lat": 55.758554,
+   "lon": 37.632779,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-12-1.webp",
+     "thumb": "img/msk-12-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "daily.afisha.ru",
+     "page": "https://daily.afisha.ru/news/89130-klub-propaganda-i-kafe-lyudi-kak-lyudi-obyavili-o-zakrytii/"
+    },
+    {
+     "src": "img/msk-12-2.webp",
+     "thumb": "img/msk-12-2-t.webp",
+     "w": 960,
+     "h": 384,
+     "credit": "vk.com",
+     "page": "https://vk.com/event226377113"
+    },
+    {
+     "src": "img/msk-12-3.webp",
+     "thumb": "img/msk-12-3-t.webp",
+     "w": 960,
+     "h": 674,
+     "credit": "onparty.app",
+     "page": "https://onparty.app/moscow/propaganda/"
+    }
+   ]
+  },
+  "msk-13": {
+   "id": "msk-13",
+   "name": "ABC Coffee Roasters",
+   "local": "ABC Coffee Roasters (Покровка)",
+   "nameEn": "ABC Coffee Roasters – Pokrovka",
+   "branch": "Покровка 7/9-11с1 – zincirin ilk kafesi (Kitay-gorod metrosu; turuncu hatla VDNKh'ye aktarmasız, Kurskaya'dan mavi hatla İzmailovo'ya)",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Japon minimalizmi tarzındaki nitelikli kahve zincirinin ilk kafesi; hafta içi 08:00–22:00, hafta sonu 10:00–22:00, 2GIS'te 4.9. Yorumlarda oturma yerinin az olduğu belirtiliyor; kalabalıksa yakındaki Милютинский пер. 3 şubesi alternatif.",
+   "address": "ул. Покровка, 7/9-11, стр. 1, 1 этаж, Москва",
+   "lat": 55.759009,
+   "lon": 37.642162,
+   "website": "https://abc-roasters.com/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-13-1.webp",
+     "thumb": "img/msk-13-1-t.webp",
+     "w": 640,
+     "h": 960,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/restaurant/abc-coffee-roasters-455004/"
+    },
+    {
+     "src": "img/msk-13-2.webp",
+     "thumb": "img/msk-13-2-t.webp",
+     "w": 550,
+     "h": 733,
+     "credit": "tripadvisor.ru",
+     "page": "https://www.tripadvisor.ru/Restaurant_Review-g298484-d15218027-Reviews-ABC_Coffee_Roasters-Moscow_Central_Russia.html"
+    },
+    {
+     "src": "img/msk-13-3.webp",
+     "thumb": "img/msk-13-3-t.webp",
+     "w": 960,
+     "h": 637,
+     "credit": "kf.expert",
+     "page": "https://kf.expert/retail/pokrovka-d-7-9-11-k-1-s230442"
+    }
+   ]
+  },
+  "msk-14": {
+   "id": "msk-14",
+   "name": "VDNKh",
+   "local": "ВДНХ — Главный вход (арка)",
+   "nameEn": "VDNKh – Main Entrance Arch",
+   "branch": null,
+   "category": "park",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Sovyet dönemi dev sergi parkı; pin 'Traktörcü ve Kolhozcu Kadın' heykelli Ana Giriş Kemeri'nde. Arazi 7/24 açık ve ücretsiz; kışın Merkez Pavyon önünde büyük buz pisti kuruluyor. Kozmonotik Müzesi (msk-15) kemerin ~450 m güneyinde, VDNKh metrosunun yanında.",
+   "address": "проспект Мира, 119, Москва",
+   "lat": 55.826276,
+   "lon": 37.637608,
+   "website": "https://vdnh.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-14-1.webp",
+     "thumb": "img/msk-14-1-t.webp",
+     "w": 960,
+     "h": 768,
+     "credit": "urixblog.com",
+     "page": "https://urixblog.com/en/"
+    },
+    {
+     "src": "img/msk-14-2.webp",
+     "thumb": "img/msk-14-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "tripex.ru",
+     "page": "https://tripex.ru/chto-posmotret-na-vdnh-v-moskve/"
+    },
+    {
+     "src": "img/msk-14-3.webp",
+     "thumb": "img/msk-14-3-t.webp",
+     "w": 960,
+     "h": 641,
+     "credit": "rewizor.ru",
+     "page": "https://www.rewizor.ru/other/news-copy/katok-vdnh-stanet-glavnoy-ploshchadkoy-dnya-zimnih-vidov-sporta/"
+    }
+   ]
+  },
+  "msk-15": {
+   "id": "msk-15",
+   "name": "Museum of Cosmonautics",
+   "local": "Мемориальный музей космонавтики",
+   "nameEn": "Memorial Museum of Cosmonautics",
+   "branch": null,
+   "category": "museum",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "'Uzayı Fethedenler' titanyum roket anıtının altındaki uzay müzesi: Sputnik, Vostok kapsülü, Gagarin ve Sovyet uzay programı eşyaları. Pazartesi kapalı; salı–pazar 10:00–19:00 (kasa 18:30), perşembe 21:00'e kadar — 22 Aralık salı ziyareti için uygun.",
+   "address": "проспект Мира, 111, Москва",
+   "lat": 55.822571,
+   "lon": 37.639595,
+   "website": "http://www.kosmo-museum.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-15-1.webp",
+     "thumb": "img/msk-15-1-t.webp",
+     "w": 960,
+     "h": 480,
+     "credit": "Wikimedia Commons · Музей Космонавтики from Россия · CC0",
+     "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D0%BD%D1%83%D0%BC%D0%B5%D0%BD%D1%82_%D0%9F%D0%BE%D0%BA%D0%BE%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC_%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D0%B0._%D0%92%D1%85%D0%BE%D0%B4_%D0%B2_%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%92%D0%94%D0%9D%D0%A5._(14746777384).jpg"
+    },
+    {
+     "src": "img/msk-15-2.webp",
+     "thumb": "img/msk-15-2-t.webp",
+     "w": 960,
+     "h": 611,
+     "credit": "russiable.com",
+     "page": "https://russiable.com/museum-cosmonautics-moscow/"
+    },
+    {
+     "src": "img/msk-15-3.webp",
+     "thumb": "img/msk-15-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · Денис Пономарев · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BA%D0%BE%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC_%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D0%B0.jpg"
+    }
+   ]
+  },
+  "msk-16": {
+   "id": "msk-16",
+   "name": "Blanc",
+   "local": "Blanc (Бланк)",
+   "nameEn": "Blanc",
+   "branch": null,
+   "category": "restaurant",
+   "city": "moscow",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Ocak 2026'da kapandı"
+   },
+   "statusNote": "Kalıcı olarak kapandı: 25 Aralık 2025'te kapanışını duyurdu (Vedomosti, Afisha Daily), Ocak 2026 tatilindeki veda etkinlikleriyle kapandı; sebep binanın işlevinin değişmesi. Yandex Haritalar 'Shut down', OSM de kapalı (was:amenity) gösteriyor; taşınma haberi yok.",
+   "notes": "Kitay-gorod yakınında, Hohlovsky sokağındaki tarihi avlulu binada, bitki dolu showroom tarzı Avrupa mutfağı restoranı ve etkinlik mekânıydı (2019–2026). Moskova'da bu adla bilinen en tanınmış mekân bu; Trehgorny Val'deki 'Blanc Cafe' 2021'de kapanmıştı, 'Cheval Blanc' ise farklı bir mekân.",
+   "address": "Хохловский пер., 7-9с2, Москва",
+   "lat": 55.755955,
+   "lon": 37.643158,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-16-1.webp",
+     "thumb": "img/msk-16-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "onparty.app",
+     "page": "https://onparty.app/moscow/blanc/"
+    },
+    {
+     "src": "img/msk-16-2.webp",
+     "thumb": "img/msk-16-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "chef.ru",
+     "page": "https://chef.ru/place/blanc/"
+    },
+    {
+     "src": "img/msk-16-3.webp",
+     "thumb": "img/msk-16-3-t.webp",
+     "w": 750,
+     "h": 556,
+     "credit": "jazzmap.ru",
+     "page": "https://www.jazzmap.ru/place/blanc.php"
+    }
+   ]
+  },
+  "msk-17": {
+   "id": "msk-17",
+   "name": "Cooperative Chernyi",
+   "local": "Кооператив «Чёрный»",
+   "nameEn": "Cooperative Chernyi (Kooperativ Chyornyi)",
+   "branch": "Лялин пер. 5с1 – kooperatifin tek/ana kafesi (Kurskaya / Chistye Prudy metrolarına ~10 dk)",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kendi kahvesini kavuran, çalışan ortaklı ünlü nitelikli kahve kooperatifinin büyük kafesi; hafta içi 08:00–23:00, hafta sonu 10:00–23:00 (OSM'de pazartesi 19:00'a kadar görünüyor). Ücretsiz Wi‑Fi; 2GIS'te 4.9.",
+   "address": "Лялин пер., 5, стр. 1, 1 этаж, Москва",
+   "lat": 55.76002,
+   "lon": 37.651832,
+   "website": "https://chernyi.coffee/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-17-1.webp",
+     "thumb": "img/msk-17-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "chernyi.coffee",
+     "page": "https://chernyi.coffee/coffeeshop"
+    },
+    {
+     "src": "img/msk-17-2.webp",
+     "thumb": "img/msk-17-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "invme.com",
+     "page": "https://invme.com/en/blogs/content/samie-uyutnie-kofeini-v-moskve"
+    },
+    {
+     "src": "img/msk-17-3.webp",
+     "thumb": "img/msk-17-3-t.webp",
+     "w": 640,
+     "h": 960,
+     "credit": "stoneforest.ru",
+     "page": "https://stoneforest.ru/look/allabout/kofe/novaya-bolshaya-kofejnya-kooperativa-chyornyj/"
+    }
+   ]
+  },
+  "msk-18": {
+   "id": "msk-18",
+   "name": "State Tretyakov Gallery",
+   "local": "Государственная Третьяковская галерея (Лаврушинский переулок)",
+   "nameEn": "State Tretyakov Gallery (Lavrushinsky Lane)",
+   "branch": null,
+   "category": "museum",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Plandaki 23 Aralık bir çarşamba: müze 18:00'de kapanıyor, son giriş 17:00 — 16:00'da başlayan program için çok dar. Perşembe–cumartesi 21:00'e kadar açık olduğundan ziyareti 24 veya 26 Aralık'a kaydırmak daha mantıklı.",
+   "notes": "Rus sanatının en büyük koleksiyonu (ikonalardan 20. yy başına); ana tarihi bina Lavruşinski sokağında. Pazartesi kapalı; salı, çarşamba ve pazar 10:00–18:00, perşembe–cumartesi 10:00–21:00; kasa ve giriş kapanıştan 1 saat önce kapanıyor.",
+   "address": "Лаврушинский переулок, 10, Москва",
+   "lat": 55.741389,
+   "lon": 37.620864,
+   "website": "https://www.tretyakovgallery.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-18-1.webp",
+     "thumb": "img/msk-18-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "matadornetwork.com",
+     "page": "https://matadornetwork.com/read/see-do-moscow/"
+    },
+    {
+     "src": "img/msk-18-2.webp",
+     "thumb": "img/msk-18-2-t.webp",
+     "w": 960,
+     "h": 637,
+     "credit": "maksponomarev.ru",
+     "page": "https://maksponomarev.ru/blog/tretyakovskaya-galereya-lavrushinskij-per-10-postoyannaya-ekspozitsiya-v-10"
+    },
+    {
+     "src": "img/msk-18-3.webp",
+     "thumb": "img/msk-18-3-t.webp",
+     "w": 900,
+     "h": 600,
+     "credit": "bacaberita24.net",
+     "page": "https://bacaberita24.net/galeri-tretyakov-di-lavrushinsky-lane-moscow/"
+    }
+   ]
+  },
+  "msk-19": {
+   "id": "msk-19",
+   "name": "Kitay-Gorod (bar area)",
+   "local": "Китай-город (барный район у метро)",
+   "nameEn": "Kitay-Gorod bar area",
+   "branch": null,
+   "category": "area",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Alan pini: Kitay-gorod metro istasyonu; barlar Maroseyka, Pokrovka, Solyanka, Zabelina ve Hohlovsky/Petroverigsky sokaklarında yoğunlaşıyor (Black Swan pub Solyanka 1/2'de, ~300 m). Plandaki 'Zinc' bulunamadı; 'Blanc' ve 'Propaganda' kapandı.",
+   "address": "район м. «Китай-город»: Маросейка, Покровка, Солянка, Хохловский пер., Москва",
+   "lat": 55.755652,
+   "lon": 37.633565,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-19-1.webp",
+     "thumb": "img/msk-19-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · Retired electrician · CC0",
+     "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Maroseyka_Street_4_s.1_after_a_botched_remodeling,_May_2021_01.jpg"
+    },
+    {
+     "src": "img/msk-19-2.webp",
+     "thumb": "img/msk-19-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/zhazhda-bolshoy-tryohsvyatitelskiy"
+    },
+    {
+     "src": "img/msk-19-3.webp",
+     "thumb": "img/msk-19-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/hanky"
+    }
+   ]
+  },
+  "msk-20": {
+   "id": "msk-20",
+   "name": "Zinc (bar)",
+   "local": null,
+   "nameEn": "Zinc (bar)",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "not_found",
+   "short": {
+    "level": "not_found",
+    "text": "Bu adla bir bar bulunamadı"
+   },
+   "statusNote": "Afisha, Restoclub ve Russpass Kitay-gorod bar listelerinde, web aramalarında (Zinc / Цинк), OSM POI ve Nominatim aramalarında eşleşme yok. Benzer isimli 'Zinziver' (Зинзивер, Pokrovsky bulvarı) farklı bir mekân, eşleştirilmedi.",
+   "notes": "Kitay-gorod çevresinde 'Zinc' (Rusça 'Цинк') adında bir bar bulunamadı; bölge bar listelerinde, OSM'de ve Nominatim'de böyle bir mekân yok. Plan metnindeki isim büyük olasılıkla hatalı/uydurma; yerine Kitay-gorod'daki gerçek barlardan biri seçilmeli.",
+   "address": null,
+   "lat": null,
+   "lon": null,
+   "website": null,
+   "stops": null,
+   "photos": []
+  },
+  "msk-21": {
+   "id": "msk-21",
+   "name": "Black Swan (bar)",
+   "local": "The Black Swan (Блэк Свон)",
+   "nameEn": "The Black Swan Pub & Shop",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kitay-gorod metrosuna ~5 dk, Solyanka'da iki katlı, antika mobilyalı Viktorya dönemi havasında İngiliz/İrlanda pub'ı; İngiliz, İrlanda ve İskoç biraları. Giriş Zabelina sokağı tarafından; Pz–Per ve Paz 12:00–00:00, Cum–Cmt 06:00'ya kadar.",
+   "address": "ул. Солянка, 1/2с1, Москва",
+   "lat": 55.754476,
+   "lon": 37.637927,
+   "website": "https://bspubshop.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-21-1.webp",
+     "thumb": "img/msk-21-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "dzen.ru",
+     "page": "https://dzen.ru/a/YIunrIUgclRrgslx"
+    },
+    {
+     "src": "img/msk-21-2.webp",
+     "thumb": "img/msk-21-2-t.webp",
+     "w": 960,
+     "h": 646,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/black-swan"
+    },
+    {
+     "src": "img/msk-21-3.webp",
+     "thumb": "img/msk-21-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/restaurant/black-swan-pub-442960/"
+    }
+   ]
+  },
+  "msk-22": {
+   "id": "msk-22",
+   "name": "Surf Coffee x Hlebozavod",
+   "local": "Surf Coffee x Xleb",
+   "nameEn": "Surf Coffee x Xleb (Hlebozavod No.9)",
+   "branch": "Surf Coffee x Xleb – Хлебозавод №9, стр. 12 (Flacon'un hemen kuzeyi)",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Eski ekmek fabrikasından dönüştürülmüş Hlebozavod №9 yaratıcı kümesindeki Surf şubesi (~20 kişilik, Wi‑Fi, laptopla çalışmaya uygun). 2GIS'e göre her gün 08:00–22:00 (küme sitesi 09:00 diyor); Dmitrovskaya metrosuna ~5 dk.",
+   "address": "Новодмитровская ул., 1, стр. 12, 1 этаж (Хлебозавод №9), Москва",
+   "lat": 55.807137,
+   "lon": 37.583589,
+   "website": "https://www.surfcoffee.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-22-1.webp",
+     "thumb": "img/msk-22-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "Wikimedia Commons · Artyom Svetlov · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Khlebozavod_9_2017-05_1495991335.JPG"
+    },
+    {
+     "src": "img/msk-22-2.webp",
+     "thumb": "img/msk-22-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "surfcoffee.ru",
+     "page": "https://www.surfcoffee.ru/msk-moon"
+    },
+    {
+     "src": "img/msk-22-3.webp",
+     "thumb": "img/msk-22-3-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "tenchat.ru",
+     "page": "https://tenchat.ru/media/591275-brend-surf-coffee--moi-vpechatleniya"
+    }
+   ]
+  },
+  "msk-23": {
+   "id": "msk-23",
+   "name": "Flacon Design Factory",
+   "local": "Дизайн завод (бывш. дизайн-завод «Флакон»)",
+   "nameEn": "Design Zavod (former Flacon Design Factory)",
+   "branch": null,
+   "category": "venue",
+   "city": "moscow",
+   "status": "open",
+   "short": {
+    "level": "info",
+    "text": "Yeni adı Дизайн завод; haritada bu adla ara"
+   },
+   "statusNote": "'Flacon' markası 2021'de mülkiyet değişince bırakıldı; mekân aynı adreste 'Дизайн завод' (Design Zavod) adıyla faaliyette — haritada/taksi uygulamasında bu adla arayın.",
+   "notes": "Eski kristal fabrikası binalarında yaratıcı kampüs: tasarım dükkânları, galeriler, kafeler ve etkinlik alanları. Resmi siteye göre alan 7/24 açık, mağazalar 11:00–22:00.",
+   "address": "улица Большая Новодмитровская, 36, стр. 2, Москва",
+   "lat": 55.805017,
+   "lon": 37.585533,
+   "website": "https://design-zavod.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-23-1.webp",
+     "thumb": "img/msk-23-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "discoverrussia.travel",
+     "page": "https://discoverrussia.travel/things-to-do/flacon-design-factory"
+    },
+    {
+     "src": "img/msk-23-2.webp",
+     "thumb": "img/msk-23-2-t.webp",
+     "w": 640,
+     "h": 427,
+     "credit": "tripadvisor.com.au",
+     "page": "https://www.tripadvisor.com.au/Attraction_Review-g298484-d3929080-Reviews-Flacon_Design_Factory-Moscow_Central_Russia.html"
+    },
+    {
+     "src": "img/msk-23-3.webp",
+     "thumb": "img/msk-23-3-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "Wikimedia Commons · Flacon PR department · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Flacon.jpg"
+    }
+   ]
+  },
+  "msk-24": {
+   "id": "msk-24",
+   "name": "Rule Taproom",
+   "local": "Rule Taproom",
+   "nameEn": "Rule Taproom",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Şubat 2026'da bir 2GIS yorumu barın tadilat için kapalı olduğunu bildirdi; ancak Yandex'te Mart–Ağustos 2026 tarihli yorumlar ve 'Good place 2026' ödülü var, 2GIS de faal gösteriyor. Gitmeden önce çalışma saatlerini kontrol etmekte fayda var.",
+   "notes": "Zagovor bira fabrikasıyla bağlantılı, ~27 musluklu ve geniş şişe seçkili küçük craft bira barı; Kremlin/Borovitskaya'ya birkaç dakika, bir avlu içinde. Pz–Per ve Paz 16:00–00:00, Cum–Cmt 02:00'ye kadar; mutfak yok, sadece atıştırmalık.",
+   "address": "Староваганьковский пер., 19с7, Москва",
+   "lat": 55.751298,
+   "lon": 37.607021,
+   "website": "http://ruletaproom.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-24-1.webp",
+     "thumb": "img/msk-24-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "ruletaproom.ru",
+     "page": "http://ruletaproom.ru/"
+    },
+    {
+     "src": "img/msk-24-2.webp",
+     "thumb": "img/msk-24-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "a-a-ah.ru",
+     "page": "https://a-a-ah.ru/bar-rule-taproom"
+    },
+    {
+     "src": "img/msk-24-3.webp",
+     "thumb": "img/msk-24-3-t.webp",
+     "w": 960,
+     "h": 960,
+     "credit": "tripadvisor.ru",
+     "page": "https://www.tripadvisor.ru/Restaurant_Review-g298484-d8720268-Reviews-RULE_taproom-Moscow_Central_Russia.html"
+    }
+   ]
+  },
+  "msk-25": {
+   "id": "msk-25",
+   "name": "Roaster Coffee",
+   "local": "Roaster Coffee (Ростер)",
+   "nameEn": "Roaster Coffee – Mayakovskaya",
+   "branch": "4-я Тверская-Ямская 2/11с2 (Mayakovskaya) – 2 şubeli küçük zincirin ana kafesi; diğeri Долгоруковская ул. 32",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Moskova'da gerçekten 'Roaster Coffee' adını taşıyan specialty kahve + yemek kafesi; 08:30–22:00 (hafta sonu 10:00'dan), 2GIS'te 4.9 (267 oy). Gorki Parkı/Novodeviçi'ye yakın değil: Mayakovskaya'dan metroyla ~20–25 dk.",
+   "address": "4-я Тверская-Ямская ул., 2/11, стр. 2, 1 этаж, Москва",
+   "lat": 55.771968,
+   "lon": 37.598188,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-25-1.webp",
+     "thumb": "img/msk-25-1-t.webp",
+     "w": 960,
+     "h": 593,
+     "credit": "stoneforest.ru",
+     "page": "https://stoneforest.ru/sf/obzory/kofejnya-roaster-coffee-na-mayakovskoj/"
+    },
+    {
+     "src": "img/msk-25-2.webp",
+     "thumb": "img/msk-25-2-t.webp",
+     "w": 640,
+     "h": 960,
+     "credit": "openkitchen.eda.yandex",
+     "page": "https://openkitchen.eda.yandex/article/places/guides/khorosho-vdvoyom-gulyat-po-svetu-ischem-menyu-dlya-sobak-ot-cesar-v-restoranakh-moskvy"
+    },
+    {
+     "src": "img/msk-25-3.webp",
+     "thumb": "img/msk-25-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "zoon.ru",
+     "page": "https://zoon.ru/msk/restaurants/roaster_coffee/"
+    }
+   ]
+  },
+  "msk-26": {
+   "id": "msk-26",
+   "name": "Gorky Park",
+   "local": "Парк Горького (ЦПКиО им. Горького)",
+   "nameEn": "Gorky Park",
+   "branch": null,
+   "category": "park",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Moskova Nehri kıyısındaki merkezi park; pin Krımskiy Val caddesindeki anıtsal ana giriş kemerinin hemen içinde. Park 7/24 açık ve ücretsiz; kışın büyük buz pisti kuruluyor (pist açılış tarihi ve saatleri her sezon ayrıca duyuruluyor).",
+   "address": "улица Крымский Вал, 9, Москва",
+   "lat": 55.731353,
+   "lon": 37.604637,
+   "website": "http://www.park-gorkogo.com",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-26-1.webp",
+     "thumb": "img/msk-26-1-t.webp",
+     "w": 960,
+     "h": 600,
+     "credit": "supernovaspb.ru",
+     "page": "https://supernovaspb.ru/v-moskve-otrestavriryut-glavnyi-vhod-v-park-gorkogo/"
+    },
+    {
+     "src": "img/msk-26-2.webp",
+     "thumb": "img/msk-26-2-t.webp",
+     "w": 960,
+     "h": 480,
+     "credit": "thecity.m24.ru",
+     "page": "https://thecity.m24.ru/news/13881"
+    },
+    {
+     "src": "img/msk-26-3.webp",
+     "thumb": "img/msk-26-3-t.webp",
+     "w": 960,
+     "h": 644,
+     "credit": "fity.club",
+     "page": "https://fity.club/lists/suggestions/Gorky-Park-Ice-Skating/"
+    }
+   ]
+  },
+  "msk-27": {
+   "id": "msk-27",
+   "name": "Garage Museum (Café)",
+   "local": "Музей современного искусства «Гараж» (Кафе «Гаража»)",
+   "nameEn": "Garage Museum of Contemporary Art (Garage Café)",
+   "branch": null,
+   "category": "museum",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Gorki Parkı içindeki çağdaş sanat müzesi (Rem Koolhaas/OMA'nın dönüştürdüğü Sovyet dönemi 'Vremena Goda' restoran binası). Kafe zemin katta, müzeyle aynı saatlerde her gün 11:00–22:00 açık; mevsimlik menü, vejetaryen ve çocuk menüsü var.",
+   "address": "ул. Крымский Вал, 9, стр. 32, Парк Горького, Москва",
+   "lat": 55.727819,
+   "lon": 37.601637,
+   "website": "https://garagemca.org/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-27-1.webp",
+     "thumb": "img/msk-27-1-t.webp",
+     "w": 960,
+     "h": 639,
+     "credit": "Wikimedia Commons · Garage Museum of Contemporary Art · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9C%D1%83%D0%B7%D0%B5%D1%8F_%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B0_%C2%AB%D0%93%D0%B0%D1%80%D0%B0%D0%B6%C2%BB.jpg"
+    },
+    {
+     "src": "img/msk-27-2.webp",
+     "thumb": "img/msk-27-2-t.webp",
+     "w": 960,
+     "h": 641,
+     "credit": "garagemca.org",
+     "page": "https://garagemca.org/visit/cafe?ysclid=m8fwum87b172392153"
+    },
+    {
+     "src": "img/msk-27-3.webp",
+     "thumb": "img/msk-27-3-t.webp",
+     "w": 750,
+     "h": 500,
+     "credit": "archi.ru",
+     "page": "https://archi.ru/projects/world/7657/muzei-sovremennogo-iskusstva-garazh-v-parke-gorkogo-vremena-goda"
+    }
+   ]
+  },
+  "msk-28": {
+   "id": "msk-28",
+   "name": "Introvert Place",
+   "local": "Introvert Place (Introvert.)",
+   "nameEn": "Introvert Place",
+   "branch": null,
+   "category": "cafe",
+   "city": "moscow",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Kapandı; başka bir çalışma kafesi gerekli"
+   },
+   "statusNote": "Afisha 'Ресторан закрыт' diyor; Yandex'te aynı kayıt önce Here'n'now adını almış, şimdi 'Shut down' olarak işaretli (Here'n'now 2-й Сыромятнический пер. 1'e taşınmış). Moskova'da bu adla başka bir mekân bulunamadı.",
+   "notes": "Krasnye Vorota yakınında, laptopla sessiz çalışmak için ayrı 'introvert' katı olan vegan menülü specialty kafeydi. Artık açık değil; plan için başka bir çalışma kafesi seçilmeli.",
+   "address": "Мясницкая ул., 41, стр. 3, 1 этаж (двор), Москва",
+   "lat": 55.768315,
+   "lon": 37.642562,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-28-1.webp",
+     "thumb": "img/msk-28-1-t.webp",
+     "w": 743,
+     "h": 656,
+     "credit": "timeout.ru",
+     "page": "https://www.timeout.ru/msk/feature/tishina-moskva"
+    },
+    {
+     "src": "img/msk-28-2.webp",
+     "thumb": "img/msk-28-2-t.webp",
+     "w": 960,
+     "h": 504,
+     "credit": "moskvichmag.ru",
+     "page": "https://moskvichmag.ru/restorany-i-bary/introvert-place-na-myasnitskoj-idealen-dlya-vegetariantsev-kotorye-izbegayut-vseh-ostalnyh-lyudej/"
+    },
+    {
+     "src": "img/msk-28-3.webp",
+     "thumb": "img/msk-28-3-t.webp",
+     "w": 922,
+     "h": 960,
+     "credit": "zoon.ru",
+     "page": "https://zoon.ru/msk/restaurants/art-prostranstvo_introvert_place/"
+    }
+   ]
+  },
+  "msk-29": {
+   "id": "msk-29",
+   "name": "Moscow Metro Architecture Tour",
+   "local": "Станция метро «Комсомольская» (Кольцевая линия)",
+   "nameEn": "Moscow Metro architecture tour — start: Komsomolskaya (Koltsevaya line)",
+   "branch": null,
+   "category": "transport",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Metro mimarisi turu, Halka hattındaki Komsomolskaya'nın barok tavan mozaikleriyle başlıyor. İstasyondan çıkmadan tek girişle hat değiştirerek gezilebilir: Novoslobodskaya vitrayları, Mayakovskaya art deco tavan mozaikleri, Ploşçad Revolyutsii bronz heykelleri, Kiyevskaya (Halka) mozaik panoları, Arbatskaya avizeleri, Elektrozavodskaya tavan lambaları.",
+   "address": "Комсомольская площадь, Москва",
+   "lat": 55.776486,
+   "lon": 37.656169,
+   "website": null,
+   "stops": [
+    {
+     "name": "Komsomolskaya — Комсомольская (Кольцевая линия)",
+     "lat": 55.776486,
+     "lon": 37.656169
+    },
+    {
+     "name": "Novoslobodskaya — Новослободская (Кольцевая линия)",
+     "lat": 55.779517,
+     "lon": 37.601167
+    },
+    {
+     "name": "Mayakovskaya — Маяковская (Замоскворецкая линия)",
+     "lat": 55.768983,
+     "lon": 37.596956
+    },
+    {
+     "name": "Ploshchad Revolyutsii — Площадь Революции (Арбатско-Покровская линия)",
+     "lat": 55.75639,
+     "lon": 37.62139
+    },
+    {
+     "name": "Kiyevskaya — Киевская (Кольцевая линия)",
+     "lat": 55.743583,
+     "lon": 37.566488
+    },
+    {
+     "name": "Arbatskaya — Арбатская (Арбатско-Покровская линия)",
+     "lat": 55.752222,
+     "lon": 37.606111
+    },
+    {
+     "name": "Elektrozavodskaya — Электрозаводская (Арбатско-Покровская линия)",
+     "lat": 55.78188,
+     "lon": 37.70449
+    }
+   ],
+   "photos": [
+    {
+     "src": "img/msk-29-1.webp",
+     "thumb": "img/msk-29-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · A.Savin · FAL",
+     "page": "https://commons.wikimedia.org/wiki/File:MosMetro_KomsomolskayaKL_img2_asv2018-01.jpg"
+    },
+    {
+     "src": "img/msk-29-2.webp",
+     "thumb": "img/msk-29-2-t.webp",
+     "w": 684,
+     "h": 960,
+     "credit": "Wikimedia Commons · Andrey Kryuchenko · CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Vertical_panorama_of_the_Mayakovskaya_Metro_Station.jpg"
+    },
+    {
+     "src": "img/msk-29-3.webp",
+     "thumb": "img/msk-29-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · Florstein ( Telegram: WikiPhoto.Space ) · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Metro_MSK_Line5_Novoslobodskaya.jpg"
+    }
+   ]
+  },
+  "msk-30": {
+   "id": "msk-30",
+   "name": "Alexey Kozlov Club",
+   "local": "Клуб Алексея Козлова",
+   "nameEn": "Alexey Kozlov Club (Kozlov Club)",
+   "branch": null,
+   "category": "club",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Saksofoncu Aleksey Kozlov'un adını taşıyan, birden fazla sahneli büyük caz kulübü (caz, blues, füzyon + restoran/bar); Kitay-gorod metrosuna yürüme mesafesinde. Konserler genelde 19:30–20:30'da başlıyor, biletleri önceden almak gerekiyor (Eylül–Ekim 2026 programı yayında).",
+   "address": "ул. Маросейка, 9/2, стр. 1 (2–4 этаж), Москва",
+   "lat": 55.757758,
+   "lon": 37.633646,
+   "website": "https://kozlovclub.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-30-1.webp",
+     "thumb": "img/msk-30-1-t.webp",
+     "w": 960,
+     "h": 450,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/club/klub-alekseya-kozlova-17780/"
+    },
+    {
+     "src": "img/msk-30-2.webp",
+     "thumb": "img/msk-30-2-t.webp",
+     "w": 728,
+     "h": 410,
+     "credit": "psychologies.ru",
+     "page": "https://www.psychologies.ru/events/mezhdunarodnyi-den-dzhaza-3-koncerta-v-klube-alekseya-kozlova/"
+    },
+    {
+     "src": "img/msk-30-3.webp",
+     "thumb": "img/msk-30-3-t.webp",
+     "w": 750,
+     "h": 514,
+     "credit": "jazzmap.ru",
+     "page": "https://www.jazzmap.ru/rus/clubs/Klub-Alekseya-Kozlova.php"
+    }
+   ]
+  },
+  "msk-31": {
+   "id": "msk-31",
+   "name": "Stars Coffee (Tverskaya)",
+   "local": "Stars Coffee (Тверская)",
+   "nameEn": "Stars Coffee – Tverskaya",
+   "branch": "Тверская ул., 8к1с3 – Tverskaya Meydanı tarafı (zincirin Tverskaya Caddesi üzerindeki tek şubesi)",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Tverskaya Caddesi'nde, Tverskaya Meydanı/Stoleshnikov köşesinde küçük Stars Coffee şubesi (~20 kişilik). Listelerde açılış 10:00 görünüyor (bir kaynakta 11:00–12:00), yani 08:00'de çalışmaya başlamak için uygun olmayabilir.",
+   "address": "Тверская ул., 8, корп. 1, стр. 3 (Тверская площадь), Москва",
+   "lat": 55.761793,
+   "lon": 37.61065,
+   "website": "https://stars-coffee.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-31-1.webp",
+     "thumb": "img/msk-31-1-t.webp",
+     "w": 960,
+     "h": 480,
+     "credit": "thecity.m24.ru",
+     "page": "https://thecity.m24.ru/news/6089"
+    },
+    {
+     "src": "img/msk-31-2.webp",
+     "thumb": "img/msk-31-2-t.webp",
+     "w": 800,
+     "h": 600,
+     "credit": "zoon.ru",
+     "page": "https://zoon.ru/msk/restaurants/kofejnya_stars_coffee_v_tts_afimoll_siti/"
+    },
+    {
+     "src": "img/msk-31-3.webp",
+     "thumb": "img/msk-31-3-t.webp",
+     "w": 960,
+     "h": 639,
+     "credit": "leaderstime.ru",
+     "page": "https://leaderstime.ru/lifestyle/gastronomy-lifestyle/vremya-rastsvetat-v-stars-coffee/"
+    }
+   ]
+  },
+  "msk-32": {
+   "id": "msk-32",
+   "name": "Tverskaya Street",
+   "local": "Тверская улица",
+   "nameEn": "Tverskaya Street",
+   "branch": null,
+   "category": "street",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kremlin dibindeki Manejnaya Meydanı'ndan Triumfalnaya Meydanı'na uzanan Moskova'nın ana bulvarı; Stalin dönemi binalar, mağazalar ve kafelerle dolu. Pin caddenin orta kesiminde (Tverskaya 14 / Yeliseyev mağazası civarı), Puşkin Meydanı'na (msk-33) ~200 m.",
+   "address": "Тверская улица, Москва",
+   "lat": 55.763889,
+   "lon": 37.606389,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-32-1.webp",
+     "thumb": "img/msk-32-1-t.webp",
+     "w": 960,
+     "h": 600,
+     "credit": "flickr.com",
+     "page": "https://www.flickr.com/photos/38465352@N03/52604806126"
+    },
+    {
+     "src": "img/msk-32-2.webp",
+     "thumb": "img/msk-32-2-t.webp",
+     "w": 960,
+     "h": 604,
+     "credit": "silverkris.singaporeair.com",
+     "page": "https://silverkris.singaporeair.com/guide/shop-moscow/tverskaya-street/"
+    },
+    {
+     "src": "img/msk-32-3.webp",
+     "thumb": "img/msk-32-3-t.webp",
+     "w": 960,
+     "h": 480,
+     "credit": "Wikimedia Commons · mos.ru · CC BY 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Tverskaya_Street2.jpg"
+    }
+   ]
+  },
+  "msk-33": {
+   "id": "msk-33",
+   "name": "Pushkin Square",
+   "local": "Пушкинская площадь",
+   "nameEn": "Pushkin Square",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Tverskaya Caddesi üzerindeki meydan; ortada Puşkin heykeli, çevresinde Izvestiya binası ve bulvar halkası. Yılbaşı döneminde genellikle ışıklı süslemeler kuruluyor; altında Puşkinskaya/Tverskaya/Çehovskaya metro aktarma istasyonu var.",
+   "address": "Пушкинская площадь, Москва",
+   "lat": 55.765556,
+   "lon": 37.605833,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-33-1.webp",
+     "thumb": "img/msk-33-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "rbth.com",
+     "page": "https://www.rbth.com/lifestyle/331415-celebrate-new-year-moscow-red-square"
+    },
+    {
+     "src": "img/msk-33-2.webp",
+     "thumb": "img/msk-33-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "freepik.com",
+     "page": "https://www.freepik.com/premium-photo/moscow-russia-jan-23-2022-pushkinskaya-square-with-monument-pushkin_87266777.htm"
+    },
+    {
+     "src": "img/msk-33-3.webp",
+     "thumb": "img/msk-33-3-t.webp",
+     "w": 918,
+     "h": 612,
+     "credit": "wikimapia.org",
+     "page": "https://wikimapia.org/14477157/Pushkinskaya-Square"
+    }
+   ]
+  },
+  "msk-34": {
+   "id": "msk-34",
+   "name": "Noor Electro",
+   "local": "Noor Electro",
+   "nameEn": "Noor Electro (Noor Bar)",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Planlardaki isim doğru: Tverskaya'daki 'efsane' kokteyl barı Noor Electro (eski Noor Bar), Yandex'te 'Хорошее место 2026' ödüllü. Art-deco salon, imza kokteyller ve hafta sonları DJ; genelde 03:00'e, Cuma–Cumartesi sabaha kadar açık (Pushkinskaya/Tverskaya metro).",
+   "address": "Тверская ул., 23/12, стр. 1, Москва",
+   "lat": 55.766962,
+   "lon": 37.600761,
+   "website": "https://www.noorbar.com/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-34-1.webp",
+     "thumb": "img/msk-34-1-t.webp",
+     "w": 960,
+     "h": 641,
+     "credit": "onparty.app",
+     "page": "https://onparty.app/moscow/noor-electro/"
+    },
+    {
+     "src": "img/msk-34-2.webp",
+     "thumb": "img/msk-34-2-t.webp",
+     "w": 834,
+     "h": 556,
+     "credit": "mn.ru",
+     "page": "https://www.mn.ru/smart/gde-otmetit-den-rozhdeniya-v-moskve"
+    },
+    {
+     "src": "img/msk-34-3.webp",
+     "thumb": "img/msk-34-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "a-a-ah.ru",
+     "page": "https://a-a-ah.ru/noor-bar"
+    }
+   ]
+  },
+  "msk-35": {
+   "id": "msk-35",
+   "name": "Cathedral of Christ the Saviour",
+   "local": "Храм Христа Спасителя",
+   "nameEn": "Cathedral of Christ the Saviour",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Kaynaklara göre pazartesi 13:00'te açılıyor ve kapanış saati kaynaklarda 17:00–18:00 arasında değişiyor; 28 Aralık pazartesi ziyaretinden önce saatleri resmi siteden (xxc.ru) teyit edin.",
+   "notes": "Rusya'nın en büyük Ortodoks katedrali; 1931'de yıkılıp 1990'larda yeniden inşa edildi, giriş ücretsiz. Arkasındaki Patriarşiy yaya köprüsünden Kremlin ve nehir manzarası çok güzel.",
+   "address": "улица Волхонка, 15, Москва",
+   "lat": 55.744444,
+   "lon": 37.605556,
+   "website": "https://xxc.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-35-1.webp",
+     "thumb": "img/msk-35-1-t.webp",
+     "w": 637,
+     "h": 900,
+     "credit": "fineartamerica.com",
+     "page": "https://fineartamerica.com/featured/cathedral-of-christ-the-savior-moscow-mordolff.html"
+    },
+    {
+     "src": "img/msk-35-2.webp",
+     "thumb": "img/msk-35-2-t.webp",
+     "w": 960,
+     "h": 878,
+     "credit": "Wikimedia Commons · Alvesgaspar · CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Moscow_July_2011-7a.jpg"
+    },
+    {
+     "src": "img/msk-35-3.webp",
+     "thumb": "img/msk-35-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "travelphotographyguru.com",
+     "page": "https://www.travelphotographyguru.com/travel-blogs/how-to-photograph-moscow-cathedral-of-christ-the-saviour"
+    }
+   ]
+  },
+  "msk-36": {
+   "id": "msk-36",
+   "name": "Gipsy Bar",
+   "local": "VK Gipsy (Джипси)",
+   "nameEn": "VK Gipsy (Gipsy Bar)",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Hâlâ Kızıl Ekim (Krasny Oktyabr) adasında, çatı/teras katlarında çalışıyor; 2023'ten beri VK'ya ait ve adı 'VK Gipsy' (Yandex 'Хорошее место 2026', Kasım–Aralık 2026 konserleri satışta). DİKKAT: kulüp normalde sadece hafta sonu geceleri (Cuma–Cumartesi, bazen Perşembe; ~22:00/23:00'ten sabaha) açık ve sıkı face-control var — plandaki 28 Aralık Pazartesi; o gece etkinlik olup olmadığını önceden kontrol edin.",
+   "address": "Болотная наб., 3, стр. 4, арт-квартал «Красный Октябрь», Москва",
+   "lat": 55.739702,
+   "lon": 37.610095,
+   "website": "https://bargipsy.com/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-36-1.webp",
+     "thumb": "img/msk-36-1-t.webp",
+     "w": 960,
+     "h": 694,
+     "credit": "novomoscow.ru",
+     "page": "https://novomoscow.ru/info/chto-posmotret-v-moskve-15-luchshih-mest/"
+    },
+    {
+     "src": "img/msk-36-2.webp",
+     "thumb": "img/msk-36-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "onparty.app",
+     "page": "https://onparty.app/moscow/gipsy/"
+    },
+    {
+     "src": "img/msk-36-3.webp",
+     "thumb": "img/msk-36-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "redkassa.ru",
+     "page": "https://redkassa.ru/venue/gipsy_club"
+    }
+   ]
+  },
+  "msk-37": {
+   "id": "msk-37",
+   "name": "Izmailovo Kremlin",
+   "local": "Кремль в Измайлово",
+   "nameEn": "Izmailovo Kremlin",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Rus masalı tarzında renkli ahşap 'kremlin' kompleksi (küçük müzeler, atölyeler); hemen yanındaki Vernisaj pazarı matruşka, şal, hediyelik eşya için Moskova'nın klasik adresi. Kaynaklara göre Vernisaj hafta içi ~09:00–18:00 açık, bit pazarı yalnızca hafta sonu — 29 Aralık salı olduğundan tezgâh sayısı az olabilir.",
+   "address": "Измайловское шоссе, 73Ж, Москва",
+   "lat": 55.794321,
+   "lon": 37.750525,
+   "website": "http://kremlin-izmailovo.com/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-37-1.webp",
+     "thumb": "img/msk-37-1-t.webp",
+     "w": 960,
+     "h": 645,
+     "credit": "wallpapers.com",
+     "page": "https://wallpapers.com/wallpapers/the-izmailovo-kremlin-mhmim3fpacsolxpx.html"
+    },
+    {
+     "src": "img/msk-37-2.webp",
+     "thumb": "img/msk-37-2-t.webp",
+     "w": 626,
+     "h": 418,
+     "credit": "freepik.com",
+     "page": "https://www.freepik.com/premium-photo/shadow-large-tree-snow-near-izmailovo-kremlin-moscow-one-winter-sunny-day_12842476.htm"
+    },
+    {
+     "src": "img/msk-37-3.webp",
+     "thumb": "img/msk-37-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "travellingtom.com",
+     "page": "https://travellingtom.com/blog/quick-travel-guide-moscow-russia"
+    }
+   ]
+  },
+  "msk-38": {
+   "id": "msk-38",
+   "name": "Zinzin",
+   "local": null,
+   "nameEn": "Zinzin",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "not_found",
+   "short": {
+    "level": "not_found",
+    "text": "Bu adla bir bar bulunamadı"
+   },
+   "statusNote": "Bu isimde mekân tespit edilemedi; benzer isimli 'Зинзивер' ikame edilmedi, sadece aday olarak not edildi.",
+   "notes": "Moskova'da 'Zinzin/Зинзин' adlı bir bar bulunamadı (web, Yandex/2GIS sonuçları ve OSM taraması). İsme en yakın mekân 'Зинзивер' (Zinziver) adlı ucuz, kalabalık bir рюмочная (shot bar) — Покровский бул., 2/14, Kitay-gorod/Çistiye Prudı; plan bunu kastediyorsa ayrıca teyit edilmeli.",
+   "address": null,
+   "lat": null,
+   "lon": null,
+   "website": null,
+   "stops": null,
+   "photos": []
+  },
+  "msk-39": {
+   "id": "msk-39",
+   "name": "Surf Coffee x Baumanskaya",
+   "local": "Surf Coffee x Lucky",
+   "nameEn": "Surf Coffee x Lucky (Baumanskaya)",
+   "branch": "Surf Coffee x Lucky – Бауманская ул. 33/2с1, Baumanskaya metrosunun hemen yanı",
+   "category": "cafe",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Baumanskaya metrosunun yanında, bodrum katta Surf şubesi; resmi sitede 'çalışma ve dinlenme alanlarına ayrılmış' diye tanıtılıyor. Hafta içi 08:00–22:00, hafta sonu 09:00–22:00; 2GIS'te 5.0 (348 yorum).",
+   "address": "Бауманская ул., 33/2, стр. 1, цокольный этаж, Москва",
+   "lat": 55.772549,
+   "lon": 37.678792,
+   "website": "https://www.surfcoffee.ru/lucky",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-39-1.webp",
+     "thumb": "img/msk-39-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "surfcoffee.ru",
+     "page": "https://www.surfcoffee.ru/lucky"
+    },
+    {
+     "src": "img/msk-39-2.webp",
+     "thumb": "img/msk-39-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/restaurant/surf-coffee-218800/"
+    },
+    {
+     "src": "img/msk-39-3.webp",
+     "thumb": "img/msk-39-3-t.webp",
+     "w": 900,
+     "h": 500,
+     "credit": "tripadvisor.com",
+     "page": "https://www.tripadvisor.com/Restaurant_Review-g298484-d23779672-Reviews-Surf_Coffee_x_Lovely-Moscow_Central_Russia.html"
+    }
+   ]
+  },
+  "msk-40": {
+   "id": "msk-40",
+   "name": "Artplay Design Center",
+   "local": "Центр дизайна ARTPLAY",
+   "nameEn": "Artplay Design Center",
+   "branch": null,
+   "category": "venue",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kurskaya/Çkalovskaya metrolarına yakın eski fabrika binalarında tasarım ve mimarlık kümesi: showroomlar, galeriler ve Artplay Media multimedya sergileri. Kaynaklara göre alan her gün 08:00–23:00 açık; sergiler biletli.",
+   "address": "улица Нижняя Сыромятническая, 10, Москва",
+   "lat": 55.752261,
+   "lon": 37.669773,
+   "website": "https://artplay.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-40-1.webp",
+     "thumb": "img/msk-40-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "ohwanderlin.com",
+     "page": "https://ohwanderlin.com/moscow-artplay/"
+    },
+    {
+     "src": "img/msk-40-2.webp",
+     "thumb": "img/msk-40-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "lidenz.com",
+     "page": "https://lidenz.com/artplay-design-center/"
+    },
+    {
+     "src": "img/msk-40-3.webp",
+     "thumb": "img/msk-40-3-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "Wikimedia Commons · Vlad Shtelts (Stelz) · CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:ArtPlay_-_panoramio_(3).jpg"
+    }
+   ]
+  },
+  "msk-41": {
+   "id": "msk-41",
+   "name": "Depo Food Mall",
+   "local": "Депо.Москва (фудмолл «Депо» на Лесной)",
+   "nameEn": "Depo.Moscow Food Mall (Depo Lesnaya)",
+   "branch": "Лесная ул. (ana/ilk Depo; 'Депо Три вокзала' ayrı bir şube)",
+   "category": "restaurant",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "1874'ten kalma eski tramvay/troleybüs deposunda, 2019'da açılan dev gastronomi mahallesi: onlarca restoran/büfe, barlar ve ortak masalar; Belorusskaya/Mendeleyevskaya metrosuna yakın. Saatler Pzt–Per ve Paz 10:00–23:00, Cu–Ct 10:00–02:00 (30 Aralık Çarşamba → 23:00'te kapanır); Eylül–Ekim 2026 etkinlik programı yayında.",
+   "address": "Лесная ул., 20, стр. 3, Москва",
+   "lat": 55.78019,
+   "lon": 37.592998,
+   "website": "https://depomoscow.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-41-1.webp",
+     "thumb": "img/msk-41-1-t.webp",
+     "w": 960,
+     "h": 639,
+     "credit": "dzen.ru",
+     "page": "https://dzen.ru/a/ZRVC6oITfCC8-WcY"
+    },
+    {
+     "src": "img/msk-41-2.webp",
+     "thumb": "img/msk-41-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "style.rbc.ru",
+     "page": "https://style.rbc.ru/impressions/63ef2c719a79474d9e32e94d"
+    },
+    {
+     "src": "img/msk-41-3.webp",
+     "thumb": "img/msk-41-3-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "rbclifetime.ru",
+     "page": "https://rbclifetime.ru/news/62e8c7ed9a79471d7d67a88b"
+    }
+   ]
+  },
+  "msk-42": {
+   "id": "msk-42",
+   "name": "Mutabor Club",
+   "local": "Мутабор (Mutabor; 2024'ten itibaren ARMA)",
+   "nameEn": "Mutabor Club (later ARMA)",
+   "branch": null,
+   "category": "club",
+   "city": "moscow",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Nisan 2025'te kapandı; binada artık DEX var"
+   },
+   "statusNote": "KAPANDI: Aralık 2023'teki 'yarı çıplak' parti skandalından sonra 90 gün kapatıldı, Mart 2024'te adı ARMA oldu; ARMA Ocak 2025'te bu mekândaki işletmeyi Nisan 2025 sezon sonunda bitireceğini duyurdu. Aynı mekânda 26 Temmuz 2025'ten beri Private Persons ekibinin açtığı DEX kulübü çalışıyor — koordinat bu binadaki DEX noktası.",
+   "notes": "Dubrovka metrosu yakınında, eski 1. Devlet Rulman Fabrikası (GPZ-1) binasındaki büyük tekno/sanat kulübüydü. Yılbaşı için Mutabor artık yok; aynı binadaki DEX kulübünün 2026 sezon programında 31 Aralık–2 Ocak 'DEX NEW YEAR' partisi (erken kayıt) listeleniyor — en yakın alternatif.",
+   "address": "Шарикоподшипниковская ул., 13, стр. 32 (территория ГПЗ-1), Москва",
+   "lat": 55.71966,
+   "lon": 37.686501,
+   "website": "https://dexclub.net",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-42-1.webp",
+     "thumb": "img/msk-42-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "national-expertise.ru",
+     "page": "https://national-expertise.ru/blog/na-klub-mutabor-podalo-v-sud-rossijskoe-avtorskoe-obshchestvo/"
+    },
+    {
+     "src": "img/msk-42-2.webp",
+     "thumb": "img/msk-42-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "courier-media.com",
+     "page": "https://courier-media.com/novosti/klub-mutabor-smenil-nazvanie-posle-goloj-vecherinki-ivleevoj/"
+    },
+    {
+     "src": "img/msk-42-3.webp",
+     "thumb": "img/msk-42-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "timeout.ru",
+     "page": "https://www.timeout.ru/msk/place/45217"
+    }
+   ]
+  },
+  "msk-43": {
+   "id": "msk-43",
+   "name": "Chistye Prudy",
+   "local": "Чистые пруды",
+   "nameEn": "Chistye Prudy (Clean Ponds)",
+   "branch": null,
+   "category": "park",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Bulvar Halkası'ndaki Çistoprudnıy Bulvarı'nın ortasındaki gölet; tramvay hattı, kafeler ve tarihi binalarla çevrili sakin bir yürüyüş rotası. Kışın gölet genellikle buz pistine dönüşüyor; en yakın metro Çistıye Prudı.",
+   "address": "Чистопрудный бульвар, Москва",
+   "lat": 55.760833,
+   "lon": 37.644722,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-43-1.webp",
+     "thumb": "img/msk-43-1-t.webp",
+     "w": 810,
+     "h": 540,
+     "credit": "travelrussia.ru",
+     "page": "https://travelrussia.ru/blog/dostoprimechatelnosti/chistye-prudy-v-moskve/"
+    },
+    {
+     "src": "img/msk-43-2.webp",
+     "thumb": "img/msk-43-2-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "youtube.com",
+     "page": "https://www.youtube.com/watch?v=lym22uBOk-I"
+    },
+    {
+     "src": "img/msk-43-3.webp",
+     "thumb": "img/msk-43-3-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "Wikimedia Commons · Vasilii Martynov · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Clean_Ponds,_an_Evening,_October_2023.jpg"
+    }
+   ]
+  },
+  "msk-44": {
+   "id": "msk-44",
+   "name": "Tekhnikum",
+   "local": "Техникум (Tehnikum)",
+   "nameEn": "Tehnikum",
+   "branch": "Большая Дмитровка (ana şube); ayrıca Atrium AVM'de (Kurskaya) şubesi var",
+   "category": "restaurant",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Planlardaki 'Tekhnikum' = White Rabbit Family'nin (şef Vladimir Mukhin) daha uygun fiyatlı gastro-bistrosu Tehnikum; Teatralnaya/Okhotny Ryad yakınında, loft iç mekân ve büyük fresk. Yandex'te 'Хорошее место 2026'; genelde ~00:00'a (Cu–Ct ~02:00'ye) kadar açık, ortalama hesap ~1.000–3.000 ₽. 1 Ocak (Cuma) tatil saatleri farklı olabilir, rezervasyon önerilir.",
+   "address": "ул. Большая Дмитровка, 7/5, стр. 2, Москва",
+   "lat": 55.76079,
+   "lon": 37.61484,
+   "website": "https://tehnikumbistro.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-44-1.webp",
+     "thumb": "img/msk-44-1-t.webp",
+     "w": 800,
+     "h": 800,
+     "credit": "moscow-restaurants.ru",
+     "page": "https://www.moscow-restaurants.ru/restaurants/tehnikum.html"
+    },
+    {
+     "src": "img/msk-44-2.webp",
+     "thumb": "img/msk-44-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "restorating.ru",
+     "page": "https://www.restorating.ru/msk/catalogue/tehnikum"
+    },
+    {
+     "src": "img/msk-44-3.webp",
+     "thumb": "img/msk-44-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "moscowrestaurant.ru",
+     "page": "https://moscowrestaurant.ru/restaurants/tehnikum"
+    }
+   ]
+  },
+  "msk-45": {
+   "id": "msk-45",
+   "name": "Novodevichy Convent & Pond",
+   "local": "Новодевичий монастырь",
+   "nameEn": "Novodevichy Convent",
+   "branch": null,
+   "category": "landmark",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Manastır 17:00'de kapanıyor ve ocak başında hava ~16:00'da kararıyor: 16:00'da başlayan programda içeri girmeye vakit çok az — daha erken gelin ya da gölet kıyısından dış manzarayla yetinin.",
+   "notes": "16. yy'dan kalma, UNESCO Dünya Mirası listesindeki manastır; yanındaki Novodeviçi göletinden görünen kule ve kubbeler en bilinen manzarası. Bölgeye giriş ücretsiz (her gün 09:00–17:00); müze bölümleri biletli, salı ve ayın ilk pazartesi kapalı.",
+   "address": "Новодевичий проезд, 1, Москва",
+   "lat": 55.725972,
+   "lon": 37.556583,
+   "website": "https://novodev.msk.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-45-1.webp",
+     "thumb": "img/msk-45-1-t.webp",
+     "w": 960,
+     "h": 613,
+     "credit": "goodfon.ru",
+     "page": "https://www.goodfon.ru/landscapes/wallpaper-viacheslav-biriukov-moskva-gorod-peizazh-zima-sneg-novodevic.html"
+    },
+    {
+     "src": "img/msk-45-2.webp",
+     "thumb": "img/msk-45-2-t.webp",
+     "w": 960,
+     "h": 638,
+     "credit": "rbth.com",
+     "page": "https://www.rbth.com/travel/329731-5-reasons-to-visit-novodevichy-convent-moscow"
+    },
+    {
+     "src": "img/msk-45-3.webp",
+     "thumb": "img/msk-45-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "supersnimki.ru",
+     "page": "https://supersnimki.ru/ru/photo/17/582deb9be2cfda06db526db3"
+    }
+   ]
+  },
+  "msk-46": {
+   "id": "msk-46",
+   "name": "Veladora",
+   "local": "Veladora (Веладора)",
+   "nameEn": "Veladora",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Yandex'te açık görünüyor (4.9, 3.163 oy; en yeni tarihli yorum Kasım 2025); 2GIS 'işletme verisini uzun süredir güncellemedi' diyor ama kapalı işaretlemiyor. Kapanış haberi bulunamadı.",
+   "notes": "Plan doğru: Voda barının ekibinden (Rubanenko & Bgantsov) bodrum katta Meksika mezcal barı; mezcal, tekila ve taco (yanak eti, domuz, tavuk, vejetaryen) meşhur, hafta sonu gece dans ediliyor. Kitay-gorod/Lubyanka yakınında, akşam 18:00'de açılıyor, Perşembe–Cumartesi sabaha (~05:00) kadar; küçük mekân, hafta sonu kalabalık olur.",
+   "address": "ул. Покровка, 2/1, стр. 1 (цокольный этаж), Москва",
+   "lat": 55.758247,
+   "lon": 37.640041,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-46-1.webp",
+     "thumb": "img/msk-46-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "a-a-ah.ru",
+     "page": "https://a-a-ah.ru/bar-veladora"
+    },
+    {
+     "src": "img/msk-46-2.webp",
+     "thumb": "img/msk-46-2-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/restaurant/veladora-406597/"
+    },
+    {
+     "src": "img/msk-46-3.webp",
+     "thumb": "img/msk-46-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "daily.afisha.ru",
+     "page": "https://daily.afisha.ru/eating/7582-bar-veladora-meskal-tako-i-tancy-na-pokrovke/"
+    }
+   ]
+  },
+  "msk-47": {
+   "id": "msk-47",
+   "name": "Sparrow Hills Viewpoint",
+   "local": "Смотровая площадка на Воробьёвых горах",
+   "nameEn": "Sparrow Hills Observation Deck",
+   "branch": null,
+   "category": "viewpoint",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Moskova Nehri'nin ~80 m yukarısındaki seyir terası: Lujniki Stadı, Moskova City gökdelenleri ve şehir panoraması; arkada MGU ana binası. 7/24 açık ve ücretsiz; terasın yanında Lujniki'ye inen teleferik istasyonu var.",
+   "address": "улица Косыгина, Воробьёвы горы, Москва",
+   "lat": 55.709356,
+   "lon": 37.542332,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-47-1.webp",
+     "thumb": "img/msk-47-1-t.webp",
+     "w": 960,
+     "h": 668,
+     "credit": "rbth.com",
+     "page": "https://www.rbth.com/travel/330717-observation-decks-moscow"
+    },
+    {
+     "src": "img/msk-47-2.webp",
+     "thumb": "img/msk-47-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "reddit.com",
+     "page": "https://www.reddit.com/r/Moscow/comments/18cxagc/moscow_view_from_the_sparrow_hills/"
+    },
+    {
+     "src": "img/msk-47-3.webp",
+     "thumb": "img/msk-47-3-t.webp",
+     "w": 960,
+     "h": 429,
+     "credit": "iskatel.com",
+     "page": "https://iskatel.com/places/vorobyovy-gory"
+    }
+   ]
+  },
+  "msk-48": {
+   "id": "msk-48",
+   "name": "Strelka Bar",
+   "local": "Бар «Стрелка» (Strelka Bar)",
+   "nameEn": "Strelka Bar",
+   "branch": null,
+   "category": "bar",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": "Strelka Enstitüsü Şubat 2022'de faaliyetini süresiz askıya aldı, ancak bar ayrı olarak çalışmaya devam ediyor: 31 Aralık 2025 yılbaşı partisi düzenlendi, Eylül 2025'te 15. yaşını kutladı, Yandex/2GIS'te açık görünüyor.",
+   "notes": "Kızıl Ekim adasının ucunda, Kurtarıcı İsa Katedrali manzaralı efsane bar; yazın çatı terası meşhur, kışın iç salon. Cuma–Cumartesi geceleri DJ'li kulübe dönüşüyor (face-control). Bildirilen saatler Paz–Per 12:00–23:00, Cu–Ct 12:00–03:00; ancak Eylül 2026'da Yandex 'Cumaya kadar kapalı' gösteriyordu — kış programı kısıtlı olabilir, 3 Ocak (Pazar) için önceden teyit edin.",
+   "address": "Берсеневская наб., 14, стр. 5, арт-квартал «Красный Октябрь», Москва",
+   "lat": 55.74259,
+   "lon": 37.609317,
+   "website": "https://barstrelka.com",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-48-1.webp",
+     "thumb": "img/msk-48-1-t.webp",
+     "w": 834,
+     "h": 556,
+     "credit": "mn.ru",
+     "page": "https://www.mn.ru/smart/gde-otmetit-den-rozhdeniya-v-moskve"
+    },
+    {
+     "src": "img/msk-48-2.webp",
+     "thumb": "img/msk-48-2-t.webp",
+     "w": 780,
+     "h": 649,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/moskva/places/strelka--2"
+    },
+    {
+     "src": "img/msk-48-3.webp",
+     "thumb": "img/msk-48-3-t.webp",
+     "w": 960,
+     "h": 384,
+     "credit": "vk.com",
+     "page": "https://vk.com/public217494483"
+    }
+   ]
+  },
+  "msk-49": {
+   "id": "msk-49",
+   "name": "Leningradsky Railway Station (Sapsan departure)",
+   "local": "Ленинградский вокзал",
+   "nameEn": "Leningradsky Rail Terminal (Sapsan to St. Petersburg)",
+   "branch": null,
+   "category": "transport",
+   "city": "moscow",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Sapsan hızlı trenlerinin St. Petersburg'a kalktığı Moskova terminali; 'Üç İstasyon' (Komsomolskaya) Meydanı'nda, metro Komsomolskaya. Ağustos 2024'ten beri süren kapsamlı yenilemenin ardından 22 Mayıs 2026'da yeniden açıldı; bekleme alanı üç katına çıktı.",
+   "address": "Комсомольская площадь, 3, Москва",
+   "lat": 55.776261,
+   "lon": 37.655328,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/msk-49-1.webp",
+     "thumb": "img/msk-49-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · Ппресс-служба Градостроительного комплекса Москвы · CC BY 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:2026-05-22_%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D0%B0_7284-01.png"
+    },
+    {
+     "src": "img/msk-49-2.webp",
+     "thumb": "img/msk-49-2-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "youtube.com",
+     "page": "https://www.youtube.com/watch?v=-vB1VWrX3Ow"
+    },
+    {
+     "src": "img/msk-49-3.webp",
+     "thumb": "img/msk-49-3-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "1prime.ru",
+     "page": "https://1prime.ru/20250824/rzhd--861165996.html"
+    }
+   ]
+  },
+  "spb-01": {
+   "id": "spb-01",
+   "name": "Moskovsky Railway Station (Sapsan arrival)",
+   "local": "Московский вокзал",
+   "nameEn": "Moskovsky Railway Station",
+   "branch": null,
+   "category": "transport",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Sapsan trenlerinin St. Petersburg'daki varış terminali; Vosstaniya Meydanı'nda, Nevsky Prospekt'in doğu ucunda. En yakın metro: Ploshchad Vosstaniya / Mayakovskaya.",
+   "address": "Невский проспект, 85, Санкт-Петербург",
+   "lat": 59.928717,
+   "lon": 30.362433,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-01-1.webp",
+     "thumb": "img/spb-01-1-t.webp",
+     "w": 800,
+     "h": 533,
+     "credit": "saint-petersburg.com",
+     "page": "http://www.saint-petersburg.com/buildings/moscow-rail-station/"
+    },
+    {
+     "src": "img/spb-01-2.webp",
+     "thumb": "img/spb-01-2-t.webp",
+     "w": 900,
+     "h": 674,
+     "credit": "pinayhakawati.com",
+     "page": "https://www.pinayhakawati.com/train-from-moscow-to-saint-petersburg/"
+    },
+    {
+     "src": "img/spb-01-3.webp",
+     "thumb": "img/spb-01-3-t.webp",
+     "w": 960,
+     "h": 626,
+     "credit": "play.zoepke-autoservice-gransee.de",
+     "page": "https://play.zoepke-autoservice-gransee.de/st-petersburg-railway-stations/"
+    }
+   ]
+  },
+  "spb-02": {
+   "id": "spb-02",
+   "name": "Nevsky Prospect",
+   "local": "Невский проспект",
+   "nameEn": "Nevsky Prospect",
+   "branch": null,
+   "category": "street",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Şehrin ana caddesi (~4,5 km, Amirallık'tan Aleksandr Nevski Lavrası'na). Pin orta noktada: Kazan Katedrali karşısında, Griboyedov Kanalı üzerindeki Kazansky Köprüsü; metro Nevsky Prospekt / Gostiny Dvor.",
+   "address": "Невский проспект (Казанский мост через канал Грибоедова), Санкт-Петербург",
+   "lat": 59.935294,
+   "lon": 30.326362,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-02-1.webp",
+     "thumb": "img/spb-02-1-t.webp",
+     "w": 810,
+     "h": 540,
+     "credit": "travelrussia.ru",
+     "page": "https://travelrussia.ru/blog/obzory/peterburg-zimoy/"
+    },
+    {
+     "src": "img/spb-02-2.webp",
+     "thumb": "img/spb-02-2-t.webp",
+     "w": 700,
+     "h": 467,
+     "credit": "pikabu.ru",
+     "page": "https://pikabu.ru/story/novogodniy_nevskiy_prospekt_9789553"
+    },
+    {
+     "src": "img/spb-02-3.webp",
+     "thumb": "img/spb-02-3-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "Wikimedia Commons · Vasilii Martynov · CC0",
+     "page": "https://commons.wikimedia.org/wiki/File:Nevsky_Prospekt_20240912_114912_MP.jpg"
+    }
+   ]
+  },
+  "spb-03": {
+   "id": "spb-03",
+   "name": "Pelmenya",
+   "local": "Пельмения",
+   "nameEn": "Pelmenya",
+   "branch": "Fontanka 25 şubesi (şehirde birden çok şubesi var; en merkezi ve en çok beğenileni bu)",
+   "category": "restaurant",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Dünyanın farklı mutfaklarından hamur işleri (Rus pelmenisi, vareniki, hinkali, mantı, gyoza, ravioli) sunan zincir restoran; Nevsky/Aniçkov köprüsüne birkaç dakika. Her gün 11:00–23:00, ortalama hesap ~700–1000 ₽.",
+   "address": "наб. реки Фонтанки, 25, Санкт-Петербург",
+   "lat": 59.934247,
+   "lon": 30.342952,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-03-1.webp",
+     "thumb": "img/spb-03-1-t.webp",
+     "w": 930,
+     "h": 530,
+     "credit": "spb.allcafe.ru",
+     "page": "https://spb.allcafe.ru/catalog/pelmeniya/"
+    },
+    {
+     "src": "img/spb-03-2.webp",
+     "thumb": "img/spb-03-2-t.webp",
+     "w": 900,
+     "h": 500,
+     "credit": "tripadvisor.ru",
+     "page": "https://www.tripadvisor.ru/Restaurant_Review-g298507-d3546957-Reviews-Pelmenya-St_Petersburg_Northwestern_District.html"
+    },
+    {
+     "src": "img/spb-03-3.webp",
+     "thumb": "img/spb-03-3-t.webp",
+     "w": 960,
+     "h": 960,
+     "credit": "tripadvisor.com",
+     "page": "https://www.tripadvisor.com/Restaurant_Review-g298507-d3546957-Reviews-Pelmenya-St_Petersburg_Northwestern_District.html"
+    }
+   ]
+  },
+  "spb-04": {
+   "id": "spb-04",
+   "name": "Union Bar",
+   "local": "Юнион",
+   "nameEn": "Union Bar",
+   "branch": null,
+   "category": "bar",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Fartuk kafesinin kurucularının Liteyny'de açtığı kalabalık parti barı: hafta içi canlı konserler, hafta sonu DJ partileri; kokteyl, burger, fıçı bira, yazın avlu. 18:00'den sabaha kadar açık; Mayakovskaya metrosuna yakın.",
+   "address": "Литейный просп., 55, Санкт-Петербург",
+   "lat": 59.935755,
+   "lon": 30.347775,
+   "website": "https://unionbar.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-04-1.webp",
+     "thumb": "img/spb-04-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "inyourpocket.com",
+     "page": "https://www.inyourpocket.com/russia/st-petersburg-ru/venues/yunion"
+    },
+    {
+     "src": "img/spb-04-2.webp",
+     "thumb": "img/spb-04-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/restaurant/union-bar-59745/"
+    },
+    {
+     "src": "img/spb-04-3.webp",
+     "thumb": "img/spb-04-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "unionbar.ru",
+     "page": "http://unionbar.ru/"
+    }
+   ]
+  },
+  "spb-05": {
+   "id": "spb-05",
+   "name": "Mad Espresso Team",
+   "local": "Mad Espresso Team (MET) на Римского-Корсакова",
+   "nameEn": "Mad Espresso Team – Rimsky-Korsakov Ave",
+   "branch": "пр. Римского-Корсакова 3 – Sennaya/Spasskaya metrosu, Yusupov Bahçesi karşısı; Mariinsky'ye ~10 dk, Hermitage'a ~25 dk yürüyüş",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kendi kavurduğu kahve + gün boyu kahvaltı sunan yerel specialty zinciri (MET). Resmi saatler: Pzt 08:00–20:00, Sa–Cu 08:00–22:00, hafta sonu 10:00–22:00; 1–8 Ocak resmi tatilinde saatler değişebilir.",
+   "address": "пр. Римского-Корсакова, 3, Санкт-Петербург",
+   "lat": 59.924459,
+   "lon": 30.310848,
+   "website": "https://met.coffee/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-05-1.webp",
+     "thumb": "img/spb-05-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "met.coffee",
+     "page": "https://met.coffee/adresa-kofeen-met.html"
+    },
+    {
+     "src": "img/spb-05-2.webp",
+     "thumb": "img/spb-05-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "rbi.ru",
+     "page": "https://www.rbi.ru/restoran/"
+    },
+    {
+     "src": "img/spb-05-3.webp",
+     "thumb": "img/spb-05-3-t.webp",
+     "w": 960,
+     "h": 480,
+     "credit": "openkitchen.eda.yandex",
+     "page": "https://openkitchen.eda.yandex/article/news/other/obnovlyonnoe-menyu-v-kofeynyah-mad-espresso-team"
+    }
+   ]
+  },
+  "spb-06": {
+   "id": "spb-06",
+   "name": "State Hermitage Museum (Winter Palace)",
+   "local": "Государственный Эрмитаж (Зимний дворец)",
+   "nameEn": "State Hermitage Museum (Winter Palace)",
+   "branch": null,
+   "category": "museum",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Ermitaj'ın ana binası Kışlık Saray; giriş Saray Meydanı'ndaki büyük avludan. 2026 saatleri: Salı/Cuma/Cumartesi 11:00–20:00, Çarşamba/Perşembe/Pazar 11:00–18:00, Pazartesi kapalı; seanslı bilet, gişe kapanıştan 1 saat önce kapanır — 5 Ocak 2027 Salı, 16:00 sonrası ziyaret uygun.",
+   "address": "Дворцовая площадь, 2 (Дворцовая набережная, 38), Санкт-Петербург",
+   "lat": 59.940278,
+   "lon": 30.313889,
+   "website": "https://www.hermitagemuseum.org/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-06-1.webp",
+     "thumb": "img/spb-06-1-t.webp",
+     "w": 960,
+     "h": 504,
+     "credit": "mywowo.net",
+     "page": "https://mywowo.net/en/russia/saint-petersburg/hermitage/winter-palace"
+    },
+    {
+     "src": "img/spb-06-2.webp",
+     "thumb": "img/spb-06-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · W. Bulach · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:00_2038_Winter_Palace_-_Hermitage_Museum_(St._Petersburg).jpg"
+    },
+    {
+     "src": "img/spb-06-3.webp",
+     "thumb": "img/spb-06-3-t.webp",
+     "w": 672,
+     "h": 960,
+     "credit": "commons.wikimedia.org",
+     "page": "https://commons.wikimedia.org/wiki/File:Johrdan_staircase.jpg"
+    }
+   ]
+  },
+  "spb-07": {
+   "id": "spb-07",
+   "name": "El Copitas",
+   "local": "Эль Копитас",
+   "nameEn": "El Copitas Bar",
+   "branch": null,
+   "category": "bar",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "World's 50 Best Bars listesine girmiş, tabelasız Meksika temalı speakeasy kokteyl barı (Şubat 2025'te yenilendi), 19:00'dan itibaren yalnızca rezervasyonla. Rezervasyon: elcopitasbar.com'daki form, Telegram @elcopitas_spb veya +7 921 941-71-68; gelmeden arayın, avlu kapısında karşılanırsınız.",
+   "address": "ул. Колокольная, 2/18 (Владимирский пр., 18, вход через ворота во двор), Санкт-Петербург",
+   "lat": 59.929301,
+   "lon": 30.348582,
+   "website": "https://www.elcopitasbar.com",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-07-1.webp",
+     "thumb": "img/spb-07-1-t.webp",
+     "w": 960,
+     "h": 641,
+     "credit": "greatlist.ru",
+     "page": "https://greatlist.ru/spb/restaurant/el-copitas/"
+    },
+    {
+     "src": "img/spb-07-2.webp",
+     "thumb": "img/spb-07-2-t.webp",
+     "w": 641,
+     "h": 960,
+     "credit": "taler-travel.ru",
+     "page": "https://taler-travel.ru/countries/elkapitos"
+    },
+    {
+     "src": "img/spb-07-3.webp",
+     "thumb": "img/spb-07-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "saintpetersburg.zagranitsa.com",
+     "page": "https://saintpetersburg.zagranitsa.com/place/18091/el-copitas"
+    }
+   ]
+  },
+  "spb-08": {
+   "id": "spb-08",
+   "name": "Surf Coffee x Gorokhovaya",
+   "local": "Surf Coffee x G34",
+   "nameEn": "Surf Coffee x G34 (Gorokhovaya 34)",
+   "branch": "Surf Coffee x G34 – Гороховая 34, Moyka ile Fontanka arası (Sennaya/Sadovaya metrolarına ~7 dk)",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Tuğla tonozlu, sörf temalı Surf şubesi; her gün 09:00–22:00 (08:00'de açık değil), 2GIS'te 5.0 (536 oy).",
+   "address": "Гороховая ул., 34, Санкт-Петербург",
+   "lat": 59.92925,
+   "lon": 30.321156,
+   "website": "https://www.surfcoffee.ru/surf-coffee-stores/surf-spb-gorokhovaya34",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-08-1.webp",
+     "thumb": "img/spb-08-1-t.webp",
+     "w": 960,
+     "h": 738,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/restaurant/surf-coffee-x-g34-151608/"
+    },
+    {
+     "src": "img/spb-08-2.webp",
+     "thumb": "img/spb-08-2-t.webp",
+     "w": 960,
+     "h": 453,
+     "credit": "surfcoffee.ru",
+     "page": "https://www.surfcoffee.ru/surf-coffee-stores/surf-spb-gorokhovaya34"
+    },
+    {
+     "src": "img/spb-08-3.webp",
+     "thumb": "img/spb-08-3-t.webp",
+     "w": 900,
+     "h": 500,
+     "credit": "tripadvisor.com",
+     "page": "https://www.tripadvisor.com/Restaurant_Review-g298507-d9749572-Reviews-Surf_Coffee-St_Petersburg_Northwestern_District.html"
+    }
+   ]
+  },
+  "spb-09": {
+   "id": "spb-09",
+   "name": "Church of the Savior on Spilled Blood",
+   "local": "Храм Спаса на Крови (Собор Воскресения Христова)",
+   "nameEn": "Church of the Savior on Spilled Blood",
+   "branch": null,
+   "category": "landmark",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": "Normalde Çarşamba kapalı; ancak resmi siteye göre okul tatilleri ve resmi tatillerde (1 Ocak hariç) her gün açık — 6 Ocak 2027 Çarşamba, Yılbaşı tatiline denk geldiği için açık olmalı.",
+   "notes": "II. Aleksandr'ın suikaste uğradığı yere yapılmış, iç duvarları tamamen mozaik kaplı müze-kilise; Griboyedov Kanalı kıyısında. Saatler 10:00–18:00 (gişe 17:30'a kadar) — 16:00'da gelirseniz ~1,5 saatiniz olur.",
+   "address": "набережная канала Грибоедова, 2Б, Санкт-Петербург",
+   "lat": 59.940091,
+   "lon": 30.328844,
+   "website": "https://cathedral.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-09-1.webp",
+     "thumb": "img/spb-09-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "thebest-tourist-destinations.blogspot.com",
+     "page": "https://thebest-tourist-destinations.blogspot.com/2014/05/church-of-our-savior-on-spilled-blood.html"
+    },
+    {
+     "src": "img/spb-09-2.webp",
+     "thumb": "img/spb-09-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · Suicasmo · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Interiors_of_the_Church_of_the_Saviour_on_the_Blood_20180805-1.jpg"
+    },
+    {
+     "src": "img/spb-09-3.webp",
+     "thumb": "img/spb-09-3-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "trekkingmania.ru",
+     "page": "https://trekkingmania.ru/spas_na_krovi/"
+    }
+   ]
+  },
+  "spb-10": {
+   "id": "spb-10",
+   "name": "Mishka Bar",
+   "local": "Мишка (Mishka)",
+   "nameEn": "Mishka Bar",
+   "branch": null,
+   "category": "bar",
+   "city": "spb",
+   "status": "moved",
+   "short": {
+    "level": "moved",
+    "text": "2021'de Konnogvardeyski bulvarı 4'e taşındı"
+   },
+   "statusNote": "Bar yaklaşık 10 yıl Fontanka 40'taydı; Eylül 2021'de Konnogvardeyski bulvarı 4'teki yeni mekâna taşındı (eski rehberlerdeki Fontanka adresi artık geçersiz).",
+   "notes": "Kült dans barı: tuğla tonozlu, büyük kemerli pencereli salon; gündüz kafe, akşam kokteyl bar, cuma–cumartesi geceleri DJ ve dans pisti. İsaakiyevski Sobor/Admiralteyskaya metrosu yakınında, her gün 17:00'den itibaren bar (hafta sonu ~03:00'a kadar).",
+   "address": "Конногвардейский бул., 4, Санкт-Петербург",
+   "lat": 59.932984,
+   "lon": 30.29881,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-10-1.webp",
+     "thumb": "img/spb-10-1-t.webp",
+     "w": 880,
+     "h": 880,
+     "credit": "fiesta.ru",
+     "page": "https://www.fiesta.ru/spb/places/legendarnyy-bar-mishka-na-konnogvardeyskom-bulvare/"
+    },
+    {
+     "src": "img/spb-10-2.webp",
+     "thumb": "img/spb-10-2-t.webp",
+     "w": 960,
+     "h": 719,
+     "credit": "kudago.com",
+     "page": "https://kudago.com/spb/place/bar-mishka2/"
+    },
+    {
+     "src": "img/spb-10-3.webp",
+     "thumb": "img/spb-10-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "paperpaper.io",
+     "page": "https://paperpaper.io/devyat-novyh-zavedenij-sentyabrya-i-kak/"
+    }
+   ]
+  },
+  "spb-11": {
+   "id": "spb-11",
+   "name": "Civil Coffee Bar",
+   "local": "Civil (CVL Coffee)",
+   "nameEn": "Civil Coffee Bar – Volynsky Lane",
+   "branch": "Волынский пер. 8 – Nevsky Prospekt / Gostiny Dvor metrolarına ~5 dk, Moyka ve Saray Meydanı'na yakın (2 şubeden merkezdeki)",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Kaliteli kahve ve gün boyu kahvaltı sunan sakin, minimalist kafe; Yandex'te 5.0 (2.600+ oy). Resmi saatler Pzt–Per ve Paz 09:00–20:00, Cum–Cmt 09:00–21:00 — 08:00'de açık değil. Diğer şube: Большой пр. П.С. 71А (Petrogradskaya).",
+   "address": "Волынский пер., 8 (Яндекс: д. 6), цокольный этаж, Санкт-Петербург",
+   "lat": 59.938434,
+   "lon": 30.321776,
+   "website": "https://cvlcoffee.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-11-1.webp",
+     "thumb": "img/spb-11-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/restaurant/civil-270518/"
+    },
+    {
+     "src": "img/spb-11-2.webp",
+     "thumb": "img/spb-11-2-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/spb/places/civil"
+    },
+    {
+     "src": "img/spb-11-3.webp",
+     "thumb": "img/spb-11-3-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/spb/places/civil-bolshoy-p-s"
+    }
+   ]
+  },
+  "spb-12": {
+   "id": "spb-12",
+   "name": "Kazan Cathedral",
+   "local": "Казанский кафедральный собор",
+   "nameEn": "Kazan Cathedral",
+   "branch": null,
+   "category": "landmark",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Nevsky Prospekt üzerindeki yarım daire sütunlu, aktif Ortodoks katedrali (Kazan Meryem Ana ikonası burada); giriş ücretsiz. 7 Ocak Ortodoks Noeli'nde ayinler ve kalabalık beklenir; omuz/diz kapalı kıyafet, kadınlar için başörtüsü önerilir.",
+   "address": "Казанская площадь, 2, Санкт-Петербург",
+   "lat": 59.934228,
+   "lon": 30.324594,
+   "website": "http://kazansky-spb.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-12-1.webp",
+     "thumb": "img/spb-12-1-t.webp",
+     "w": 626,
+     "h": 417,
+     "credit": "freepik.com",
+     "page": "https://www.freepik.com/premium-photo/kazan-cathedral-kazanskiy-kafedralniy-sobor-also-known-as-cathedral-our-lady-kazan-is-russian-orthodox-church-nevsky-prospekt-saint-petersburg-russia-snow-winter-night_87271279.htm"
+    },
+    {
+     "src": "img/spb-12-2.webp",
+     "thumb": "img/spb-12-2-t.webp",
+     "w": 960,
+     "h": 506,
+     "credit": "Wikimedia Commons · A.Savin · CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Spb_06-2012_Nevsky_various_02.jpg"
+    },
+    {
+     "src": "img/spb-12-3.webp",
+     "thumb": "img/spb-12-3-t.webp",
+     "w": 768,
+     "h": 960,
+     "credit": "pinterest.com",
+     "page": "https://www.pinterest.com/pin/423760646185516214/"
+    }
+   ]
+  },
+  "spb-13": {
+   "id": "spb-13",
+   "name": "Severyanin",
+   "local": "Северянин",
+   "nameEn": "Severyanin",
+   "branch": null,
+   "category": "restaurant",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Eski bir Petersburg dairesi dekorunda Rus Kuzeyi mutfağı (geyik eti, balık, sugudai, kuzey meyveli likörler) sunan restoran; Sennaya meydanı yakınında. Ortalama hesap ~1.500–1.900 ₽; akşam yemeği için rezervasyon önerilir.",
+   "address": "Столярный пер., 18/69, Санкт-Петербург",
+   "lat": 59.926478,
+   "lon": 30.313065,
+   "website": "https://www.severyanin.me/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-13-1.webp",
+     "thumb": "img/spb-13-1-t.webp",
+     "w": 956,
+     "h": 546,
+     "credit": "speterburg.arendazala.net",
+     "page": "https://speterburg.arendazala.net/catalog/hall-zal-gostinaya-10084/"
+    },
+    {
+     "src": "img/spb-13-2.webp",
+     "thumb": "img/spb-13-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "restorating.ru",
+     "page": "https://www.restorating.ru/spb/catalogue/severyanin"
+    },
+    {
+     "src": "img/spb-13-3.webp",
+     "thumb": "img/spb-13-3-t.webp",
+     "w": 800,
+     "h": 533,
+     "credit": "speterburg.birthday-place.ru",
+     "page": "https://speterburg.birthday-place.ru/catalog/restoran-severyanin/"
+    }
+   ]
+  },
+  "spb-14": {
+   "id": "spb-14",
+   "name": "Smena Cafe",
+   "local": "Смена",
+   "nameEn": "Smena Cafe",
+   "branch": "Басков пер. 20 – tek şube (Chernyshevskaya ile Ploshchad Vosstaniya arası)",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Double B'nin eski baristalarının açtığı İskandinav-minimal, aydınlık kafe; hafta içi 08:00–20:00, hafta sonu 09:00–20:00, 2GIS'te 4.8. Dikkat: kaynaklara göre bilinçli olarak Wi‑Fi yok (laptopla oturmaya izin var) — mobil internet/hotspot gerekir.",
+   "address": "Басков пер., 20, Санкт-Петербург",
+   "lat": 59.939606,
+   "lon": 30.359704,
+   "website": "https://www.instagram.com/smenacafe/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-14-1.webp",
+     "thumb": "img/spb-14-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "rbc.ru",
+     "page": "https://www.rbc.ru/wine/news/6945224d9a794723f9f04b95"
+    },
+    {
+     "src": "img/spb-14-2.webp",
+     "thumb": "img/spb-14-2-t.webp",
+     "w": 960,
+     "h": 645,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/restaurant/smena-374093/"
+    },
+    {
+     "src": "img/spb-14-3.webp",
+     "thumb": "img/spb-14-3-t.webp",
+     "w": 960,
+     "h": 670,
+     "credit": "experience.tripster.ru",
+     "page": "https://experience.tripster.ru/journal/articles/kofejni-sankt-peterburga/"
+    }
+   ]
+  },
+  "spb-15": {
+   "id": "spb-15",
+   "name": "Peter and Paul Fortress",
+   "local": "Петропавловская крепость",
+   "nameEn": "Peter and Paul Fortress",
+   "branch": null,
+   "category": "landmark",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Şehrin kurulduğu kale (Zayachy Adası); içinde Romanov çarlarının mezarlarının bulunduğu Petropavlovsk Katedrali var. Ada her gün sabahtan ~21:30'a kadar serbest gezilebilir; katedral/müzeler için gişeler ~18:00'de kapanır, 16:00'da gidip önce katedrale girin. Metro: Gorkovskaya.",
+   "address": "Петропавловская крепость, 3, Заячий остров, Санкт-Петербург",
+   "lat": 59.950064,
+   "lon": 30.31643,
+   "website": "https://www.spbmuseum.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-15-1.webp",
+     "thumb": "img/spb-15-1-t.webp",
+     "w": 736,
+     "h": 889,
+     "credit": "pinterest.com",
+     "page": "https://www.pinterest.com/pin/39547302964558135/"
+    },
+    {
+     "src": "img/spb-15-2.webp",
+     "thumb": "img/spb-15-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · W. Bulach · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:00_4645_Sankt_Petersburg_-_Haseninsel.jpg"
+    },
+    {
+     "src": "img/spb-15-3.webp",
+     "thumb": "img/spb-15-3-t.webp",
+     "w": 639,
+     "h": 960,
+     "credit": "gw2ru.com",
+     "page": "https://www.gw2ru.com/travel/2151-saints-peter-paul-cathedral"
+    }
+   ]
+  },
+  "spb-16": {
+   "id": "spb-16",
+   "name": "Stackenschneider",
+   "local": "Stackenschneider (Штакеншнейдер)",
+   "nameEn": "Stackenschneider",
+   "branch": null,
+   "category": "club",
+   "city": "spb",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Kalıcı olarak kapandı"
+   },
+   "statusNote": "Kalıcı olarak kapandı: Afisha 'Закрыто навсегда', Yandex Haritalar 'Больше не работает', Foursquare 'Now Closed'; kulübün Telegram kanalındaki son duyurularda partiler başka kulüplere (Blank, History) taşınmış. Ocak 2027 için alternatif bir elektronik müzik kulübü seçilmeli.",
+   "notes": "Adını mimar Andrey Stakenşneyder'den alan, bağımsız elektronik müzik sahnesine (house/techno, yerel DJ'ler, yazın çatı terası) odaklanan underground kulüptü; 2014'te Millionnaya'dan Konyuşennaya meydanındaki avluya taşınmıştı.",
+   "address": "Конюшенная пл., 2В (во дворе), Санкт-Петербург",
+   "lat": 59.939594,
+   "lon": 30.326861,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-16-1.webp",
+     "thumb": "img/spb-16-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tripadvisor.com",
+     "page": "https://www.tripadvisor.com/Attraction_Review-g298507-d8702466-Reviews-Stackenschneider-St_Petersburg_Northwestern_District.html"
+    },
+    {
+     "src": "img/spb-16-2.webp",
+     "thumb": "img/spb-16-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "inyourpocket.com",
+     "page": "https://www.inyourpocket.com/russia/st-petersburg-en/venues/stackenschneider"
+    },
+    {
+     "src": "img/spb-16-3.webp",
+     "thumb": "img/spb-16-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "a-a-ah.ru",
+     "page": "https://a-a-ah.ru/klub-stackenschneider"
+    }
+   ]
+  },
+  "spb-17": {
+   "id": "spb-17",
+   "name": "Verle Garden",
+   "local": "Verlé (бывш. Verlé Garden)",
+   "nameEn": "Verlé Garden",
+   "branch": "Каменноостровский пр. 25/2 – Petrogradskaya metrosu yakını, Nizami Bahçesi'nin yanında (tek kafe)",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Bir çiftin açtığı, bitkilerle dolu minimalist specialty kahve kafesi + showroom; bugün listelerde sadece 'Verlé' adıyla geçiyor. Saatler 10:00–21:00 (08:00'de açık değil); 2GIS 4.8, Yandex 4.6, Wi‑Fi var.",
+   "address": "Каменноостровский просп., 25/2, Санкт-Петербург",
+   "lat": 59.963328,
+   "lon": 30.314528,
+   "website": "https://verleshop.com/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-17-1.webp",
+     "thumb": "img/spb-17-1-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "pinterest.com",
+     "page": "https://www.pinterest.com/pin/512636370102612719/"
+    },
+    {
+     "src": "img/spb-17-2.webp",
+     "thumb": "img/spb-17-2-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "pinterest.com",
+     "page": "https://www.pinterest.com/pin/6966574421495006/"
+    },
+    {
+     "src": "img/spb-17-3.webp",
+     "thumb": "img/spb-17-3-t.webp",
+     "w": 880,
+     "h": 587,
+     "credit": "fiesta.ru",
+     "page": "https://www.fiesta.ru/spb/live/zelyonye-kafe-peterburga-v-kotoryh-mozhno-vernutsya-obratno-v-leto/"
+    }
+   ]
+  },
+  "spb-18": {
+   "id": "spb-18",
+   "name": "New Holland Island",
+   "local": "Новая Голландия",
+   "nameEn": "New Holland Island",
+   "branch": null,
+   "category": "park",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": "Ada açık; buz pisti sezonluk — 2026/27 sezonu için tarih ve seans saatlerini Aralık'ta newhollandsp.ru'dan kontrol edin.",
+   "notes": "Eski tersane adası; bugün park, kafe-restoran ve etkinlik alanı. Kışın ortadaki havuz buz pistine dönüşür (2025/26 sezonu 15 Kasım–15 Mart, 1 saatlik seanslar, 200–800 ₽) — 2026/27 tarihleri henüz açıklanmadı.",
+   "address": "набережная Адмиралтейского канала, 2, Санкт-Петербург",
+   "lat": 59.929616,
+   "lon": 30.289735,
+   "website": "https://www.newhollandsp.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-18-1.webp",
+     "thumb": "img/spb-18-1-t.webp",
+     "w": 960,
+     "h": 573,
+     "credit": "yandex.ru",
+     "page": "https://yandex.ru/maps/org/katok/25807695599/"
+    },
+    {
+     "src": "img/spb-18-2.webp",
+     "thumb": "img/spb-18-2-t.webp",
+     "w": 960,
+     "h": 461,
+     "credit": "vse-na-katok.ru",
+     "page": "https://vse-na-katok.ru/sankt-peterburg/otkrytyj-katok-v-novoj-gollandii-raspisanie-i-ceny/"
+    },
+    {
+     "src": "img/spb-18-3.webp",
+     "thumb": "img/spb-18-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "Wikimedia Commons · A.Savin · FAL",
+     "page": "https://commons.wikimedia.org/wiki/File:Spb_06-2017_img33_New_Holland.jpg"
+    }
+   ]
+  },
+  "spb-19": {
+   "id": "spb-19",
+   "name": "Orthodox Russian Bar",
+   "local": "Orthodox (русский бар «Ортодокс»)",
+   "nameEn": "Orthodox Russian Bar",
+   "branch": null,
+   "category": "bar",
+   "city": "spb",
+   "status": "moved",
+   "short": {
+    "level": "moved",
+    "text": "Kasım 2024'te Vosstaniya 4'e taşındı"
+   },
+   "statusNote": "Uzun yıllar Rubinştejna ul. 2'deydi; Kasım 2024'te Vosstaniya ul. 4'teki daha büyük tuğla tonozlu mekâna taşındı (eski rehberlerde hâlâ Rubinştejna 2 yazıyor).",
+   "notes": "Planda geçen bar bu: yalnızca Rusya ve eski Sovyet ülkelerinin içkileriyle (samogon, tahıl distilatları, Dağıstan şarabı vb.) Rus yazar/sanatçılarına adanmış kokteyller yapan bar. Ploşçad Vosstaniya metrosunun yanında; pazar–perşembe 18:00–02:00, cuma–cumartesi 18:00–04:00.",
+   "address": "ул. Восстания, 4, Санкт-Петербург",
+   "lat": 59.9329,
+   "lon": 30.359133,
+   "website": "https://orthodox.bar",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-19-1.webp",
+     "thumb": "img/spb-19-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "restorating.ru",
+     "page": "https://www.restorating.ru/spb/articles/orthodox"
+    },
+    {
+     "src": "img/spb-19-2.webp",
+     "thumb": "img/spb-19-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "mcmaison.ru",
+     "page": "https://mcmaison.ru/interior-hotels-restaurants/v-dialoge-s-kulturoi-novoe-prostranstvo-bara-orthodox-v-sankt-peterburge/"
+    },
+    {
+     "src": "img/spb-19-3.webp",
+     "thumb": "img/spb-19-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/spb/places/orthodox-vosstaniya"
+    }
+   ]
+  },
+  "spb-20": {
+   "id": "spb-20",
+   "name": "Aster Cafe",
+   "local": "Aster (Астер)",
+   "nameEn": "Aster Cafe – Mayakovskogo",
+   "branch": "ул. Маяковского 23/6 – ilk ve en bilinen şube (Chernyshevskaya metrosu, Tavriçeski Bahçesi'ne yakın); diğerleri Римского-Корсакова 22 ve Рыбацкая 2",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Ronny ve Gills'in kurucularından kahve + kendi fırını + kahvaltı + şarap konseptli şehir kafesi (WhereToEat 2024 ödüllü). Her gün 09:00–23:00 (08:00'de açık değil); 2GIS 4.8, kalabalık ve sıra olabilir.",
+   "address": "ул. Маяковского, 23/6, 1 этаж, Санкт-Петербург",
+   "lat": 59.939691,
+   "lon": 30.355508,
+   "website": "https://astercafe.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-20-1.webp",
+     "thumb": "img/spb-20-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "kudaspb.com",
+     "page": "https://kudaspb.com/restorany"
+    },
+    {
+     "src": "img/spb-20-2.webp",
+     "thumb": "img/spb-20-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/restaurant/aster-494589/"
+    },
+    {
+     "src": "img/spb-20-3.webp",
+     "thumb": "img/spb-20-3-t.webp",
+     "w": 450,
+     "h": 800,
+     "credit": "vkusonomika.ru",
+     "page": "https://vkusonomika.ru/saint-petersburg/places/aster/"
+    }
+   ]
+  },
+  "spb-21": {
+   "id": "spb-21",
+   "name": "State Russian Museum",
+   "local": "Государственный Русский музей (Михайловский дворец)",
+   "nameEn": "State Russian Museum (Mikhailovsky Palace)",
+   "branch": null,
+   "category": "museum",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Dünyanın en büyük Rus sanatı koleksiyonu; ana bina Sanat Meydanı'ndaki Mikhailovsky Sarayı (Aivazovsky'nin 'Dokuzuncu Dalga'sı, Repin, Brüllov). Resmi saatler: Pazartesi ve Çarşamba–Pazar 10:00–20:00, Salı kapalı — 10 Ocak 2027 Pazar ziyareti uygun. Metro: Nevsky Prospekt / Gostiny Dvor.",
+   "address": "Инженерная улица, 4, Санкт-Петербург",
+   "lat": 59.938592,
+   "lon": 30.332221,
+   "website": "https://rusmuseum.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-21-1.webp",
+     "thumb": "img/spb-21-1-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "sunhome.ru",
+     "page": "https://www.sunhome.ru/foto/mihailovskii-dvorec-russkii-muzei.html"
+    },
+    {
+     "src": "img/spb-21-2.webp",
+     "thumb": "img/spb-21-2-t.webp",
+     "w": 830,
+     "h": 550,
+     "credit": "inyourpocket.com",
+     "page": "https://www.inyourpocket.com/st-petersburg-en/mikhailovsky-palace-russian-museum_141314v"
+    },
+    {
+     "src": "img/spb-21-3.webp",
+     "thumb": "img/spb-21-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "dic.academic.ru",
+     "page": "https://dic.academic.ru/dic.nsf/ruwiki/372"
+    }
+   ]
+  },
+  "spb-22": {
+   "id": "spb-22",
+   "name": "Rubinstein Street",
+   "local": "улица Рубинштейна",
+   "nameEn": "Rubinstein Street",
+   "branch": null,
+   "category": "street",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "Nevski Prospekt'ten Beş Köşe'ye (Pyat Uglov) uzanan, onlarca bar ve restoranın yan yana dizildiği şehrin en bilinen bar sokaklarından; pin sokağın ortasında (Rubinştejna 11 civarı). Bar bar gezmek için sokağı baştan sona yürümek yeterli.",
+   "address": "ул. Рубинштейна (от Невского пр. до Пяти углов), Санкт-Петербург",
+   "lat": 59.92962,
+   "lon": 30.344309,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-22-1.webp",
+     "thumb": "img/spb-22-1-t.webp",
+     "w": 960,
+     "h": 664,
+     "credit": "Wikimedia Commons · Bestalex · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Saint_Petersburg._Rubinstein_street,_13.jpg"
+    },
+    {
+     "src": "img/spb-22-2.webp",
+     "thumb": "img/spb-22-2-t.webp",
+     "w": 960,
+     "h": 637,
+     "credit": "Wikimedia Commons · Florstein ( Telegram: WikiPhoto.Space ) · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Rubinsteina_Street_SPB_01.jpg"
+    },
+    {
+     "src": "img/spb-22-3.webp",
+     "thumb": "img/spb-22-3-t.webp",
+     "w": 930,
+     "h": 525,
+     "credit": "dp.ru",
+     "page": "https://www.dp.ru/a/2021/02/08/Ulicu_Rubinshtejna_vzjali_p"
+    }
+   ]
+  },
+  "spb-23": {
+   "id": "spb-23",
+   "name": "Mariinsky Theatre",
+   "local": "Мариинский театр (историческая сцена)",
+   "nameEn": "Mariinsky Theatre (historic stage)",
+   "branch": null,
+   "category": "landmark",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": "Tarihi bina, Lermontovsky Prospekt'teki 4. sahne bitince uzun restorasyona girecek (tamamlanma ~2032 öngörülüyor); Ekim 2026 afişinde tarihi sahnede gösteri var, Ocak 2027 programını kontrol edin.",
+   "notes": "1860'tan beri bale ve operanın tarihi ana sahnesi (mavi-altın salon, Golovin perdesi); Kryukov Kanalı'nın karşısında modern Mariinsky-2 var. Akşam gösterileri genelde 19:00'da — bilet mariinsky.ru'dan.",
+   "address": "Театральная площадь, 1, Санкт-Петербург",
+   "lat": 59.92543,
+   "lon": 30.295909,
+   "website": "https://www.mariinsky.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-23-1.webp",
+     "thumb": "img/spb-23-1-t.webp",
+     "w": 960,
+     "h": 719,
+     "credit": "Wikimedia Commons · Nikolai Bulykin · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_%D0%9C%D0%B0%D1%80%D0%B8%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80,_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_(edited_version).jpg"
+    },
+    {
+     "src": "img/spb-23-2.webp",
+     "thumb": "img/spb-23-2-t.webp",
+     "w": 960,
+     "h": 719,
+     "credit": "megavtogal.com",
+     "page": "https://megavtogal.com/pereskazy1/o-mariinskom-teatre-kratko-detyam.html"
+    },
+    {
+     "src": "img/spb-23-3.webp",
+     "thumb": "img/spb-23-3-t.webp",
+     "w": 800,
+     "h": 533,
+     "credit": "saint-petersburg.com",
+     "page": "http://www.saint-petersburg.com/buildings/mariinsky-theatre/"
+    }
+   ]
+  },
+  "spb-24": {
+   "id": "spb-24",
+   "name": "Blank Club",
+   "local": "Blank (Бланк)",
+   "nameEn": "Blank Club",
+   "branch": null,
+   "category": "club",
+   "city": "spb",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "Haziran 2026'da kapandı"
+   },
+   "statusNote": "Kulüp Nisan 2026'da kapanacağını duyurdu ve 12–13 Haziran 2026'daki 'Son Rave' partileriyle kapandı; Yandex Haritalar'da 'Больше не работает'. Ocak 2027 için alternatif bir kulüp seçilmeli.",
+   "notes": "Eski 'Arsenal' makine fabrikasının tuğla tonozlu salonlarında 2018'de açılmış techno/elektronik kulübüydü (Neva'nın Vıborg yakasında, Arsenalnaya rıhtımı).",
+   "address": "Арсенальная наб., 1, Санкт-Петербург",
+   "lat": 59.954772,
+   "lon": 30.372051,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-24-1.webp",
+     "thumb": "img/spb-24-1-t.webp",
+     "w": 960,
+     "h": 504,
+     "credit": "daily.afisha.ru",
+     "page": "https://daily.afisha.ru/news/108466-piterskiy-klub-blank-obyavil-o-zakrytii-cherez-dva-mesyaca/"
+    },
+    {
+     "src": "img/spb-24-2.webp",
+     "thumb": "img/spb-24-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "timeout.ru",
+     "page": "https://www.timeout.ru/spb/place/blank"
+    },
+    {
+     "src": "img/spb-24-3.webp",
+     "thumb": "img/spb-24-3-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "youtube.com",
+     "page": "https://www.youtube.com/watch?v=XTYYwsUJ86Y"
+    }
+   ]
+  },
+  "spb-25": {
+   "id": "spb-25",
+   "name": "Surf Coffee x Fontanka",
+   "local": "Surf Coffee x Chizhik",
+   "nameEn": "Surf Coffee x Chizhik (near Fontanka)",
+   "branch": "Surf Coffee x Chizhik – Пестеля 13-15; Fontanka rıhtımına ~250 m, adını Fontanka'daki Çijik-Pijik heykelinden alıyor",
+   "category": "cafe",
+   "city": "spb",
+   "status": "open",
+   "short": {
+    "level": "info",
+    "text": "Bu adla şube yok; Fontanka'ya yakın olan Chizhik"
+   },
+   "statusNote": null,
+   "notes": "'Surf Coffee x Fontanka' adında şube yok; resmi sitede 'Fontanka rıhtımının yanında' diye tanıtılan tek şube Chizhik. Her gün 09:00–22:00, laptopla çalışmaya uygun, Wi‑Fi; Yaz Bahçesi ve Mars Tarlası'na yürüme mesafesinde.",
+   "address": "ул. Пестеля, 13-15, Санкт-Петербург",
+   "lat": 59.942421,
+   "lon": 30.34298,
+   "website": "https://www.surfcoffee.ru/chizhik",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-25-1.webp",
+     "thumb": "img/spb-25-1-t.webp",
+     "w": 720,
+     "h": 960,
+     "credit": "Wikimedia Commons · Vityavo · CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Pestelya_Street_13-15_(central_part)_in_St_Petersburg.jpg"
+    },
+    {
+     "src": "img/spb-25-2.webp",
+     "thumb": "img/spb-25-2-t.webp",
+     "w": 540,
+     "h": 960,
+     "credit": "ru.pinterest.com",
+     "page": "https://ru.pinterest.com/pin/108719778500817866/"
+    },
+    {
+     "src": "img/spb-25-3.webp",
+     "thumb": "img/spb-25-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/msk/restaurant/surf-coffee-218800/"
+    }
+   ]
+  },
+  "spb-26": {
+   "id": "spb-26",
+   "name": "St. Isaac's Cathedral & Colonnade",
+   "local": "Исаакиевский собор и колоннада",
+   "nameEn": "St. Isaac's Cathedral & Colonnade",
+   "branch": null,
+   "category": "landmark",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": "Katedral Çarşamba kapalı, kolonad Ekim–Nisan arası ayın 3. Çarşambası kapalı (ikisi de 1 Ocak kapalı); ziyaret günü Salı olduğu için sorun yok.",
+   "notes": "Altın kubbeli dev katedral-müze; kubbe çevresindeki kolonad (seyir terası, ayrı bilet, ~260 basamak) şehrin en iyi panoramalarından. Resmi saatler: katedral 10:00–18:00 (gişe 17:30), kolonad 10:00–18:00 — 12 Ocak 2027 Salı açık; Güneş ~16:20'de battığı için 16:00'da önce kolonada çıkın.",
+   "address": "Исаакиевская площадь, 4, Санкт-Петербург",
+   "lat": 59.934047,
+   "lon": 30.30595,
+   "website": "https://cathedral.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-26-1.webp",
+     "thumb": "img/spb-26-1-t.webp",
+     "w": 800,
+     "h": 533,
+     "credit": "saint-petersburg.com",
+     "page": "http://www.saint-petersburg.com/tours/two-day-winter-tour/"
+    },
+    {
+     "src": "img/spb-26-2.webp",
+     "thumb": "img/spb-26-2-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "spbmuzei.ru",
+     "page": "https://www.spbmuzei.ru/kolonnada-isaakievskogo-sobora"
+    },
+    {
+     "src": "img/spb-26-3.webp",
+     "thumb": "img/spb-26-3-t.webp",
+     "w": 960,
+     "h": 448,
+     "credit": "Wikimedia Commons · Ximeg · CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Saint_Isaac%27s_Cathedral_Sept._2012_Interior.jpg"
+    }
+   ]
+  },
+  "spb-27": {
+   "id": "spb-27",
+   "name": "Golitsyn Hall",
+   "local": "Голицын Холл (в креативном пространстве «Голицын Лофт»)",
+   "nameEn": "Golitsyn Hall (Golitsyn Loft)",
+   "branch": null,
+   "category": "venue",
+   "city": "spb",
+   "status": "closed",
+   "short": {
+    "level": "closed",
+    "text": "2020'de kapandı; bina boş"
+   },
+   "statusNote": "Golitsyn Loft 2020 baharında kapandı; bina Nisan 2020'den beri boş ve Aralık 2023 itibarıyla aktif kullanımda değil. Afisha'da Golitsyn-hall 'kapalı', Yandex'te Golitsyn Loft 'Больше не работает'. Aynı akşam için başka bir mekân seçilmeli.",
+   "notes": "Planın 'Golitsyn Hall'ü gerçek bir mekândı: Fontanka 20'deki 18. yy Golitsyn konağında kurulan 'Golitsyn Loft' yaratıcı kümesinin içinde konser, parti, sergi ve derslerin yapıldığı salon (kümede onlarca bar/kafe vardı).",
+   "address": "наб. реки Фонтанки, 20, Санкт-Петербург",
+   "lat": 59.940667,
+   "lon": 30.341221,
+   "website": null,
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-27-1.webp",
+     "thumb": "img/spb-27-1-t.webp",
+     "w": 960,
+     "h": 638,
+     "credit": "estetika-home.ru",
+     "page": "https://estetika-home.ru/golitsyn-loft/"
+    },
+    {
+     "src": "img/spb-27-2.webp",
+     "thumb": "img/spb-27-2-t.webp",
+     "w": 620,
+     "h": 415,
+     "credit": "the-village.ru",
+     "page": "https://www.the-village.ru/weekend/the-village-guide/244441-golitsynloft"
+    },
+    {
+     "src": "img/spb-27-3.webp",
+     "thumb": "img/spb-27-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "onlinekarty.ru",
+     "page": "https://onlinekarty.ru/travel/golicyn-loft"
+    }
+   ]
+  },
+  "spb-28": {
+   "id": "spb-28",
+   "name": "Sevkabel Port",
+   "local": "Севкабель Порт",
+   "nameEn": "Sevkabel Port",
+   "branch": null,
+   "category": "venue",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": "Eylül 2026 itibarıyla faal: resmi sitede Ekim–Aralık 2026 etkinlikleri listeleniyor.",
+   "notes": "Vasilyevsky Adası'nın ucunda, Fin Körfezi kıyısında eski kablo fabrikasından dönüştürülmüş kültür alanı: kafe-barlar, konser/etkinlik salonları, sahil promenadı. Giriş ücretsiz; kafe ve mekânların çoğu 10:00–23:00, barlar daha geç; 2025/26 kışında 'Горка у моря' kızak tepesi vardı.",
+   "address": "Кожевенная линия, 40, Васильевский остров, Санкт-Петербург",
+   "lat": 59.924553,
+   "lon": 30.240998,
+   "website": "https://sevcableport.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-28-1.webp",
+     "thumb": "img/spb-28-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "wikiway.com",
+     "page": "https://wikiway.com/russia/sankt-peterburg/sevkabel-port/"
+    },
+    {
+     "src": "img/spb-28-2.webp",
+     "thumb": "img/spb-28-2-t.webp",
+     "w": 810,
+     "h": 540,
+     "credit": "travelrussia.ru",
+     "page": "https://travelrussia.ru/blog/obzory/sevkabel-port-v-peterburge/"
+    },
+    {
+     "src": "img/spb-28-3.webp",
+     "thumb": "img/spb-28-3-t.webp",
+     "w": 960,
+     "h": 720,
+     "credit": "sevcableport.ru",
+     "page": "https://sevcableport.ru/photoreport/zima-v-portu-2025/"
+    }
+   ]
+  },
+  "spb-29": {
+   "id": "spb-29",
+   "name": "Griboedov Club",
+   "local": "Грибоедов",
+   "nameEn": "Griboedov Club",
+   "branch": null,
+   "category": "club",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "1996'da 'Dva Samolyota' grubunun eski bir bomba sığınağında açtığı kült kulüp (Ekim 2026'da 30. yılı); üstündeki cam pavyon 'Griboedov Hill' bar/konser alanı. DJ partileri ve konserler, cuma–pazar sabah 06:00'ya kadar; Ligovsky Prospekt metrosuna yakın.",
+   "address": "Воронежская ул., 2А, Санкт-Петербург",
+   "lat": 59.919541,
+   "lon": 30.350641,
+   "website": "https://www.griboedovclub.ru",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-29-1.webp",
+     "thumb": "img/spb-29-1-t.webp",
+     "w": 960,
+     "h": 540,
+     "credit": "afisha.ru",
+     "page": "https://www.afisha.ru/spb/club/griboedov-12901/"
+    },
+    {
+     "src": "img/spb-29-2.webp",
+     "thumb": "img/spb-29-2-t.webp",
+     "w": 630,
+     "h": 420,
+     "credit": "peterburg.ru",
+     "page": "https://peterburg.ru/clubs/klub-griboedov-0"
+    },
+    {
+     "src": "img/spb-29-3.webp",
+     "thumb": "img/spb-29-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "tomesto.ru",
+     "page": "https://tomesto.ru/spb/places/griboedov"
+    }
+   ]
+  },
+  "spb-30": {
+   "id": "spb-30",
+   "name": "Pulkovo Airport",
+   "local": "Аэропорт Пулково (пассажирский терминал)",
+   "nameEn": "Pulkovo Airport (passenger terminal)",
+   "branch": null,
+   "category": "transport",
+   "city": "spb",
+   "status": "open",
+   "short": null,
+   "statusNote": null,
+   "notes": "St. Petersburg'un tek uluslararası havalimanı; iç ve dış hatlar aynı birleşik yolcu terminalinde. Şehir merkezine ~20 km güneyde; metro Moskovskaya'dan otobüs ya da taksiyle ulaşılır.",
+   "address": "Пулковское шоссе, 41, Санкт-Петербург",
+   "lat": 59.79949,
+   "lon": 30.270055,
+   "website": "https://pulkovoairport.ru/",
+   "stops": null,
+   "photos": [
+    {
+     "src": "img/spb-30-1.webp",
+     "thumb": "img/spb-30-1-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "en.topwar.ru",
+     "page": "https://en.topwar.ru/271182-rabota-sajta-sankt-peterburgskogo-ajeroporta-pulkovo-priostanovlena-iz-za-vzloma.html"
+    },
+    {
+     "src": "img/spb-30-2.webp",
+     "thumb": "img/spb-30-2-t.webp",
+     "w": 889,
+     "h": 568,
+     "credit": "guideforyou-russia.com",
+     "page": "https://guideforyou-russia.com/airport-st-petersburg-pulkovo-new-terminal/"
+    },
+    {
+     "src": "img/spb-30-3.webp",
+     "thumb": "img/spb-30-3-t.webp",
+     "w": 960,
+     "h": 640,
+     "credit": "russiable.com",
+     "page": "https://russiable.com/pulkovo-airport-st-petersburg/"
+    }
+   ]
+  }
+ },
+ "visitWarnings": {
+  "2026-12-20|msk-05": {
+   "level": "warn",
+   "text": "Pazar: 09:00–10:00'da açılıyor"
+  },
+  "2026-12-20|msk-07": {
+   "level": "warn",
+   "text": "Kışın 17:00'de kapanır, son giriş ~16:00"
+  },
+  "2026-12-23|msk-18": {
+   "level": "warn",
+   "text": "Çarşamba: son giriş 17:00, 18:00'de kapanır"
+  },
+  "2026-12-24|msk-22": {
+   "level": "info",
+   "text": "Hlebozavod kümesi 09:00'da açılıyor olabilir"
+  },
+  "2026-12-24|msk-24": {
+   "level": "info",
+   "text": "Şubat 2026'da tadilat notu var; saatleri kontrol et"
+  },
+  "2026-12-25|msk-25": {
+   "level": "info",
+   "text": "08:30'da açılıyor"
+  },
+  "2026-12-27|msk-31": {
+   "level": "warn",
+   "text": "10:00'dan önce açık değil"
+  },
+  "2026-12-28|msk-35": {
+   "level": "warn",
+   "text": "Pazartesi 13:00'te açılır; kapanış 17–18:00"
+  },
+  "2026-12-28|msk-36": {
+   "level": "warn",
+   "text": "Normalde yalnızca Cuma–Cumartesi açık"
+  },
+  "2026-12-29|msk-37": {
+   "level": "info",
+   "text": "Hafta içi Vernisaj ~18:00'e kadar; bit pazarı hafta sonu"
+  },
+  "2026-12-31|msk-06": {
+   "level": "warn",
+   "text": "Yılbaşı gecesi 18:00'den itibaren kapalı olabilir"
+  },
+  "2026-12-31|msk-42": {
+   "level": "info",
+   "text": "Aynı binada DEX'in 31 Aralık partisi var"
+  },
+  "2027-01-02|msk-25": {
+   "level": "warn",
+   "text": "Cumartesi: 10:00'da açılıyor"
+  },
+  "2027-01-02|msk-45": {
+   "level": "warn",
+   "text": "17:00'de kapanır; hava ~16:00'da kararıyor"
+  },
+  "2027-01-03|msk-48": {
+   "level": "warn",
+   "text": "Kış saatleri belirsiz; pazar 23:00'te kapanabilir"
+  },
+  "2027-01-05|spb-05": {
+   "level": "info",
+   "text": "1–8 Ocak tatili: saatler değişebilir"
+  },
+  "2027-01-05|spb-07": {
+   "level": "warn",
+   "text": "Yalnızca rezervasyonla, 19:00'dan itibaren"
+  },
+  "2027-01-06|spb-08": {
+   "level": "warn",
+   "text": "09:00'da açılıyor"
+  },
+  "2027-01-06|spb-09": {
+   "level": "warn",
+   "text": "Çarşamba normalde kapalı; tatil nedeniyle açık olmalı, gişe 17:30"
+  },
+  "2027-01-07|spb-11": {
+   "level": "warn",
+   "text": "09:00'da açılıyor"
+  },
+  "2027-01-07|spb-12": {
+   "level": "info",
+   "text": "Ortodoks Noeli: ayin ve kalabalık; omuz ve diz kapalı"
+  },
+  "2027-01-07|spb-13": {
+   "level": "info",
+   "text": "Akşam için rezervasyon önerilir"
+  },
+  "2027-01-08|spb-14": {
+   "level": "warn",
+   "text": "Bilerek Wi-Fi yok; mobil internet gerekir"
+  },
+  "2027-01-08|spb-15": {
+   "level": "info",
+   "text": "Katedral ve müze gişeleri ~18:00'de kapanır"
+  },
+  "2027-01-09|spb-17": {
+   "level": "warn",
+   "text": "10:00'da açılıyor"
+  },
+  "2027-01-09|spb-18": {
+   "level": "info",
+   "text": "2026/27 buz pisti tarihleri henüz açıklanmadı"
+  },
+  "2027-01-10|spb-20": {
+   "level": "warn",
+   "text": "09:00'da açılıyor; sıra olabilir"
+  },
+  "2027-01-11|spb-23": {
+   "level": "info",
+   "text": "Ocak 2027 programını mariinsky.ru'dan kontrol et"
+  },
+  "2027-01-12|spb-25": {
+   "level": "warn",
+   "text": "09:00'da açılıyor"
+  },
+  "2027-01-12|spb-26": {
+   "level": "info",
+   "text": "Kolonad 18:00'de kapanır; önce kolonada çık"
+  },
+  "2027-01-13|spb-11": {
+   "level": "warn",
+   "text": "09:00'da açılıyor"
+  },
+  "2027-01-13|spb-29": {
+   "level": "warn",
+   "text": "Kulüp geceleri genelde Cuma–Pazar; çarşamba programına bak"
+  },
+  "2027-01-14|spb-14": {
+   "level": "warn",
+   "text": "Bilerek Wi-Fi yok; mobil internet gerekir"
+  }
+ }
+}

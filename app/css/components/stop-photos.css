@@ -1,0 +1,144 @@
+/* ------------------------------------------------ a stop: photographs first */
+
+.stop {
+  display: grid;
+  gap: calc(var(--pitch) * 2);
+  min-width: 0;
+}
+
+/* Three photographs as one plate: the cover large, the other two stacked beside it (below it on phones). */
+.card-photos {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.card-photos[data-count='1'] {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.card-photos[data-count='2'] {
+  grid-template-rows: 1fr;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--night-raised);
+}
+
+.card-img--cover {
+  grid-row: 1 / -1;
+}
+
+@media (max-width: 599px) {
+  .card-photos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    aspect-ratio: 4 / 3.4;
+  }
+
+  .card-photos[data-count='2'] {
+    grid-template-rows: 3fr 1fr;
+  }
+
+  .card-img--cover {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+}
+
+/* The frame: a gold filet, and the city's ornament in the corners. */
+.card-photos::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgb(220 171 73 / 0.5);
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.slot[data-state='next'] .card-photos::after,
+.slot[data-state='lit'] .card-photos::after {
+  border: 2px solid var(--ember);
+}
+
+.card-photos .corner {
+  position: absolute;
+  z-index: 1;
+  width: 46px;
+  height: 46px;
+  pointer-events: none;
+}
+
+/* The vine's ends sit on the filet, 5/64 of the ornament in from its corner. */
+.corner--tl { top: -9px; left: -9px; }
+.corner--tr { top: -9px; right: -9px; transform: scaleX(-1); }
+.corner--bl { bottom: -9px; left: -9px; transform: scaleY(-1); }
+.corner--br { bottom: -9px; right: -9px; transform: scale(-1); }
+
+body[data-city='spb'] .card-photos .corner {
+  width: 22px;
+  height: 22px;
+}
+
+body[data-city='spb'] .corner--tl { top: -16px; left: -16px; }
+body[data-city='spb'] .corner--tr { top: -16px; right: -16px; }
+body[data-city='spb'] .corner--bl { bottom: -16px; left: -16px; }
+body[data-city='spb'] .corner--br { bottom: -16px; right: -16px; }
+
+/* The stop's number on the photograph, the same bulb and number as its pin on the map. */
+.card-num {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #fff6d6 0 18%, var(--filament) 34%, var(--bulb) 62%, #c46a18 100%);
+  color: var(--night);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  box-shadow: 0 4px 14px -4px rgb(0 0 0 / 0.7);
+}
+
+.stop[data-status='closed'] .card-num,
+.stop[data-status='not_found'] .card-num {
+  background: radial-gradient(circle at 50% 38%, #4a4038 0 30%, #2a2420 100%);
+  color: var(--ash);
+}
+
+.stop[data-status='closed'] .card-img {
+  filter: grayscale(0.85) brightness(0.62);
+}
+
+/* A pin on the map was chosen: its card answers with one warm flash of the frame. */
+.stop.is-flash .card-photos::after {
+  animation: card-flash 1.4s ease-out;
+}
+
+@keyframes card-flash {
+  0%, 40% { border: 3px solid var(--filament); box-shadow: 0 0 26px 4px rgb(255 181 74 / 0.55); }
+}
+
+.card-credits {
+  margin: 8px 0 0;
+  font-size: var(--t-xs);
+  color: var(--frost);
+  overflow-wrap: anywhere;
+}
+
+.card-credits a {
+  text-decoration-color: rgb(154 172 203 / 0.5);
+}

@@ -1,0 +1,139 @@
+/* A stop's text: name, Cyrillic name, warnings, address and the action plates. */
+
+.card-body {
+  display: grid;
+  gap: calc(var(--pitch) * 1.25);
+  min-width: 0;
+}
+
+.stop-title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.stop-toggle {
+  display: grid;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.stop-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--snow);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.stop-name .icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.3em;
+  vertical-align: 0.05em;
+  color: var(--gold);
+  transition: transform 0.2s var(--ease-out);
+}
+
+.stop-toggle[aria-expanded='true'] .stop-name .icon {
+  transform: rotate(90deg);
+}
+
+@media (hover: hover) {
+  .stop-toggle:hover .stop-name {
+    color: var(--filament);
+  }
+}
+
+.stop-local {
+  font-size: var(--t-m);
+  font-weight: 400;
+  color: var(--frost);
+  overflow-wrap: anywhere;
+}
+
+.stop[data-status='closed'] .stop-name,
+.stop[data-status='not_found'] .stop-name {
+  color: var(--ash);
+  text-decoration: line-through;
+  text-decoration-color: rgb(185 170 155 / 0.75);
+  text-decoration-thickness: 2px;
+}
+
+/* Hanging icon, block flow: a long warning wraps cleanly under its own first line. */
+.flag {
+  margin: 0;
+  padding-left: 28px;
+  font-size: var(--t-m);
+  line-height: 1.4;
+}
+
+.flag .icon {
+  width: 19px;
+  height: 19px;
+  margin: 0 9px 0 -28px;
+  vertical-align: -4px;
+}
+
+.flag[data-level='warn'] {
+  color: var(--snow);
+  font-weight: 600;
+}
+
+.flag[data-level='warn'] .icon {
+  color: var(--ice);
+}
+
+.flag[data-level='info'],
+.flag[data-level='moved'] {
+  color: var(--frost);
+}
+
+.flag[data-level='closed'],
+.flag[data-level='not_found'] {
+  color: var(--ash);
+}
+
+.stop-address {
+  margin: 0;
+  font-size: var(--t-m);
+  overflow-wrap: anywhere;
+}
+
+.stop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pitch);
+  margin-top: 4px;
+}
+
+.act--tick .icon {
+  color: var(--ember);
+}
+
+/* A ticked stop reads as a lit bulb: the button itself turns on. */
+.act--tick[aria-pressed='true'] {
+  border-color: var(--bulb);
+  background: var(--bulb);
+  color: var(--night);
+}
+
+.act--tick[aria-pressed='true'] .icon {
+  color: inherit;
+}
+
+/* Narrow phones: tighter action plates keep a stop's three actions on one row. */
+@media (max-width: 420px) {
+  .stop-actions .act {
+    padding-inline: calc(var(--pitch) * 1.25);
+  }
+}

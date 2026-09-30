@@ -1,0 +1,31 @@
+/* Folk art around the day: the city's own textile behind the whole page, and a painted shelf of matryoshkas
+   with a samovar — under the map on wide screens, at the end of the day on phones. */
+
+/* Moscow wears a Pavlovo Posad shawl, Petersburg its cobalt-net porcelain. Text never sits on it bare: see glass. */
+/* The textile scrolls with the page, underneath it inside the page's own stacking context. A fixed layer made mobile
+   Chromium drop the glass blur (and tint) on any plate scrolled partly above the viewport. */
+.page-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bg-moscow {
+  opacity: 0.42;
+}
+
+.bg-spb {
+  display: none;
+  opacity: 0.46;
+}
+
+body[data-city='spb'] .bg-moscow {
+  display: none;
+}
+
+body[data-city='spb'] .bg-spb {
+  display: inline;
+}

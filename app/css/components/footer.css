@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------ footer */
+
+.foot {
+  display: grid;
+  gap: calc(var(--pitch) * 1.5);
+  margin-block-end: calc(env(safe-area-inset-bottom, 0px) + var(--pitch) * 5);
+  font-size: var(--t-s);
+  color: var(--frost);
+}
+
+.foot p {
+  margin: 0;
+}
+
+.offline {
+  display: flex;
+  align-items: center;
+  gap: var(--pitch);
+  font-variant-numeric: tabular-nums;
+}
+
+.offline[data-state='ready'] {
+  color: var(--snow);
+}
+
+.offline[data-state='ready'] .icon {
+  color: var(--bulb);
+}
+
+.offline[data-state='error'],
+.offline[data-state='unsupported'],
+.offline[data-state='insecure'] {
+  color: var(--ice);
+}
+
+.verified {
+  font-size: var(--t-xs);
+}

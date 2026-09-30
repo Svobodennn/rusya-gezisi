@@ -1,0 +1,13 @@
+/* ----------------------------------------------------- loading, error */
+
+.load-error {
+  display: grid;
+  gap: calc(var(--pitch) * 2);
+  max-width: 52ch;
+  min-height: 40vh;
+  align-content: center;
+}
+
+.load-error p {
+  margin: 0;
+}

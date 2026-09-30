@@ -1,0 +1,66 @@
+/* Design tokens: the night palette, the city colour switch, type families, the 8px pitch and sizes. */
+
+:root {
+  color-scheme: dark;
+
+  --night: #0d1220;
+  --night-raised: #151c2f;
+  --night-deep: #080c16;
+  --snow: #eef1f6;
+  --frost: #9aaccb;
+  --wire: #313a55;
+  --glass: #2a3350;
+  --bulb: #ffb54a;
+  --filament: #ffe7a3;
+  --ember: #c9803a;
+  --ash: #b9aa9b;
+  --ice: #a9d6ff;
+  --gold: #dcab49;
+  --gold-soft: #f0cd7c;
+  --brick: #8e2a1f;
+  --brick-deep: #3d0e09;
+  --cobalt: #2448b8;
+  --cobalt-deep: #0c1a4d;
+  --porcelain: #f2f5fc;
+  --city: var(--brick);
+  --city-deep: var(--brick-deep);
+
+  --font-text: 'Sofia Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sign: 'Sofia Sans Condensed', 'Sofia Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Oranienbaum', 'Bodoni 72', Didot, 'Times New Roman', serif;
+  --font-hand: 'Bad Script', 'Segoe Script', 'Apple Chancery', cursive;
+
+  --pitch: 8px;
+  --t-xs: 0.8125rem;
+  --t-s: 0.9375rem;
+  --t-m: 1.0625rem;
+  --t-l: 1.25rem;
+  --t-xl: 1.5rem;
+  --t-2xl: 2rem;
+
+  --rail: 40px;
+  --plate-radius: 6px;
+  --touch: 48px;
+  --gutter: clamp(16px, 4vw, 56px);
+  --glass-pad: clamp(16px, 2.4vw, 28px);
+  --shell: 1560px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body[data-city='spb'] {
+  --city: var(--cobalt);
+  --city-deep: var(--cobalt-deep);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Narrow phones: a slimmer glass-plate edge. */
+@media (max-width: 420px) {
+  :root {
+    --glass-pad: 14px;
+  }
+}

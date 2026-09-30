@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ day nav */
+
+.day-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--pitch);
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--touch);
+  padding: 0 calc(var(--pitch) * 2);
+  border: 1px solid var(--wire);
+  border-radius: var(--plate-radius);
+  background: var(--night);
+  font-family: var(--font-sign);
+  font-size: var(--t-s);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.18s, background-color 0.18s;
+}
+
+.nav-btn[data-dir='prev'] {
+  justify-self: start;
+  padding-left: calc(var(--pitch) * 1.25);
+}
+
+.nav-btn[data-dir='next'] {
+  justify-self: end;
+  padding-right: calc(var(--pitch) * 1.25);
+}
+
+.nav-btn:disabled {
+  visibility: hidden;
+}
+
+.nav-btn--today {
+  border-color: var(--bulb);
+  background: var(--bulb);
+  color: var(--night);
+}
+
+@media (hover: hover) {
+  .nav-btn:hover:not(:disabled) {
+    border-color: var(--ember);
+  }
+
+  .nav-btn--today:hover:not(:disabled) {
+    background: var(--filament);
+    border-color: var(--filament);
+  }
+}

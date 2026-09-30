@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T14:53:27+00:00",
+  "title": "Design System: Rusya Gezisi",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "#0d1220",
+        "tonalRamp": [
+          "#060a18",
+          "#1e2433",
+          "#393f50",
+          "#565d6f",
+          "#767d90",
+          "#969eb2",
+          "#bcc4d8",
+          "#e6eeff"
+        ]
+      },
+      "night-raised": {
+        "role": "neutral",
+        "displayName": "Raised Night",
+        "canonical": "#151c2f",
+        "tonalRamp": [
+          "#050a1b",
+          "#1c2337",
+          "#373f54",
+          "#545d74",
+          "#737d95",
+          "#949eb7",
+          "#b9c4de",
+          "#e3eeff"
+        ]
+      },
+      "night-deep": {
+        "role": "neutral",
+        "displayName": "Deep Night",
+        "canonical": "#080c16",
+        "tonalRamp": [
+          "#070b15",
+          "#1f242f",
+          "#3a404c",
+          "#585e6b",
+          "#777d8b",
+          "#989ead",
+          "#bdc4d3",
+          "#e7effe"
+        ]
+      },
+      "map-ground": {
+        "role": "neutral",
+        "displayName": "Map Ground",
+        "canonical": "#0a0f1c",
+        "tonalRamp": [
+          "#060b17",
+          "#1e2432",
+          "#393f4f",
+          "#565d6e",
+          "#767d8f",
+          "#969eb1",
+          "#bcc4d7",
+          "#e6eeff"
+        ]
+      },
+      "snow": {
+        "role": "neutral",
+        "displayName": "Snow",
+        "canonical": "#eef1f6",
+        "tonalRamp": [
+          "#090b0e",
+          "#222428",
+          "#3d4044",
+          "#5b5e62",
+          "#7b7d82",
+          "#9c9ea3",
+          "#c1c4c9",
+          "#eceff4"
+        ]
+      },
+      "frost": {
+        "role": "neutral",
+        "displayName": "Frost",
+        "canonical": "#9aaccb",
+        "tonalRamp": [
+          "#020a1f",
+          "#16243c",
+          "#31405a",
+          "#4e5e7a",
+          "#6d7e9b",
+          "#8d9fbe",
+          "#b3c5e5",
+          "#dcf0ff"
+        ]
+      },
+      "wire": {
+        "role": "neutral",
+        "displayName": "Wire",
+        "canonical": "#313a55",
+        "tonalRamp": [
+          "#05091f",
+          "#1b223c",
+          "#353f5a",
+          "#535d7a",
+          "#727c9b",
+          "#929ebe",
+          "#b7c3e5",
+          "#e1eeff"
+        ]
+      },
+      "glass": {
+        "role": "neutral",
+        "displayName": "Unlit Glass",
+        "canonical": "#2a3350",
+        "tonalRamp": [
+          "#040821",
+          "#1a223e",
+          "#353e5c",
+          "#525c7c",
+          "#717c9e",
+          "#919dc0",
+          "#b7c3e8",
+          "#e0eeff"
+        ]
+      },
+      "bulb": {
+        "role": "primary",
+        "displayName": "Tungsten Bulb",
+        "canonical": "#ffb54a",
+        "tonalRamp": [
+          "#250000",
+          "#4a0700",
+          "#6b2b00",
+          "#8e4b00",
+          "#b16c00",
+          "#d58d0c",
+          "#fdb348",
+          "#ffe291"
+        ]
+      },
+      "filament": {
+        "role": "primary",
+        "displayName": "Filament",
+        "canonical": "#ffe7a3",
+        "tonalRamp": [
+          "#190600",
+          "#342000",
+          "#523d00",
+          "#715b14",
+          "#917b39",
+          "#b39c5b",
+          "#dac280",
+          "#ffeda9"
+        ]
+      },
+      "ember": {
+        "role": "primary",
+        "displayName": "Ember",
+        "canonical": "#c9803a",
+        "tonalRamp": [
+          "#290000",
+          "#4a0700",
+          "#6b2a00",
+          "#8d4900",
+          "#b16a1f",
+          "#d58b46",
+          "#feb16d",
+          "#ffdc99"
+        ]
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "#b9aa9b",
+        "tonalRamp": [
+          "#130901",
+          "#2d2216",
+          "#4a3d30",
+          "#685b4d",
+          "#897b6c",
+          "#aa9c8d",
+          "#d1c1b2",
+          "#fbebdc"
+        ]
+      },
+      "ice": {
+        "role": "neutral",
+        "displayName": "Ice",
+        "canonical": "#a9d6ff",
+        "tonalRamp": [
+          "#000a28",
+          "#002645",
+          "#194364",
+          "#386185",
+          "#5882a7",
+          "#78a3ca",
+          "#9dcaf2",
+          "#c6f4ff"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Gilt",
+        "canonical": "#dcab49",
+        "tonalRamp": [
+          "#210000",
+          "#411600",
+          "#603500",
+          "#815400",
+          "#a37400",
+          "#c69630",
+          "#edbc5b",
+          "#ffe78e"
+        ]
+      },
+      "gold-soft": {
+        "role": "secondary",
+        "displayName": "Pale Gilt",
+        "canonical": "#f0cd7c",
+        "tonalRamp": [
+          "#1d0200",
+          "#3a1c00",
+          "#583900",
+          "#785800",
+          "#997822",
+          "#bb9a49",
+          "#e2c06f",
+          "#ffea99"
+        ]
+      },
+      "brick": {
+        "role": "tertiary",
+        "displayName": "Kremlin Brick",
+        "canonical": "#8e2a1f",
+        "tonalRamp": [
+          "#2d0000",
+          "#540000",
+          "#781209",
+          "#9c372b",
+          "#c1594a",
+          "#e77b6a",
+          "#ffa18f",
+          "#ffd0bf"
+        ],
+        "cssVar": "--city (Moscow)"
+      },
+      "brick-deep": {
+        "role": "tertiary",
+        "displayName": "Brick Night",
+        "canonical": "#3d0e09",
+        "tonalRamp": [
+          "#220000",
+          "#41120d",
+          "#612f28",
+          "#834d44",
+          "#a56c63",
+          "#c98d83",
+          "#f1b3a8",
+          "#ffddd2"
+        ],
+        "cssVar": "--city-deep (Moscow)"
+      },
+      "cobalt": {
+        "role": "tertiary",
+        "displayName": "Porcelain Cobalt",
+        "canonical": "#2448b8",
+        "tonalRamp": [
+          "#02003c",
+          "#05007a",
+          "#112e9d",
+          "#2b51c2",
+          "#4974e8",
+          "#6897ff",
+          "#8bbeff",
+          "#c8edff"
+        ],
+        "cssVar": "--city when body[data-city=spb]"
+      },
+      "cobalt-deep": {
+        "role": "tertiary",
+        "displayName": "Cobalt Night",
+        "canonical": "#0c1a4d",
+        "tonalRamp": [
+          "#020132",
+          "#0f1e52",
+          "#293c72",
+          "#455b94",
+          "#647bb7",
+          "#849ddb",
+          "#a8c3ff",
+          "#d2edff"
+        ],
+        "cssVar": "--city-deep when body[data-city=spb]"
+      },
+      "porcelain": {
+        "role": "tertiary",
+        "displayName": "Porcelain",
+        "canonical": "#f2f5fc",
+        "tonalRamp": [
+          "#090b0f",
+          "#222429",
+          "#3d4045",
+          "#5b5e63",
+          "#7b7d83",
+          "#9c9ea5",
+          "#c1c4cb",
+          "#ebeef5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero city name in Cyrillic; container-sized so it never breaks."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Stop names, taxi name, free-slot plan."
+      },
+      "script": {
+        "displayName": "Script",
+        "purpose": "The day's Russian phrase on the postcard only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Flags, addresses, notes."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Secondary text, links, sun times."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero date line."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Slot time and slot name, uppercase, tabular numerals."
+      },
+      "label-button": {
+        "displayName": "Label Button",
+        "purpose": "Every plate and map-mode label."
+      },
+      "label-gloss": {
+        "displayName": "Label Gloss",
+        "purpose": "Russian translation under a section title, uppercase gold."
+      },
+      "sign": {
+        "displayName": "Sign",
+        "purpose": "Taxi address in filament."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glow-next",
+        "value": "0 0 12px 3px rgb(255 181 74 / 0.55), 0 0 36px 10px rgb(255 181 74 / 0.2)",
+        "purpose": "The next stop's bulb."
+      },
+      {
+        "name": "glow-lit",
+        "value": "0 0 8px 1px rgb(201 128 58 / 0.55)",
+        "purpose": "A visited bulb."
+      },
+      {
+        "name": "filament-bloom",
+        "value": "drop-shadow(0 0 3px rgb(255 226 170 / 0.95)) drop-shadow(0 0 10px rgb(255 181 74 / 0.5))",
+        "purpose": "Garland bulbs and lit dots of the date sign (filter)."
+      },
+      {
+        "name": "postcard",
+        "value": "0 18px 40px -18px rgb(0 0 0 / 0.8), inset 0 0 0 1px rgb(220 171 73 / 0.55), inset 0 0 0 5px var(--city-deep), inset 0 0 0 6px rgb(220 171 73 / 0.35)",
+        "purpose": "Phrase card with gold double filet."
+      },
+      {
+        "name": "map-well",
+        "value": "inset 0 0 0 1px var(--wire), 0 24px 60px -30px rgb(0 0 0 / 0.9)",
+        "purpose": "The route map."
+      },
+      {
+        "name": "plate-drop",
+        "value": "0 4px 14px -4px rgb(0 0 0 / 0.7)",
+        "purpose": "Numbered bulb on a photo plate."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--filament); outline-offset: 3px",
+        "purpose": "Every focusable element."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "State transitions, day slide, current, warm, reveal."
+      },
+      {
+        "name": "day-in",
+        "value": "0.24s ease-out, translateX(±14px) from 0.2 opacity",
+        "purpose": "Timeline entering on day change."
+      },
+      {
+        "name": "current",
+        "value": "0.6s ease-out, background-size 0→100%",
+        "purpose": "Current flowing down the live wire after a tick."
+      },
+      {
+        "name": "warm",
+        "value": "0.5s ease-out, brightness 0.3→1.4→1",
+        "purpose": "A bulb lighting."
+      },
+      {
+        "name": "breathe",
+        "value": "3.6s ease-in-out infinite",
+        "purpose": "Halo of the next stop's bulb."
+      },
+      {
+        "name": "twinkle",
+        "value": "3.4s / 2.8s / 4.1s ease-in-out infinite, four groups",
+        "purpose": "Hero garland bulbs."
+      },
+      {
+        "name": "chase",
+        "value": "1.6s linear infinite, dash 0 13",
+        "purpose": "Route lights along the map garland."
+      },
+      {
+        "name": "hero-fade",
+        "value": "0.9s ease-out",
+        "purpose": "Hero photo arriving."
+      },
+      {
+        "name": "hero-drift",
+        "value": "28s ease-in-out infinite alternate, scale 1.02→1.1",
+        "purpose": "Slow drift of the hero photo."
+      },
+      {
+        "name": "hero-rise",
+        "value": "0.7s cubic-bezier(0.22, 1, 0.36, 1), 14px, stagger 0.08s / 0.18s",
+        "purpose": "Hero lettering rising in."
+      },
+      {
+        "name": "reveal",
+        "value": "0.2s ease-out, 4px",
+        "purpose": "Notes panel opening."
+      },
+      {
+        "name": "card-flash",
+        "value": "1.4s ease-out",
+        "purpose": "Photo frame answering a map pin."
+      },
+      {
+        "name": "map-tween",
+        "value": "900ms easeInOutCubic",
+        "purpose": "Map camera moving between days and modes."
+      },
+      {
+        "name": "snow",
+        "value": "requestAnimationFrame canvas, ≤170 flakes",
+        "purpose": "Hero snowfall; paused off screen and when the tab is hidden."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce → all animation none, transitions 0.01ms, snow painted still, map jumps, instant scroll",
+        "purpose": "Accessibility floor."
+      },
+      {
+        "name": "offscreen-pause",
+        "value": "[data-offscreen] → animation-play-state: paused",
+        "purpose": "Hero photo, garland twinkle and route chase stop repainting off screen."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "max-width: 599px"
+      },
+      {
+        "name": "phone-hero-grade",
+        "value": "max-width: 719px"
+      },
+      {
+        "name": "hero-three-column",
+        "value": "min-width: 980px"
+      },
+      {
+        "name": "almanac-two-column",
+        "value": "min-width: 1180px"
+      }
+    ],
+    "gradients": [
+      {
+        "name": "bulb-off",
+        "value": "radial-gradient(circle at 50% 34%, #4a5577 0 16%, var(--glass) 56%, #1a2033 100%)"
+      },
+      {
+        "name": "bulb-next",
+        "value": "radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%)"
+      },
+      {
+        "name": "bulb-lit",
+        "value": "radial-gradient(circle at 50% 38%, #ffd9a0 0 14%, var(--ember) 56%, #7a4719 100%)"
+      },
+      {
+        "name": "bulb-dead",
+        "value": "radial-gradient(circle at 50% 38%, #3d352f 0 32%, #25201e 100%)"
+      }
+    ],
+    "ornaments": [
+      {
+        "name": "p-kremlin",
+        "purpose": "Moscow hero edge: 48×56 swallowtail merlon with loophole on a brick parapet (56px band)."
+      },
+      {
+        "name": "p-railing",
+        "purpose": "Petersburg hero edge: 22×60 spear-topped cast-iron bars and rings (56px)."
+      },
+      {
+        "name": "p-cobalt",
+        "purpose": "Petersburg strip under the railing: 28×28 Imperial Porcelain cobalt net with gold stars (22px)."
+      },
+      {
+        "name": "o-khokhloma",
+        "purpose": "Moscow corners on photo plates (46px) and postcard (34px): gold vine, leaves, rowan berries."
+      },
+      {
+        "name": "o-star",
+        "purpose": "Petersburg corners (22px on plates, 34px on postcard)."
+      },
+      {
+        "name": "bulb-matrix",
+        "purpose": "5×7 dot numerals on an 11px pitch, r 4.2, for the hero date."
+      },
+      {
+        "name": "stamp-perforation",
+        "purpose": "Radial mask, 2.6px holes on an 8px grid, in a 5px band."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Plate Button",
+      "kind": "button",
+      "refersTo": "button-plate",
+      "description": "Default control: Rota, Adres, Copy, day nav.",
+      "html": "<button class=\"ds-plate\"><svg viewBox=\"0 0 24 24\"><circle cx=\"6\" cy=\"18\" r=\"2.2\"/><path d=\"M8.2 18H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h8\"/><path d=\"M15 1.8 17.2 4 15 6.2\"/></svg>Rota</button>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-plate{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border:1px solid var(--wire);border-radius:6px;background:var(--night);color:var(--snow);font-family:'Sofia Sans Condensed','Sofia Sans',sans-serif;font-size:.9375rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:border-color .18s,background-color .18s,color .18s}.ds-plate:hover{border-color:var(--ember)}.ds-plate:active{transform:translateY(1px)}.ds-plate:focus-visible{outline:2px solid var(--filament);outline-offset:3px}.ds-plate svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "Lit Plate",
+      "kind": "button",
+      "refersTo": "button-lit",
+      "description": "Primary action: Rotayı Yandex'te aç, update, taxi close, Bugün.",
+      "html": "<button class=\"ds-plate ds-lit\"><svg viewBox=\"0 0 24 24\"><circle cx=\"6\" cy=\"18\" r=\"2.2\"/><path d=\"M8.2 18H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h8\"/><path d=\"M15 1.8 17.2 4 15 6.2\"/></svg>Rotayı Yandex'te aç</button>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-plate{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border:1px solid var(--wire);border-radius:6px;background:var(--night);color:var(--snow);font-family:'Sofia Sans Condensed','Sofia Sans',sans-serif;font-size:.9375rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:border-color .18s,background-color .18s,color .18s}.ds-plate:hover{border-color:var(--ember)}.ds-plate:active{transform:translateY(1px)}.ds-plate:focus-visible{outline:2px solid var(--filament);outline-offset:3px}.ds-plate svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}.ds-lit{border-color:var(--bulb);background:var(--bulb);color:var(--night)}.ds-lit:hover{border-color:var(--filament);background:var(--filament)}"
+    },
+    {
+      "name": "Tick Toggle",
+      "kind": "button",
+      "refersTo": "tick-on",
+      "description": "Gittik: an ember bulb icon; aria-pressed=true turns the plate on. Label never changes.",
+      "html": "<button class=\"ds-plate ds-tick\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\"><path d=\"M9.5 18.2h5M10.5 21h3\"/><path d=\"M8.6 14.6a6 6 0 1 1 6.8 0c-.8.6-1.2 1.4-1.3 2.3h-4.2c-.1-.9-.5-1.7-1.3-2.3z\"/></svg>Gittik</button> <button class=\"ds-plate ds-tick\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9.5 18.2h5M10.5 21h3\"/><path d=\"M8.6 14.6a6 6 0 1 1 6.8 0c-.8.6-1.2 1.4-1.3 2.3h-4.2c-.1-.9-.5-1.7-1.3-2.3z\"/></svg>Gittik</button>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-plate{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border:1px solid var(--wire);border-radius:6px;background:var(--night);color:var(--snow);font-family:'Sofia Sans Condensed','Sofia Sans',sans-serif;font-size:.9375rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:border-color .18s,background-color .18s,color .18s}.ds-plate:hover{border-color:var(--ember)}.ds-plate:active{transform:translateY(1px)}.ds-plate:focus-visible{outline:2px solid var(--filament);outline-offset:3px}.ds-plate svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}.ds-tick svg{color:var(--ember)}.ds-tick[aria-pressed='true']{border-color:var(--bulb);background:var(--bulb);color:var(--night)}.ds-tick[aria-pressed='true'] svg{color:inherit}"
+    },
+    {
+      "name": "Map Mode Switch",
+      "kind": "nav",
+      "refersTo": "map-mode",
+      "description": "Gün / Şehir segmented plate; the pressed segment takes the city colour.",
+      "html": "<div class=\"ds-modes\"><button class=\"ds-mode\" aria-pressed=\"true\">Gün</button><button class=\"ds-mode\" aria-pressed=\"false\">Şehir</button></div>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-modes{display:inline-flex;padding:3px;border:1px solid var(--wire);border-radius:6px;background:var(--night-deep)}.ds-mode{min-height:48px;padding:0 14px;border:0;border-radius:4px;background:none;font-family:'Sofia Sans Condensed',sans-serif;font-size:.9375rem;font-weight:600;letter-spacing:.03em;color:var(--frost);cursor:pointer}.ds-mode[aria-pressed='true']{background:var(--city);color:var(--snow)}.ds-mode:focus-visible{outline:2px solid var(--filament);outline-offset:3px}"
+    },
+    {
+      "name": "Bulb States",
+      "kind": "custom",
+      "refersTo": "bulb",
+      "description": "The four-state grammar: off, next, lit, dead. Same on rail, garland, pins, card numbers.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-bulb\"></span><span class=\"ds-bulb\" data-state=\"next\"></span><span class=\"ds-bulb\" data-state=\"lit\"></span><span class=\"ds-bulb\" data-state=\"dead\"></span></div>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-row{display:flex;gap:28px;padding:24px;background:var(--night)}.ds-bulb{position:relative;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 50% 34%, #4a5577 0 16%, var(--glass) 56%, #1a2033 100%);box-shadow:inset 0 -2px 3px rgb(0 0 0/.5),0 0 0 1px rgb(255 255 255/.05)}.ds-bulb[data-state=next]{background:radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%);box-shadow:0 0 12px 3px rgb(255 181 74/.55),0 0 36px 10px rgb(255 181 74/.2)}.ds-bulb[data-state=lit]{background:radial-gradient(circle at 50% 38%, #ffd9a0 0 14%, var(--ember) 56%, #7a4719 100%);box-shadow:0 0 8px 1px rgb(201 128 58/.55)}.ds-bulb[data-state=dead]{background:radial-gradient(circle at 50% 38%, #3d352f 0 32%, #25201e 100%)}.ds-bulb[data-state=dead]::before{content:'';position:absolute;left:24%;right:24%;top:calc(50% - .75px);height:1.5px;background:var(--ash);transform:rotate(-42deg)}"
+    },
+    {
+      "name": "Slot Rail With Live Wire",
+      "kind": "custom",
+      "refersTo": "slot",
+      "description": "A 40px rail: wire, bulb, wire; the wire from the last visited stop to the next is live.",
+      "html": "<ol class=\"ds-slots\"><li class=\"ds-slot\"><div class=\"ds-rail\"><span class=\"ds-bulb\" data-state=\"lit\"></span><span class=\"ds-wire ds-live\"></span></div><p class=\"ds-time\"><strong>08:00–16:00</strong> Çalışma</p></li><li class=\"ds-slot\"><div class=\"ds-rail\"><span class=\"ds-bulb\" data-state=\"next\"></span><span class=\"ds-wire\"></span></div><p class=\"ds-time\"><strong>16:00–19:30</strong> Gezi <em class=\"ds-now\">Sıradaki</em></p></li></ol>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-slots{margin:0;padding:24px;list-style:none;background:var(--night)}.ds-slot{display:grid;grid-template-columns:40px 1fr;column-gap:12px}.ds-rail{display:flex;flex-direction:column;align-items:center}.ds-wire{width:2px;min-height:48px;background:var(--wire)}.ds-live{background:linear-gradient(var(--ember),var(--bulb))}.ds-bulb{width:24px;height:24px;border-radius:50%;flex:none}.ds-bulb[data-state=next]{background:radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%);box-shadow:0 0 12px 3px rgb(255 181 74/.55)}.ds-bulb[data-state=lit]{background:radial-gradient(circle at 50% 38%, #ffd9a0 0 14%, var(--ember) 56%, #7a4719 100%);box-shadow:0 0 8px 1px rgb(201 128 58/.55)}.ds-time{margin:0;font-family:'Sofia Sans Condensed',sans-serif;font-size:1.0625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-soft)}.ds-time strong{color:var(--snow)}.ds-now{padding:2px 8px;border-radius:4px;background:var(--bulb);color:var(--night);font-size:.8125rem;font-style:normal;font-weight:700;letter-spacing:.08em}"
+    },
+    {
+      "name": "Photo Plate",
+      "kind": "card",
+      "refersTo": "card-number",
+      "description": "Photographs as one plate: gold filet 5px outside, city corners, numbered bulb matching the map pin.",
+      "html": "<figure class=\"ds-plate-photo\"><div class=\"ds-img\"></div><span class=\"ds-num\">2</span></figure>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-plate-photo{position:relative;margin:24px;aspect-ratio:16/9;max-width:360px}.ds-img{width:100%;height:100%;border-radius:2px;background:linear-gradient(160deg,#3a4466,#151c2f 60%,#5a2a1c)}.ds-plate-photo::after{content:'';position:absolute;inset:-5px;border:2px solid var(--ember);border-radius:1px}.ds-num{position:absolute;top:18px;left:18px;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%);color:var(--night);font-family:Oranienbaum,Didot,serif;font-size:1.35rem;box-shadow:0 4px 14px -4px rgb(0 0 0/.7)}"
+    },
+    {
+      "name": "Postcard Phrase",
+      "kind": "card",
+      "refersTo": "postcard-moscow",
+      "description": "The day's Russian on the city's deep colour with a gold double filet and a perforated porcelain stamp.",
+      "html": "<figure class=\"ds-card\"><blockquote class=\"ds-ru\" lang=\"ru\">Спасибо!</blockquote><p class=\"ds-say\">Spasiba!</p><figcaption class=\"ds-tr\">Teşekkürler!</figcaption><div class=\"ds-stamp\"><span lang=\"ru\">ПОЧТА</span><strong>20</strong><span lang=\"ru\">ДЕК</span></div></figure>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-card{position:relative;display:grid;gap:4px;max-width:360px;margin:28px;padding:36px 26px 20px;background:var(--city-deep);border-radius:3px;box-shadow:0 18px 40px -18px rgb(0 0 0/.8),inset 0 0 0 1px rgb(220 171 73/.55),inset 0 0 0 5px var(--city-deep),inset 0 0 0 6px rgb(220 171 73/.35);transform:rotate(-1.6deg)}.ds-ru{margin:4px 0 0;font-family:'Bad Script',cursive;font-size:2.4rem;line-height:1.15;color:var(--snow)}.ds-say{margin:0;font-family:'Sofia Sans Condensed',sans-serif;font-weight:600;letter-spacing:.04em;color:var(--gold-soft)}.ds-tr{font-size:.9375rem;color:var(--frost)}.ds-stamp{position:absolute;top:-14px;right:14px;display:grid;place-items:center;width:58px;height:68px;padding:5px;background:var(--porcelain);color:var(--city);text-align:center;line-height:1;-webkit-mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 2.6px,transparent 96%,#000) -4px -4px/8px 8px round;mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 2.6px,transparent 96%,#000) -4px -4px/8px 8px round;transform:rotate(5deg)}.ds-stamp span{font-family:'Sofia Sans Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em}.ds-stamp strong{font-family:Oranienbaum,serif;font-size:30px;font-weight:400}"
+    },
+    {
+      "name": "Map Pin",
+      "kind": "custom",
+      "refersTo": "pin-label",
+      "description": "A 32px numbered bulb in the four states with a label chip; min 44px hit area.",
+      "html": "<div class=\"ds-map\"><button class=\"ds-pin\"><span class=\"ds-pb\">3</span><span class=\"ds-pl\">St. Basil's Cathedral</span></button><button class=\"ds-pin ds-off\"><span class=\"ds-pb\">5</span><span class=\"ds-pl\">Mendeleev Bar</span></button></div>",
+      "css": ":host{--night:#0d1220;--night-deep:#080c16;--snow:#eef1f6;--frost:#9aaccb;--wire:#313a55;--glass:#2a3350;--bulb:#ffb54a;--filament:#ffe7a3;--ember:#c9803a;--ash:#b9aa9b;--gold:#dcab49;--gold-soft:#f0cd7c;--city:#8e2a1f;--city-deep:#3d0e09;--porcelain:#f2f5fc}.ds-map{display:grid;gap:12px;padding:24px;background:#0a0f1c}.ds-pin{display:flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;cursor:pointer}.ds-pb{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 50% 38%, #fff6d6 0 16%, var(--filament) 30%, var(--bulb) 58%, #c46a18 100%);box-shadow:0 0 0 2px #0a0f1c,0 0 14px 4px rgb(255 181 74/.6);color:var(--night);font-family:Oranienbaum,serif;font-size:1.05rem}.ds-off .ds-pb{background:radial-gradient(circle at 50% 34%, #4a5577 0 16%, var(--glass) 56%, #1a2033 100%);box-shadow:0 0 0 2px #0a0f1c,0 0 0 3px var(--wire);color:var(--snow)}.ds-pl{padding:3px 8px;border-radius:3px;background:rgb(10 15 28/.86);box-shadow:inset 0 0 0 1px rgb(220 171 73/.35);font-family:'Sofia Sans Condensed',sans-serif;font-size:.8125rem;font-weight:600;color:var(--snow)}.ds-pin:focus-visible .ds-pb{outline:2px solid var(--filament);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The City at Night, Strung with Lights",
+    "overview": "**Creative North Star: \"The City at Night, Strung with Lights\"**\n\nEvery day opens on its own city after dark: the day's landmark photographed full bleed, dimmed by a night scrim, with two strings of street garlands sagging across the sky, snow falling on a canvas, the date spelled in a bulb-matrix sign and the city's name in Oranienbaum capitals, in Cyrillic. The hero stands on the city's own edge: the Kremlin wall's swallowtail merlons under Moscow, a gilded cast-iron railing over a strip of cobalt-net porcelain under Petersburg. Below it the page becomes an almanac on the night ground: the day's three slots hang on one wire at the left, each with a bulb whose state is the stop's state, and on wide screens the offline route map stays in view at the right, the day's stops numbered on a string of chasing lights. The whole trip closes the page as one garland of 27 × 3 bulbs.\n\nLight is the only accent. Tungsten (bulb, filament, ember) means \"now, next, done\". Gold is ornament only: filets, vines, stars, glosses. Each city has one colour, Kremlin brick or porcelain cobalt, switched as a whole by `body[data-city]`. Ornament comes from the cities themselves (Kremlin merlons, Khokhloma vines with rowan berries, the Petersburg railing, the Imperial Porcelain cobalt net and its gold star), never from generic flourishes. Density is moderate: photographs are large, text is set for reading outdoors at arm's length, and night space rather than rules separates stops and days.",
+    "keyCharacteristics": [
+      "Full-bleed night hero per day: photo, scrim, garlands, snow, bulb-matrix date, Cyrillic city name, postcard phrase, city edge ornament.",
+      "One tungsten accent family carrying state; gold reserved for ornament; one city colour switched by `data-city`.",
+      "Four-state bulb grammar (off, next, lit, dead) repeated on the slot rail, card number, map pin and trip garland.",
+      "Photographs as gilt-framed plates with city corners, never rounded cards.",
+      "One 8 px pitch for all spacing; 48 px plates for every control.",
+      "Continuous light motion that pauses off screen and stops under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Tungsten Rule",
+        "body": "Only light means state. Bulb, filament and ember mark next, now, today and done; gold never marks state and tungsten never decorates.",
+        "section": "colors"
+      },
+      {
+        "name": "The City Switch Rule",
+        "body": "A component takes the city's colour only through `--city` / `--city-deep`; the city is changed in one place, `body[data-city]`.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dead Bulb Rule",
+        "body": "Closed and not-found are ash, never red: a dark bulb with a slash, the name struck through, the photos greyed (grayscale 0.85, brightness 0.62), and a text flag. Colour is never the only carrier.",
+        "section": "colors"
+      },
+      {
+        "name": "The Russian Tag Rule",
+        "body": "Every Cyrillic run carries `lang=\"ru\"`. Sofia Sans draws Bulgarian letterforms otherwise; builders wrap mixed text with `ruText()` and set `lang=\"ru\"` on Cyrillic names, addresses, the phrase, the stamp, the garland city names and map labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Gloss-Below Rule",
+        "body": "A section title may carry its Russian translation as a small gold line below it; the gloss is always the heading's own meaning in Russian, never a category label placed above.",
+        "section": "typography"
+      },
+      {
+        "name": "The Void Rule",
+        "body": "Night space separates stops, slots and days. No horizontal rules between content; gold appears as frames and ornament, not as dividers.",
+        "section": "layout"
+      },
+      {
+        "name": "The Scrim Rule",
+        "body": "Text never sits on a raw photograph. The hero shade grades the photo dark at the top (garlands), clearer mid-frame, and to night at the bottom (a denser grade below 720 px); a radial night pool sits behind the lettering and the city name has a night text-shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** take every spacing value from the 8 px pitch and give every control at least 48 px (links and pins at least 44 px).",
+      "**Do** mark state with the four-state bulb grammar, identically on rail, card number, map pin and garland, always with text alongside.",
+      "**Do** set every Cyrillic run with `lang=\"ru\"`.",
+      "**Do** switch city colour only through `--city` / `--city-deep` via `body[data-city]`.",
+      "**Do** frame photographs as gilt plates with the city's corners, and put text over photos only on a night scrim.",
+      "**Do** pause continuous lights off screen and remove them under reduced motion."
+    ],
+    "donts": [
+      "**Don't** use rounded photo cards on grey, or leave the page empty of photographs, map and ornament.",
+      "**Don't** use gold or the city colour to signal state, or tungsten as decoration.",
+      "**Don't** show a closed or missing venue in red; it is ash, struck, greyed and labelled.",
+      "**Don't** separate content with horizontal rules; use night space.",
+      "**Don't** borrow ornament from outside the two cities; the vocabulary is Kremlin merlons, Khokhloma, the Petersburg railing, the cobalt net and its star."
+    ]
+  }
+}

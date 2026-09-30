@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ plates (buttons) */
+
+.act {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pitch);
+  min-height: var(--touch);
+  padding: 0 calc(var(--pitch) * 1.75);
+  border: 1px solid var(--wire);
+  border-radius: var(--plate-radius);
+  background: var(--night);
+  font-family: var(--font-sign);
+  font-size: var(--t-s);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.18s, background-color 0.18s, color 0.18s;
+}
+
+@media (hover: hover) {
+  .act:hover {
+    border-color: var(--ember);
+  }
+}
+
+.act:active {
+  transform: translateY(1px);
+}
+
+.act--accent {
+  border-color: var(--bulb);
+  background: var(--bulb);
+  color: var(--night);
+}
+
+@media (hover: hover) {
+  .act--accent:hover {
+    border-color: var(--filament);
+    background: var(--filament);
+  }
+}
+
+.loading-text {
+  font-family: var(--font-sign);
+  letter-spacing: 0.04em;
+  color: var(--frost);
+}
