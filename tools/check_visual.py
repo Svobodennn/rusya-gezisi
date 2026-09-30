@@ -48,6 +48,10 @@ SETTLE = """async () => {
   }
   await Promise.all([...document.images].map((img) => img.complete ? null
     : new Promise((resolve) => { img.onload = img.onerror = resolve; })));
+  // Load every face with Cyrillic and Turkish text, so no subset is still arriving when the picture is taken.
+  const sample = 'Москва воспоминания Ağıçşü 0123';
+  await Promise.all(['Sofia Sans', 'Sofia Sans Condensed', 'Oranienbaum', 'Bad Script']
+    .flatMap((family) => ['400', '600', '700'].map((weight) => document.fonts.load(`${weight} 16px "${family}"`, sample))));
   await document.fonts.ready;
   window.scrollTo(0, 0);
 }"""
