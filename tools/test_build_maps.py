@@ -131,5 +131,109 @@ class OutputTest(unittest.TestCase):
                 self.assertTrue(layers["labels"])
 
 
+
+def stop_at(proj, place, lon, lat, wikidata=None, names=(), footprint=None):
+    from osm import features
+    return {"place": place, "point": proj(lon, lat), "wikidata": wikidata, "footprint": footprint,
+            "names": [features._words(name) for name in names]}
+
+
+class PoiTest(unittest.TestCase):
+    """A notable place shows once, in a name a Turkish reader can read, the best known first (lowest tier) so they
+    show from the farthest zoom and win the space for labels; a place that IS a trip stop is marked with the stop's id
+    (the page hides it while that stop has a pin), and a mere neighbour of a stop is not."""
+
+    def test_pois_skip_repeats_and_nameless_places(self):
+        from osm import features
+        proj = geometry.Projection.for_bbox((37.60, 55.74, 37.64, 55.76))
+        elements = [
+            {"type": "node", "lat": 55.7539, "lon": 37.6209, "tags": {"name": "Red Square", "wikidata": "Q1", "tourism": "attraction"}},
+            {"type": "way", "center": {"lat": 55.7510, "lon": 37.6180}, "tags": {"name": "Бо", "wikidata": "Q2", "amenity": "theatre"}},
+            {"type": "way", "center": {"lat": 55.7511, "lon": 37.6181}, "tags": {"name": "Бо (dup)", "wikidata": "Q2", "amenity": "theatre"}},
+            {"type": "node", "lat": 55.7550, "lon": 37.6150, "tags": {"name": "Храм", "wikidata": "Q3", "amenity": "place_of_worship"}},
+            {"type": "node", "lat": 55.7555, "lon": 37.6190, "tags": {"name": "Музей", "wikidata": "Q4", "tourism": "museum"}},
+            {"type": "node", "lat": 55.7560, "lon": 37.6230, "tags": {"wikidata": "Q5", "tourism": "museum"}},
+            {"type": "node", "lat": 55.7490, "lon": 37.6300, "tags": {"name": "Памятник", "wikidata": "Q6", "historic": "monument"}},
+        ]
+        pois = features.poi_features(elements, proj, [])
+        self.assertEqual([(p["name"], p["kind"]) for p in pois], [
+            ("Red Square", "sight"), ("Памятник", "historic"), ("Музей", "museum"), ("Бо", "theatre"), ("Храм", "church")])
+
+    def test_a_place_that_is_a_stop_is_marked_and_its_neighbours_are_not(self):
+        from osm import features
+        proj = geometry.Projection.for_bbox((37.60, 55.74, 37.64, 55.76))
+        corners = [proj(37.617, 55.751), proj(37.625, 55.751), proj(37.625, 55.756), proj(37.617, 55.756)]
+        footprint = [(corners + corners[:1], True)]
+        stops = [stop_at(proj, "msk-06", 37.6208, 55.7539, "Q1", ["Red Square", "Красная площадь"], footprint),
+                 stop_at(proj, "msk-45", 37.6100, 55.7450, None, ["Novodevichy Convent & Pond"]),
+                 stop_at(proj, "spb-23", 37.6300, 55.7420, None, ["Mariinsky Theatre"])]
+        node = lambda qid, lat, lon, **tags: {"type": "node", "lat": lat, "lon": lon, "tags": {"wikidata": qid, **tags}}
+        elements = [
+            node("Q1", 55.7600, 37.6300, name="Красная площадь", **{"name:en": "Square by id"}, tourism="attraction"),
+            node("Q2", 55.7538, 37.6195, name="Мавзолей", **{"name:en": "Lenin's Mausoleum"}, historic="monument"),
+            node("Q3", 55.7540, 37.6240, name="Красная площадь", **{"name:en": "Red Square"}, tourism="attraction"),
+            node("Q4", 55.7458, 37.6100, name="Новодевичий", **{"name:en": "Novodevichy Convent"}, tourism="attraction"),
+            node("Q5", 55.7452, 37.6102, name="Смоленский собор", **{"name:en": "Smolensky Cathedral"}, building="cathedral"),
+            node("Q6", 55.7580, 37.6300, name="Красная площадь", **{"name:en": "Far namesake"}, tourism="attraction"),
+            node("Q7", 55.7429, 37.6300, name="Мариинский-2", **{"name:en": "Mariinsky II"}, amenity="theatre"),
+        ]
+        marked = {p["name"]: p.get("stop") for p in features.poi_features(elements, proj, stops)}
+        self.assertEqual(marked, {
+            "Square by id": "msk-06",  # the stop's wikidata id, whatever the distance
+            "Red Square": "msk-06",  # another id, but the stop's own name inside its footprint
+            "Far namesake": None,  # the same Russian name, outside the footprint and 300 m
+            "Lenin's Mausoleum": None,  # 50 m from the pin but another place
+            "Novodevichy Convent": "msk-45",  # "Novodevichy Convent" is in "Novodevichy Convent & Pond"
+            "Smolensky Cathedral": None,  # inside the convent, still a place of its own
+            "Mariinsky II": None,  # the new stage, 100 m off: "II" is a word, so the name is not the stop's
+        })
+
+    def test_the_best_known_places_come_first_and_take_the_lowest_tiers(self):
+        from unittest import mock
+        from osm import features
+        proj = geometry.Projection.for_bbox((37.60, 55.74, 37.64, 55.76))
+        langs = lambda n: {f"name:{code}": "x" for code in ("de", "fr", "es", "it", "ja", "pl", "uk", "zh")[:n]}
+        place = lambda qid, name, n, **tags: {"type": "node", "lat": 55.75, "lon": 37.61 + int(qid[1:]) / 1000,
+                                             "tags": {"name": name, "wikidata": qid, **langs(n), **tags}}
+        elements = [
+            place("Q1", "Храм", 0, amenity="place_of_worship"),
+            place("Q2", "Большой театр", 8, amenity="theatre", **{"name:en": "The Bolshoi Theatre"}),
+            place("Q3", "Музей", 3, tourism="museum", **{"name:tr": "Müze", "name:en": "Museum"}),
+            place("Q4", "Памятник", 3, historic="monument", **{"name:etymology:wikidata": "Q9"}),
+        ]
+        with mock.patch.object(features, "POI_TIERS", (1, 3)):
+            pois = features.poi_features(elements, proj, [])
+        self.assertEqual([(p["name"], p["lang"], p["tier"]) for p in pois], [
+            ("Bolshoi Theatre", "en", 1),  # 9 languages, "The" dropped
+            ("Müze", "tr", 2),  # 5 languages beat 3; Turkish before English
+            ("Памятник", "ru", 2),  # a name:etymology tag is no language
+            ("Храм", "ru", 3),
+        ])
+
+
+class StationNamesTest(unittest.TestCase):
+    """Each station is named once, readably: an interchange's platforms share one label, set under the lowest of them,
+    while two stations that only share a name keep their own."""
+
+    def test_interchange_platforms_merge_and_distant_namesakes_do_not(self):
+        from osm import features
+        proj = geometry.Projection.for_bbox((37.55, 55.70, 37.70, 55.80))
+        station = (lambda lat, lon, name, en=None: {"type": "node", "lat": lat, "lon": lon, "tags": {
+            "railway": "station", "station": "subway", "name": name, **({"name:en": en} if en else {})}})
+        elements = [
+            station(55.7520, 37.6100, "Арбатская", "Arbatskaya"),
+            station(55.7524, 37.6108, "Арбатская", "Arbatskaya"),  # the other line's platform, ~60 m away
+            station(55.7800, 37.6800, "Арбатская"),  # a namesake several km off
+            station(55.7600, 37.6200, "Театральная", "Teatralnaya"),
+            {"type": "node", "lat": 55.7600, "lon": 37.6300, "tags": {"railway": "station", "name": "Тверская"}},
+        ]
+        names = features.station_names(elements, proj)
+        self.assertEqual([(n["name"], n["lang"]) for n in names],
+                         [("Arbatskaya", "en"), ("Teatralnaya", "en"), ("Арбатская", "ru")])
+        self.assertAlmostEqual(names[0]["x"], (proj(37.6100, 55.7520)[0] + proj(37.6108, 55.7524)[0]) / 2, delta=0.2)
+        self.assertAlmostEqual(names[0]["y"], proj(37.6100, 55.7520)[1], delta=0.2,
+                               msg="the name hangs under the lower platform, clear of both dots")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,11 +1,11 @@
-"""The map layers: water, parks, roads, rail, metro lines and stations, landmark footprints."""
+"""The map layers: water, parks, roads, rail, metro lines and stations, landmark footprints, notable places."""
 import math
 import re
 from collections import Counter, defaultdict
 
 from .config import (
-    CSS_COLOURS, EXTRA_LANDMARKS, FLOWING, MAJOR, NOT_WATER, PARK_MIN_M2, POND_MIN_M2, RAIL_SKIP_USAGE,
-    STATION_REACH_M, STATION_TIE_M, TWIN_M,
+    CSS_COLOURS, EXTRA_LANDMARKS, FLOWING, MAJOR, NOT_WATER, PARK_MIN_M2, POI_LIMIT, POI_SAME_NAME_M, POI_TIERS,
+    POND_MIN_M2, RAIL_SKIP_USAGE, STATION_MERGE_M, STATION_REACH_M, STATION_TIE_M, TWIN_M,
 )
 from .geometry import douglas_peucker
 from .labels import _inside
@@ -162,6 +162,40 @@ def station_features(elements, proj, metro):
     return sorted(stations, key=lambda s: (s["name"], s["x"]))
 
 
+def readable_name(tags):
+    """(name, language) a Turkish reader can read: the Turkish name, else the English one without a leading
+    "The", else the Russian name on the sign."""
+    for key, lang in (("name:tr", "tr"), ("name:en", "en")):
+        value = (tags.get(key) or "").strip()
+        if value:
+            return (value[4:] if value.startswith("The ") else value), lang
+    return tags["name"], "ru"
+
+
+def station_names(elements, proj):
+    """One readable name per station: platforms that share a Russian name within STATION_MERGE_M (the halves of an
+    interchange) take a single label, anchored under the lowest of them so it hangs clear of every platform dot."""
+    merge = STATION_MERGE_M / proj.m_per_unit
+    groups = []
+    for el in elements:
+        tags = el.get("tags", {})
+        if el["type"] != "node" or tags.get("station") != "subway" or not tags.get("name"):
+            continue
+        point = proj(el["lon"], el["lat"])
+        if not _inside(point, proj.frame(0)):
+            continue
+        home = next((g for g in groups if g["key"] == tags["name"]
+                     and any(math.dist(point, p) < merge for p in g["points"])), None)
+        if home:
+            home["points"].append(point)
+        else:
+            groups.append({"key": tags["name"], "label": readable_name(tags), "points": [point]})
+    names = [{"name": g["label"][0], "lang": g["label"][1],
+              "x": round(sum(x for x, _ in g["points"]) / len(g["points"]), 1),
+              "y": round(max(y for _, y in g["points"]), 1)} for g in groups]
+    return sorted(names, key=lambda s: (s["name"], s["x"]))
+
+
 def landmark_targets(places, wikidata, city):
     targets = {}
     for pid, place in sorted(places.items()):
@@ -194,3 +228,93 @@ def landmark_features(elements, targets, proj):
         _, osm_name, feature = max(found, key=lambda entry: entry[0])
         marks.append({"place": target["place"], "name": osm_name or target["name"], "feature": feature})
     return marks, missing
+
+
+def _poi_kind(tags):
+    if tags.get("tourism") in ("museum", "gallery"):
+        return "museum"
+    if tags.get("amenity") in ("theatre", "arts_centre", "concert_hall", "planetarium"):
+        return "theatre"
+    if tags.get("amenity") == "place_of_worship" or tags.get("building") in ("cathedral", "church"):
+        return "church"
+    if tags.get("historic") or tags.get("building") == "palace":
+        return "historic"
+    return "sight"
+
+
+POI_ORDER = ("sight", "historic", "museum", "theatre", "church")
+NAME_TAG = re.compile(r"name:[a-z]{2,3}(-[A-Za-z]+)?")
+
+
+def _renown(tags):
+    """How widely known a place is: the number of languages OSM gives its name in (the Bolshoi 47, a parish church 0)."""
+    return sum(1 for key in tags if NAME_TAG.fullmatch(key))
+
+
+def _contains(feature, point):
+    """Even-odd over every ring: inside an outer ring and outside its holes."""
+    x, y = point
+    inside = False
+    for ring, _ in feature:
+        for (x0, y0), (x1, y1) in zip(ring, ring[1:] + ring[:1]):
+            if (y0 > y) != (y1 > y) and x < x0 + (y - y0) * (x1 - x0) / (y1 - y0):
+                inside = not inside
+    return inside
+
+
+NAME_KEYS = ("name", "name:en", "name:tr", "name:ru")
+
+
+def _words(text):
+    """The words that tell a name apart: fillers ("of", "st", "the") drop out, numbers and numerals ("II") stay."""
+    return frozenset(w for w in re.findall(r"\w+", text.casefold())
+                     if (len(w) > 2 or w.isdigit() or re.fullmatch(r"[ivxlc]+", w)) and w not in ("the", "and"))
+
+
+def _same_name(tags, stop):
+    """Some name of the place is contained, word for word, in some name of the stop ("Novodevichy Convent" in
+    "Novodevichy Convent & Pond"); a place that only shares words ("Peter and Paul Cathedral") is another place."""
+    places = [_words(tags[key]) for key in NAME_KEYS if tags.get(key)]
+    return any(words and words <= theirs for words in places for theirs in stop["names"])
+
+
+def _stop_of(qid, tags, point, stops, proj):
+    """The trip stop a notable place is: the same wikidata id, else, in the stop's footprint or near its pin, the same
+    place under another id (by name). Neighbours stay places of their own, the Mausoleum on Red Square, VDNKh's
+    pavilions, the Fabergé Museum beside a lunch stop: a dot right under a pin is covered by it anyway, and names keep
+    clear of pins on the page."""
+    same = next((stop["place"] for stop in stops if qid and qid == stop["wikidata"]), None)
+    return same or next((stop["place"] for stop in stops if _same_name(tags, stop) and (
+        math.dist(point, stop["point"]) < POI_SAME_NAME_M / proj.m_per_unit
+        or (stop["footprint"] and _contains(stop["footprint"], point)))), None)
+
+
+def poi_features(elements, proj, stops):
+    """Notable places, each wikidata id once: readable name, kind, tier, position, and the trip stop it is, if any.
+
+    stops: [{"place", "point", "wikidata", "footprint", "names"}]. A place that is a stop keeps its entry with its id,
+    so the page hides it only while that stop has a pin and still shows it on the other days. The best known come
+    first and get the lowest tier, so the page shows and labels them from the farthest zoom and they win the space
+    when names would collide; sights and history before churches among equals."""
+    seen, found = set(), []
+    for el in elements:
+        tags = el.get("tags", {})
+        name, qid = tags.get("name"), tags.get("wikidata")
+        centre = el.get("center") or (el if "lat" in el and "lon" in el else None)
+        if not name or not qid or qid in seen or not centre:
+            continue
+        point = proj(centre["lon"], centre["lat"])
+        if not _inside(point, proj.frame(0)):
+            continue
+        seen.add(qid)
+        label, lang = readable_name(tags)
+        found.append((-_renown(tags), POI_ORDER.index(_poi_kind(tags)), label, lang, point,
+                      _stop_of(qid, tags, point, stops, proj)))
+    found.sort(key=lambda entry: entry[:3])
+    return [{"name": label, "lang": lang, "kind": POI_ORDER[kind], "tier": _tier(i),
+             "x": round(point[0], 1), "y": round(point[1], 1), **({"stop": stop} if stop else {})}
+            for i, (_, kind, label, lang, point, stop) in enumerate(found[:POI_LIMIT])]
+
+
+def _tier(index):
+    return 1 if index < POI_TIERS[0] else 2 if index < POI_TIERS[1] else 3

@@ -1,0 +1,115 @@
+/* The map's other places: notable sights, museums, theatres and places of worship as coloured dots, and metro stations,
+   named as the zoom allows (map/detail.js sets data-detail from 0, the whole city, to 3, a street corner). */
+
+.route {
+  --poi-sight: #f0c75e;
+  --poi-historic: #e9dfc4;
+  --poi-museum: #d79ad0;
+  --poi-theatre: #ee8d74;
+  --poi-church: #7fd0bf;
+  --poi-metro: #8ea2d4;
+}
+
+.m-poi-halo {
+  fill: none;
+  stroke: #0a0f1c;
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+
+.m-poi {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+/* Size follows renown: the best known a little larger, the local ones smaller. */
+.m-poi-halo.m-tier-1 { stroke-width: 10.5; }
+.m-poi.m-tier-1 { stroke-width: 7.5; }
+.m-poi-halo.m-tier-3 { stroke-width: 7.5; }
+.m-poi.m-tier-3 { stroke-width: 4.5; }
+
+.m-poi--sight { stroke: var(--poi-sight); }
+.m-poi--historic { stroke: var(--poi-historic); }
+.m-poi--museum { stroke: var(--poi-museum); }
+.m-poi--theatre { stroke: var(--poi-theatre); }
+.m-poi--church { stroke: var(--poi-church); }
+
+/* The best known always; the next from a district's zoom; the rest from a few streets'. Written out rather than with
+   :is(), which older TV and phone engines (before Chromium 88) drop along with the whole rule. */
+.m-tier-2,
+.m-tier-3 {
+  display: none;
+}
+
+.map[data-detail='1'] .m-tier-2,
+.map[data-detail='2'] .m-tier-2,
+.map[data-detail='3'] .m-tier-2,
+.map[data-detail='2'] .m-tier-3,
+.map[data-detail='3'] .m-tier-3 {
+  display: inline;
+}
+
+/* Close up, the stations step forward with their names. */
+.map[data-detail='2'] .m-station,
+.map[data-detail='3'] .m-station {
+  stroke-width: 5;
+  opacity: 0.8;
+}
+
+.m-label--major,
+.m-label--place,
+.m-label--metro {
+  font-family: var(--font-sign);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.m-label--major {
+  fill: #f3e6c4;
+}
+
+.m-label--place {
+  fill: #b3bfdc;
+}
+
+.m-label--metro {
+  font-weight: 500;
+  fill: var(--poi-metro);
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px calc(var(--pitch) * 2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--t-xs);
+  color: var(--frost);
+}
+
+.map-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.map-key {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px #0a0f1c;
+}
+
+.map-key--sight { background: var(--poi-sight); }
+.map-key--historic { background: var(--poi-historic); }
+.map-key--museum { background: var(--poi-museum); }
+.map-key--theatre { background: var(--poi-theatre); }
+.map-key--church { background: var(--poi-church); }
+
+.map-key--metro {
+  width: 6px;
+  height: 6px;
+  background: var(--poi-metro);
+}

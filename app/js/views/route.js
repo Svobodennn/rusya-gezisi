@@ -2,6 +2,17 @@
 import { icon } from './html.js';
 import { shelfHtml } from './ornaments.js';
 
+// What the dots on the map stand for: the notable places by kind, then the metro.
+const LEGEND = [
+  ['sight', 'Gezilecek yer'], ['historic', 'Tarihi yapı, anıt'], ['museum', 'Müze, galeri'],
+  ['theatre', 'Tiyatro, konser'], ['church', 'İbadet yeri'], ['metro', 'Metro'],
+];
+
+function legendHtml() {
+  return `<ul class="map-legend" aria-label="Haritadaki noktalar">${LEGEND.map(([kind, text]) => (
+    `<li><span class="map-key map-key--${kind}" aria-hidden="true"></span>${text}</li>`)).join('')}</ul>`;
+}
+
 export function routeShellHtml() {
   return `<div class="route-head">
       <h2 id="route-title" class="section-title">Günün rotası<span lang="ru">маршрут дня</span></h2>
@@ -11,9 +22,10 @@ export function routeShellHtml() {
       </div>
     </div>
     <div class="map" id="map" data-mode="day" role="group"></div>
+    ${legendHtml()}
     <div class="map-foot">
       <a class="act act--accent" id="route-open" href="#" target="_blank" rel="noopener">${icon('i-route')}Rotayı Yandex'te aç</a>
-      <p class="map-credit">Harita: © OpenStreetMap katkıcıları · internetsiz çizildi · sürükleyip yakınlaştırın</p>
+      <p class="map-credit">Harita: © OpenStreetMap katkıcıları · internetsiz çizildi · yakınlaştırdıkça yer adları çıkar</p>
     </div>
     ${shelfHtml()}`;
 }

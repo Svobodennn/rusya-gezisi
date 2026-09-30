@@ -3,13 +3,14 @@
 import { project } from '../core/geo.js';
 import { prefersReducedMotion } from '../lib/motion.js';
 import { tweenCamera } from './camera.js';
-import { drawCity, loadMapData } from './base-map.js';
+import { drawCity, loadMapData, markPinned } from './base-map.js';
 import {
-  clampCamera, fitCamera, garlandPath, isSameCamera, layoutPins, overviewCamera, panBy, placeLabels, scaleLimits,
-  toScreen, withoutOutliers, zoomAt,
+  clampCamera, fitCamera, garlandPath, isSameCamera, layoutPins, overviewCamera, panBy, scaleLimits, toScreen, withoutOutliers,
+  zoomAt,
 } from './geometry.js';
+import { detailLevel } from './detail.js';
 import { enableMapInteraction } from './interaction.js';
-import { mountFrame } from './layers.js';
+import { controlsBox, mountFrame } from './layers.js';
 import { pinButton, pinItems, routePins } from './pins.js';
 
 const fix = (n) => n.toFixed(1);
@@ -17,8 +18,9 @@ const fix = (n) => n.toFixed(1);
 export function createRouteMap(root, { onPick }) {
   const frame = mountFrame(root);
   const state = {
-    city: null, data: null, projection: null, landmarks: [], labels: [], mode: root.dataset.mode || 'day',
-    view: null, pins: [], route: [], pinBoxes: [], camera: null, width: 0, height: 0, token: 0, stopTween: () => {},
+    city: null, data: null, projection: null, landmarks: [], stopDots: [], mode: root.dataset.mode || 'day', view: null,
+    pins: [], route: [], pinBoxes: [], controlsBox: null, camera: null, moving: false, width: 0, height: 0, token: 0,
+    stopTween: () => {},
   };
   const size = () => ({ width: state.width, height: state.height });
   const pinScreen = (pin, camera = state.camera) => {
@@ -42,20 +44,18 @@ export function createRouteMap(root, { onPick }) {
     });
     state.pins = state.pins.map((pin, i) => ({ ...pin, ...layout.offsets[i], side: layout.sides[i] }));
     state.route = routePins(state.pins, state.city);
-    state.pinBoxes = layout.boxes;
+    state.pinBoxes = state.controlsBox ? [...layout.boxes, state.controlsBox] : layout.boxes; // names keep off both
     state.pins.forEach((pin) => {
       pin.el.classList.toggle('pin--left', pin.side === 'left');
       pin.el.dataset.label = pin.side ? 'on' : 'off';
     });
   }
 
+  // The level of detail decides which dots show (CSS reads data-detail) and which names may try for a place.
   function drawLabels() {
-    const positions = state.labels.map((label) => toScreen(label, state.camera, size()));
-    const shown = placeLabels(state.labels, positions, state.pinBoxes, size());
-    state.labels.forEach((label, i) => {
-      if (shown[i]) label.node.setAttribute('transform', `translate(${fix(positions[i].x)} ${fix(positions[i].y)}) rotate(${label.angle})`);
-      label.node.toggleAttribute('hidden', !shown[i]);
-    });
+    const level = detailLevel(state.camera, state.projection);
+    if (root.dataset.detail !== String(level)) root.dataset.detail = String(level);
+    frame.labels.draw({ camera: state.camera, size: size(), pins: state.pinBoxes, level, quiet: state.moving });
   }
 
   function draw() {
@@ -85,12 +85,13 @@ export function createRouteMap(root, { onPick }) {
     state.stopTween();
     const from = state.camera;
     if (!animate || !from || isSameCamera(from, target) || prefersReducedMotion()) {
-      state.camera = target;
+      Object.assign(state, { camera: target, moving: false });
       draw();
       return;
     }
+    // While it glides, the pins' boxes are the destination's: place and metro names wait for the last frame.
     state.stopTween = tweenCamera(from, target, (camera) => {
-      state.camera = camera;
+      Object.assign(state, { camera, moving: !isSameCamera(camera, target) });
       draw();
     });
   }
@@ -99,6 +100,7 @@ export function createRouteMap(root, { onPick }) {
     state.width = root.clientWidth;
     state.height = root.clientHeight;
     frame.overlay.setAttribute('viewBox', `0 0 ${state.width} ${state.height}`);
+    state.controlsBox = controlsBox(frame, root); // no name goes under the zoom buttons
   }
 
   function buildPins() {
@@ -113,8 +115,7 @@ export function createRouteMap(root, { onPick }) {
     frame.pinLayer.replaceChildren(...state.pins.map((pin) => pin.el));
     state.pins.find((pin) => pin.id === focused)?.el.focus({ preventScroll: true });
     state.pins = state.pins.map((pin) => ({ ...pin, labelW: pin.el.querySelector('.pin-label').offsetWidth }));
-    const todays = new Set(state.view.stops.map((stop) => stop.id));
-    state.landmarks.forEach(({ place, path }) => path.classList.toggle('is-today', todays.has(place)));
+    markPinned(frame, state, { today: new Set(state.view.stops.map((s) => s.id)), pinned: new Set(state.pins.map((p) => p.id)) });
     const onMap = state.pins.filter((pin) => pin.today).length;
     root.setAttribute('aria-label', `${state.mode === 'city' ? 'Şehir haritası' : 'Günün rotası haritası'}: ${onMap} durak`);
   }
@@ -147,7 +148,10 @@ export function createRouteMap(root, { onPick }) {
     moveTo(target, animate);
   }
   enableMapInteraction({ root, controls: frame.controls }, {
-    begin: () => state.stopTween(),
+    begin: () => {
+      state.stopTween();
+      if (state.moving) lookAt(state.camera); // a glide cut short settles where it is, names and all
+    },
     pan: (dx, dy) => state.camera && lookAt(panBy(state.camera, dx, dy)),
     zoom: (factor, at, { animate = false } = {}) => state.camera
       && lookAt(zoomAt(state.camera, factor, at, size(), scaleLimits(size(), state.projection, state.data?.height)), animate),

@@ -19,7 +19,8 @@ app/                 deploy root, served as-is (no build step, no bundler, no np
   js/core/           trip logic — PURE: no DOM, no storage, no browser APIs
   js/state/          store (frozen snapshot, set(patch) only), ticks (localStorage), url (?now=, #gun-N), load
   js/views/          HTML string builders — PURE: data in, markup out, everything escaped with esc/ruText
-  js/map/            route map: geometry.js pure; layers, base-map, pins, camera, route-map are DOM
+  js/map/            route map: geometry, detail (level of detail, name layout) and names (name data) are pure;
+                     layers, base-map, labels (name nodes), pins, camera, interaction, route-map are DOM
   js/effects/        hero weather: snow, street lights
   js/ui/             DOM controllers: page (render orchestration), regions, actions (click table), focus, panels…
   js/pwa/            service worker registration and the offline status line

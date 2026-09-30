@@ -92,4 +92,9 @@ def overpass_queries(bbox, targets):
                         f'node["railway"="station"]["station"="subway"]{box};out;',
         "landmarks": head + f"({marks});out geom;",
         "places": head + f'nwr["place"~"^(suburb|quarter|island)$"]{box};out bb;',
+        # Notable places only (they carry a wikidata id), so the map says what is where without drowning in shops.
+        "pois": head + f'(nwr["tourism"~"^(museum|gallery|attraction|zoo|theme_park|viewpoint)$"]["name"]["wikidata"]{box};'
+                       f'nwr["amenity"~"^(theatre|arts_centre|concert_hall|planetarium|place_of_worship)$"]["name"]["wikidata"]{box};'
+                       f'nwr["historic"~"^(monument|castle|palace|fort|ship|citywalls|building)$"]["name"]["wikidata"]{box};'
+                       f'nwr["building"~"^(cathedral|church|palace)$"]["name"]["wikidata"]{box};);out center tags;',
     }

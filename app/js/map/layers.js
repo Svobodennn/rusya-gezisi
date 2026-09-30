@@ -1,14 +1,18 @@
 // The map's SVG: the frame of stacked layers, and the city's base drawing built from the OSM data.
 import { svgEl } from '../lib/svg.js';
+import { finite } from './geometry.js';
+import { createLabelLayer } from './labels.js';
+import { POI_KINDS, placesOf } from './names.js';
 
 const COLOUR = /^#[0-9a-f]{3,8}$/i;
-const LABEL_SIZE = { street: 10.5, default: 12.5 };
+const TOP_LAST = [3, 2, 1]; // tiers in paint order: the best-known places on top
 const CONTROLS = [['zoom-in', 'i-plus', 'Yakınlaştır'], ['zoom-out', 'i-minus', 'Uzaklaştır'], ['recenter', 'i-target', 'Günün rotasına dön']];
 
 const joinPaths = (list) => (Array.isArray(list) ? list.filter((d) => typeof d === 'string').join('') : '');
-export const finite = (...values) => values.every(Number.isFinite);
+// Zero-length subpaths with round caps: every point a dot of the same screen size at any zoom.
+const dotPath = (points) => points.map((p) => `M${p.x} ${p.y}h0`).join('');
 
-// Base drawing under a camera group, route and labels in screen space over it, pin buttons on top.
+// Base drawing under a camera group, route and names in screen space over it, pin buttons on top.
 export function mountFrame(root) {
   const base = svgEl('svg', { class: 'map-svg', 'aria-hidden': 'true' });
   const cameraGroup = svgEl('g');
@@ -30,14 +34,23 @@ export function mountFrame(root) {
   controls.innerHTML = CONTROLS.map(([action, iconId, label]) => `<button type="button" class="map-control" `
     + `data-map-control="${action}" aria-label="${label}"><svg class="icon" aria-hidden="true"><use href="#${iconId}"/></svg></button>`).join('');
   root.replaceChildren(base, overlay, pinLayer, note, controls);
-  return { cameraGroup, overlay, labelGroup, wire, lights, leaders, anchors, pinLayer, note, controls };
+  return { cameraGroup, overlay, labels: createLabelLayer(labelGroup), wire, lights, leaders, anchors, pinLayer, note, controls };
+}
+
+// The screen box the zoom buttons take, with a margin, in the map's own pixels; null before the map is laid out.
+export function controlsBox({ controls }, root) {
+  const box = controls.getBoundingClientRect();
+  const origin = root.getBoundingClientRect();
+  return box.width
+    ? { x0: box.left - origin.left - 4, x1: box.right - origin.left + 4, y0: box.top - origin.top - 4, y1: box.bottom - origin.top + 4 }
+    : null;
 }
 
 export function baseLayers(data) {
   const layers = data.layers ?? {};
   const group = svgEl('g');
-  const add = (cls, d, extra = {}) => {
-    if (d) group.append(svgEl('path', { class: cls, d, ...extra }));
+  const add = (cls, d, extra = {}, parent = group) => {
+    if (d) parent.append(svgEl('path', { class: cls, d, ...extra }));
   };
   add('m-water-area', joinPaths(layers.water?.areas));
   add('m-park', joinPaths(layers.parks));
@@ -48,9 +61,7 @@ export function baseLayers(data) {
   (layers.metro ?? []).forEach((line) => {
     add('m-metro', typeof line.d === 'string' ? line.d : '', COLOUR.test(line.colour ?? '') ? { stroke: line.colour } : {});
   });
-  // Zero-length subpaths with round caps: every station a dot of the same screen size at any zoom.
-  const stations = (layers.stations ?? []).filter((s) => finite(s.x, s.y));
-  add('m-station', stations.map((s) => `M${s.x} ${s.y}h0`).join(''));
+  add('m-station', dotPath((layers.stations ?? []).filter((s) => finite(s.x, s.y))));
   const landmarks = [];
   (layers.landmarks ?? []).forEach((mark) => {
     if (typeof mark.d !== 'string') return;
@@ -58,24 +69,23 @@ export function baseLayers(data) {
     group.append(path);
     landmarks.push({ place: mark.place, path });
   });
-  return { group, landmarks };
+  return { group, landmarks, stopDots: placeDots(placesOf(layers), add, group) };
 }
 
-export function labelNodes(data) {
-  return (data.layers?.labels ?? []).filter((label) => label.text && finite(label.x, label.y)).map((label) => {
-    const kind = /^[a-z]+$/.test(label.kind ?? '') ? label.kind : 'default';
-    const size = LABEL_SIZE[kind] ?? LABEL_SIZE.default;
-    const node = svgEl('text', { class: `m-label m-label--${kind}`, 'font-size': size, 'text-anchor': 'middle', 'dominant-baseline': 'central' });
-    node.textContent = label.text;
-    const angle = Number(label.angle) || 0;
-    // Oranienbaum with 0.24em tracking runs about 0.84em a letter.
-    const w = String(label.text).length * size * 0.84;
-    const h = size * 1.4;
-    const rad = (angle * Math.PI) / 180;
-    return {
-      node, x: label.x, y: label.y, angle,
-      halfW: (Math.abs(w * Math.cos(rad)) + Math.abs(h * Math.sin(rad))) / 2,
-      halfH: (Math.abs(w * Math.sin(rad)) + Math.abs(h * Math.cos(rad))) / 2,
-    };
+// Notable places over everything else: dots on a dark halo, coloured by kind, one path per tier and kind so CSS can
+// show each tier from its level of detail (map/detail.js), the best known painted last. A place that is a trip stop
+// gets a group of its own, which the route map hides while that stop has a pin.
+function placeDots(pois, add, group) {
+  const shared = pois.filter((p) => !p.stop);
+  TOP_LAST.forEach((tier) => add(`m-poi-halo m-tier-${tier}`, dotPath(shared.filter((p) => p.tier === tier))));
+  TOP_LAST.forEach((tier) => POI_KINDS.forEach((kind) => {
+    add(`m-poi m-poi--${kind} m-tier-${tier}`, dotPath(shared.filter((p) => p.tier === tier && p.kind === kind)));
+  }));
+  return pois.filter((p) => p.stop).map((p) => {
+    const node = svgEl('g');
+    add(`m-poi-halo m-tier-${p.tier}`, dotPath([p]), {}, node);
+    add(`m-poi m-poi--${p.kind} m-tier-${p.tier}`, dotPath([p]), {}, node);
+    group.append(node);
+    return { place: p.stop, node };
   });
 }

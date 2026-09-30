@@ -24,8 +24,8 @@ from osm.config import (
     TOLERANCE_STEPS, TRIP,
 )
 from osm.features import (
-    landmark_features, landmark_targets, metro_features, park_features, rail_features, road_features,
-    station_features, water_features,
+    _words, landmark_features, landmark_targets, metro_features, park_features, poi_features, rail_features,
+    road_features, station_features, station_names, water_features,
 )
 from osm.geometry import Projection, city_bbox, encode
 from osm.labels import label_features
@@ -47,14 +47,21 @@ def extract_features(city, places, proj, osm, targets):
     parks = park_features(osm["parks"], proj)
     metro = metro_features(osm["metro"], proj)
     marks, missing = landmark_features(osm["landmarks"], targets, proj)
-    located = [proj(p["lon"], p["lat"]) for p in places.values()
-               if p.get("city") == city and p.get("lat") is not None and p.get("lon") is not None]
+    here = {pid: p for pid, p in sorted(places.items())
+            if p.get("city") == city and p.get("lat") is not None and p.get("lon") is not None}
+    located = [proj(p["lon"], p["lat"]) for p in here.values()]
     focus = (sum(x for x, _ in located) / len(located), sum(y for _, y in located) / len(located))
+    qids = {t["place"]: t["wikidata"] for t in targets if t["place"]}
+    footprints = {mark["place"]: mark["feature"] for mark in marks if mark["place"]}
+    stops = [{"place": pid, "point": point, "wikidata": qids.get(pid), "footprint": footprints.get(pid),
+              "names": [_words(p[key]) for key in ("name", "local", "nameEn") if p.get(key)]}
+             for (pid, p), point in zip(here.items(), located)]
     return {
         "water_areas": water_areas, "water_lines": water_lines, "parks": [f for _, f, _ in parks],
         **road_features(osm["roads"], proj), "rail": rail_features(osm["rail"], proj),
         "metro": metro, "stations": station_features(osm["metro"], proj, metro),
-        "landmarks": marks, "missing": missing,
+        "station_names": station_names(osm["metro"], proj),
+        "landmarks": marks, "missing": missing, "pois": poi_features(osm["pois"], proj, stops),
         "labels": label_features(city, rivers, parks, osm["places"], proj, focus,
                                  json.dumps(places, ensure_ascii=False)),
     }
@@ -90,8 +97,10 @@ def render_city(city, bbox, proj, features, factor):
         "rail": lines("rail", features["rail"], tol["rail"]),
         "metro": metro,
         "stations": features["stations"],
+        "stationNames": features["station_names"],
         "landmarks": landmarks,
         "labels": features["labels"],
+        "pois": features["pois"],
     }
     doc = {"city": city, "bbox": bbox, "projection": {"lon0": proj.lon0, "lat0": proj.lat0, "k": proj.k},
            "width": proj.width, "height": round(proj.height, 1), "layers": layers, "attribution": ATTRIBUTION}
@@ -126,7 +135,8 @@ def report(target, size, factor, stats, layers, missing):
         print(f"  {group:<12} {subpaths:>6} subpaths {points:>7} points")
     unplaced = sum(1 for s in layers["stations"] if s["line"] is None)
     print(f"  metro lines {len(layers['metro'])}, stations {len(layers['stations'])} ({unplaced} without a line), "
-          f"landmarks {len(layers['landmarks'])}, labels {len(layers['labels'])}")
+          f"landmarks {len(layers['landmarks'])}, labels {len(layers['labels'])}, "
+          f"places {len(layers['pois'])}, station names {len(layers['stationNames'])}")
     for target_place in missing:
         print(f"  no footprint: {target_place['place'] or '-'} {target_place['name']} ({target_place['wikidata']})")
 

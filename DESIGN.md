@@ -384,3 +384,13 @@ border, counter and close at the top, previous and next at the sides, the note i
 - **Route map by hand:** drag with the mouse or one finger sideways, pinch or Ctrl + wheel to zoom (a plain wheel
   and a vertical swipe still scroll the page), round 44 px controls top-right on night glass: zoom in, zoom out,
   back to the day's route. Zoom runs from the whole city to about 350 m across.
+- **Other places on the map:** notable sights, museums, theatres and places of worship that are not trip stops, as
+  dots on a night halo: sight gold `#f0c75e`, history ivory `#e9dfc4`, museum orchid `#d79ad0`, theatre coral
+  `#ee8d74`, worship mint `#7fd0bf`; metro names periwinkle `#8ea2d4`. Renown (how many languages OSM names a place
+  in) sets three tiers: 16 best-known per city always show a larger dot, the next 64 from a district's zoom, the rest
+  from a few streets'. Names follow a step later, in Sofia Sans Condensed 600 under the dot (tier 1 ivory 12 px, the
+  others 10.5 px, metro 10 px), in Turkish where OSM has it, else English, else Russian; long names break into up
+  to three even lines. Names keep clear of pins, the zoom buttons, area names, each other and the frame; a
+  best-known name may run over a lesser dot, every other name keeps clear of all dots. While the camera glides, only
+  area names show. A place that is itself a trip stop hides while its pin is on the map and shows on the other days.
+  A legend sits under the map.

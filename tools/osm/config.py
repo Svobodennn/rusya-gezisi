@@ -42,6 +42,12 @@ NOT_WATER = {"wastewater", "reflecting_pool", "fountain", "pool"}
 MAJOR = {"motorway", "trunk", "primary"}
 RAIL_SKIP_USAGE = {"industrial", "military", "test", "tourism"}
 STATION_REACH_M = 300
+POI_SAME_NAME_M = 300  # within this (or the stop's footprint), a place whose name the stop's name contains is the stop
+POI_LIMIT = 450
+# The best-known places (by how many languages OSM names them in) show from the whole-city view, the next ones
+# from a district's, the rest only close up; the page reads the tier.
+POI_TIERS = (16, 80)
+STATION_MERGE_M = 500  # platforms of one interchange that share a name take one label
 STATION_TIE_M = 80  # cross-platform interchanges put two lines' stops within a few metres
 TWIN_M = 30  # tracks or tunnels this close to a longer one of the same layer draw as one line
 TWIN_SHARE = 0.8

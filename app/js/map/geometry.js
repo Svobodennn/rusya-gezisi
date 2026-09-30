@@ -8,6 +8,7 @@ const PAD_NARROW = { t: 56, r: 48, b: 48, l: 48 };
 const PAD_CITY = { t: 40, r: 40, b: 40, l: 40 };
 const FAN_GAP = 34; // bulbs closer than this on screen would cover each other's numbers
 
+export const finite = (...values) => values.every(Number.isFinite);
 export const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const overlaps = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
 
@@ -17,6 +18,11 @@ export function toScreen(point, camera, { width, height }) {
 
 function metresPerUnit({ lat0, k }) {
   return (METRES_PER_DEGREE * Math.cos((lat0 * Math.PI) / 180)) / k;
+}
+
+// Ground metres one screen pixel covers at this camera: the map's level of detail.
+export function metresPerPixel(camera, projection) {
+  return metresPerUnit(projection) / camera.s;
 }
 
 // The camera that frames the points inside the mode's padding, never closer than MIN_SPAN_M.
@@ -157,12 +163,13 @@ export function layoutPins(points, labelWidths, { width, fan, labels }) {
   return { offsets, sides, boxes };
 }
 
+export const labelBox = (label, q) => ({ x0: q.x - label.halfW, x1: q.x + label.halfW, y0: q.y - label.halfH, y1: q.y + label.halfH });
+
 // Map labels in list order: each shows only inside the frame and clear of pins and of the labels before it.
 export function placeLabels(labels, positions, taken, { width, height }) {
   const boxes = [...taken];
   return labels.map((label, i) => {
-    const q = positions[i];
-    const box = { x0: q.x - label.halfW, x1: q.x + label.halfW, y0: q.y - label.halfH, y1: q.y + label.halfH };
+    const box = labelBox(label, positions[i]);
     const inside = box.x0 > 4 && box.y0 > 4 && box.x1 < width - 4 && box.y1 < height - 4;
     const show = inside && !boxes.some((other) => overlaps(other, box));
     if (show) boxes.push(box);
