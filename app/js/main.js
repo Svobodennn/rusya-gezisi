@@ -48,7 +48,7 @@ async function start() {
   const viewer = createMemoryViewer(document.getElementById('memory-viewer'));
   wireActions({ page, taxi, viewer, store });
   setupArrowKeys(page.step, () => taxi.isOpen() || viewer.isOpen());
-  setupSwipe(elements.main, page.step);
+  // Only the cover swipes between days: on the stops a sideways swipe is too easy to make by accident.
   setupSwipe(elements.hero, page.step);
   window.addEventListener('storage', (event) => {
     if (event.key === TICKS_KEY) page.reloadTicks();

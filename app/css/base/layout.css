@@ -59,7 +59,6 @@
 
 .timeline {
   min-width: 0;
-  touch-action: pan-y pinch-zoom;
 }
 
 .timeline[data-enter='next'] {

@@ -307,7 +307,7 @@ City ornaments are SVG patterns and symbols in the page sprite: `p-kremlin` (48 
 - **Focus:** 2 px filament outline, 3 px offset, everywhere.
 
 ### Day navigation
-Previous and next plates carry the short date; a lit "Bugün" plate appears in the middle when viewing another day. Single-finger swipes on the hero and timeline change the day; the timeline slides in 14 px over 0.24 s.
+Previous and next plates carry the short date; a lit "Bugün" plate appears in the middle when viewing another day. Single-finger swipes on the hero change the day (the stops do not, so a stray sideways swipe never leaves the day); the timeline slides in 14 px over 0.24 s.
 
 ### Hero
 Photo (fade 0.9 s, slow 28 s drift), scrim, two garland strings (short tight front string, long deep back string; every third bulb warm; four twinkle groups at 2.8–4.1 s), snow canvas (up to 170 flakes), bulb-matrix date (5 × 7 dot numerals, 11 px pitch, unlit dots at 25% glass), Cyrillic city name, Turkish and Russian date line, sunrise/sunset, photo credit, postcard, edge ornament. Lettering rises 14 px in 0.7 s, staggered 0.08 s and 0.18 s.

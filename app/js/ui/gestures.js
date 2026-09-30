@@ -23,7 +23,7 @@ export function setupSwipe(el, onStep) {
 export function setupArrowKeys(onStep, isBlocked) {
   document.addEventListener('keydown', (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || isBlocked()) return;
-    if (event.target.closest?.('.garland-scroll, input, textarea')) return;
+    if (event.target.closest?.('.garland-scroll, .memory-album, input, textarea')) return;
     if (event.key === 'ArrowLeft') onStep(-1);
     if (event.key === 'ArrowRight') onStep(1);
   });
