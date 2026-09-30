@@ -1,11 +1,29 @@
-/* Memories: the day's photos at the end of the day, on an old family-album page. Each print is a porcelain-white
-   photo, set a little askew and held by the album's paper corners; a note in hand-writing gives the time taken. */
+/* Memories: the day's photos at the end of the day, on a strip of old family-album page that scrolls sideways. Each
+   print is a porcelain-white photo, set a little askew and held by the album's paper corners; a note in hand-writing
+   gives the time taken. */
 
 .memories {
   display: grid;
-  gap: calc(var(--pitch) * 2.5);
+  gap: calc(var(--pitch) * 2);
+  min-width: 0;
   margin-top: calc(var(--pitch) * 6);
   padding: var(--glass-pad);
+}
+
+.memories-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--pitch) calc(var(--pitch) * 2);
+}
+
+.memories-count {
+  margin-bottom: 4px;
+  font-family: var(--font-sign);
+  font-size: var(--t-s);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--frost);
 }
 
 .memories-empty {
@@ -14,20 +32,30 @@
   color: var(--frost);
 }
 
+/* One row that scrolls sideways and snaps to each print. The next print always peeks in at the right edge, so the
+   strip reads as more to come; the padding leaves room for the tilt, the corners and the shadow. */
 .memory-album {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr));
-  gap: calc(var(--pitch) * 4) calc(var(--pitch) * 3);
-  margin: 0;
-  padding: calc(var(--pitch) * 1.5) calc(var(--pitch) * 1);
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(170px, 29%, 230px);
+  gap: calc(var(--pitch) * 3);
+  margin: 0 calc(var(--glass-pad) * -1);
+  padding: 14px var(--glass-pad) 18px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--glass-pad);
+  scrollbar-width: thin;
+  scrollbar-color: rgb(220 171 73 / 0.45) transparent;
   list-style: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent);
 }
 
-/* Phones keep two prints a row, like an album page, instead of one long strip. */
 @media (max-width: 480px) {
   .memory-album {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: calc(var(--pitch) * 3.5) calc(var(--pitch) * 2);
+    grid-auto-columns: 64%;
+    gap: calc(var(--pitch) * 2.5);
   }
 
   .memory-note {
@@ -37,8 +65,43 @@
 
 .memory {
   display: grid;
+  align-content: start;
   gap: 10px;
   justify-items: center;
+  scroll-snap-align: start;
+}
+
+/* Arrows for mouse users, beside the title; touch screens swipe the strip instead. */
+.strip-nav {
+  display: flex;
+  gap: var(--pitch);
+  margin-left: auto;
+}
+
+.strip-btn {
+  display: grid;
+  place-items: center;
+  width: var(--touch);
+  height: var(--touch);
+  padding: 0;
+  border: 1px solid var(--wire);
+  border-radius: 50%;
+  background: var(--night);
+  color: var(--snow);
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .strip-btn:hover {
+    border-color: var(--gold);
+    color: var(--filament);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .strip-nav {
+    display: none;
+  }
 }
 
 .memory-open {

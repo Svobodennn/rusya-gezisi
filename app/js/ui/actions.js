@@ -1,5 +1,6 @@
 // Clicks anywhere on the page, routed by the element's data attribute to the action it stands for.
 import { setPanel } from './panels.js';
+import { scrollStrip } from './strip.js';
 
 export function wireActions({ page, taxi, viewer, store }) {
   const places = () => store.get().trip.places;
@@ -14,6 +15,7 @@ export function wireActions({ page, taxi, viewer, store }) {
     ['[data-taxi]', (el) => taxi.open(places()[el.dataset.taxi])],
     ['[data-map-mode]', (el) => page.setMapMode(el)],
     ['[data-memory]', (el) => viewer.open(dayMemories(), Number(el.dataset.memory))],
+    ['[data-strip]', (el) => scrollStrip(el)],
     ['.stop-toggle', (el) => setPanel(el, el.getAttribute('aria-expanded') !== 'true', places())],
   ];
   const anyAction = actions.map(([selector]) => selector).join(', ');
