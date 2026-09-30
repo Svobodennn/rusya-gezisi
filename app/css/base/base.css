@@ -7,6 +7,15 @@ html {
   scrollbar-color: var(--glass) var(--night);
 }
 
+/* While a full-screen sign or photo is open, the page underneath stays put; a scroll inside it never leaks out. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog {
+  overscroll-behavior: contain;
+}
+
 body {
   margin: 0;
   color: var(--snow);
