@@ -160,6 +160,13 @@
   min-height: 0;
 }
 
+.viewer-frame {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 0;
+}
+
 .viewer-img {
   justify-self: center;
   max-width: 100%;

@@ -1,7 +1,10 @@
 // A memory full screen: the photo at its own proportions, its time and caption, previous and next.
 
 export function createMemoryViewer(dialog) {
-  const image = dialog.querySelector('.viewer-img');
+  // The photo element is made on first open, so the page never ships an <img> without a source.
+  const image = document.createElement('img');
+  image.className = 'viewer-img';
+  const frame = dialog.querySelector('.viewer-frame');
   const note = dialog.querySelector('.viewer-note');
   const count = dialog.querySelector('.viewer-count');
   let photos = [];
@@ -17,6 +20,7 @@ export function createMemoryViewer(dialog) {
     note.textContent = [photo.time, photo.caption].filter(Boolean).join(' · ');
     count.textContent = `${index + 1} / ${photos.length}`;
     dialog.dataset.single = String(photos.length === 1);
+    if (!image.isConnected) frame.replaceChildren(image);
   }
 
   dialog.querySelector('[data-viewer="prev"]').addEventListener('click', () => show(index - 1));
